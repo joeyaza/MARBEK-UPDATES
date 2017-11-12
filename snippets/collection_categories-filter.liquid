@@ -1,0 +1,83 @@
+<div class="filter-tag-group">
+        <ul id="sidebar-nav-menu" class="tag-group col-xs-12"> 
+          {% for link in linklists.collections.links %}
+          <li class="level0 nav-0 parent home collapsible">
+            {% if linklists[link.handle] != empty %}
+            
+            {% endif %}
+            <a class="collapsible-wrapper" href="{{ link.url }}">{{ link.title }}</a> {% if linklists[link.handle].links.size > 0 %}<span class="cat_toggle"><i class="fa fa-plus-square"></i></span>{% endif %}
+            {% if linklists[link.handle].links.size > 0 %}
+            <ul class="level0 collapsible {% if link.active %}active{% endif %}">
+            {% for sublink in linklists[link.handle].links %}
+              
+                {% if linklists[sublink.handle].links.size > 0 %}
+                <li class="level2 collapsible has-child">
+                {% else %}
+                  <li class="">
+                {% endif %}
+                    <a class="collapsible-wrapper" href="{{ sublink.url }}">{{ sublink.title }}</a> {% if linklists[sublink.handle].links.size > 0 %}<span class="cat_toggle"><i class="fa fa-plus-square"></i></span>{% endif %}
+                {% if linklists[sublink.handle].links.size > 0 %}
+                <ul class="level0 collapsible {% if sublink.active %}active{% endif %}">
+                  {% for subsublink in linklists[sublink.handle].links %}
+                  <li class="level2">
+                    <a class="collapsible-wrapper  {% if subsublink.active %}active{% endif %}" href="{{ subsublink.url }}">{{ subsublink.title }}</a>
+                  </li>
+                  {% endfor %}
+                </ul>
+                {% endif %}
+              </li>
+            {% endfor %}
+            </ul>
+            {% endif %}
+          </li>
+          {% endfor %}
+        </ul>
+</div>
+<script>
+  $(function () {
+    $( ".home ul, .home a" ).each(function( index ) {
+      if($(this).hasClass('active')){
+        $(this).closest('.home').addClass('active');
+        $( ".home .active ul" ).show();
+        $( ".home.active .cat_toggle" ).html('<i class="fa fa-minus-square"></i>')
+        $( ".home.active .cat_toggle" ).trigger( "click" );
+        return;
+      }
+    });
+    $("span.cat_toggle").off().on('click', function (e) {
+      e.preventDefault();
+      $header = $(this);
+      $content = $header.next();
+      $content.slideToggle(500, function () {
+          $header.html(function () {
+              return $content.is(":visible") ? '<i class="fa fa-minus-square"></i>' : '<i class="fa fa-plus-square"></i>';
+          });
+      });
+
+  	});
+    $("#sidebar-nav-menu li a").off().on('click', function (event) {
+      /*
+      event.preventDefault();
+      var url = $(this).attr('href');
+      $.ajax({
+        type: 'GET',
+        url: url,
+        data: {},
+        beforeSend: function( xhr ) {
+          $("#tags-load").show();
+        },
+        complete: function (data) {          
+          $('#collection').html($("#collection", data.responseText).html());
+          history.pushState({
+            page: url
+          }, url, url);      
+          $("#tags-load").hide();
+          handleGridList();
+          toggleCatsFilter();
+          toggleTagsFilter();
+        }
+      });
+      */
+    });
+  });
+</script>

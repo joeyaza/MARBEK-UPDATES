@@ -1,0 +1,191 @@
+{% if settings.show_multiple_currencies %}
+
+{{ "/services/javascripts/currencies.js" | script_tag }}
+{{ "jquery.currencies.min.js" | asset_url | script_tag }}
+
+<script type="text/javascript">
+  
+  jQuery('.currencies li').on(clickEv, function() {
+    if(!$(this).hasClass('active')){
+      jQuery('.currencies li').removeClass('active');
+      var cls = jQuery(this).attr('class');
+      jQuery('.' + cls).addClass('active');
+      
+      var selectedValue = jQuery(this).find('input[type=hidden]').val();
+      jQuery('.currencies_src option').removeAttr('selected');
+      jQuery('.currencies_src option[value='+selectedValue+']').attr('selected', true);
+      jQuery('.currencies_src').change();
+      jQuery('.currency').removeClass('open');
+    }
+  });
+  
+  var shopCurrency = '',
+      defaultCurrency = '',
+      cookieCurrency = '';
+  currenciesCallback();
+  
+  
+  function currenciesCallback (){
+    {% if settings.currency_format %}
+    Currency.format = '{{ settings.currency_format }}';
+     {% endif %}
+     
+     shopCurrency = '{{ shop.currency }}';
+      
+      /* Sometimes merchants change their shop currency, let's tell our JavaScript file */
+      Currency.money_with_currency_format[shopCurrency] = {{ shop.money_with_currency_format | strip_html | json }};
+     Currency.money_format[shopCurrency] = {{ shop.money_format | strip_html | json }};
+    
+    /* Default currency */
+    defaultCurrency = '{{ settings.default_currency }}' || shopCurrency;
+    
+    /* Cookie currency */
+    cookieCurrency = Currency.cookie.read();
+    
+    /* Fix for customer account pages */
+    jQuery('span.money span.money').each(function() {
+      //jQuery(this).parents('span.money').removeClass('money');
+    });
+    
+    /* Saving the current price */
+    jQuery('span.money').each(function() {
+      jQuery(this).attr('data-currency-{{ shop.currency }}', jQuery(this).html());
+    });
+    
+    // If there's no cookie.
+    if (cookieCurrency == null) {
+      if (shopCurrency !== defaultCurrency) {
+        Currency.convertAll(shopCurrency, defaultCurrency);
+        jQuery('.currency_code').html(defaultCurrency + '<i class="fa fa-'+defaultCurrency.replace("CAD", "USD").toLowerCase()+'"></i>');
+        jQuery('.currency_code').parent().removeClass(function (index, css) {
+            return (css.match (/(^|\s)currency-\S+/g) || []).join(' ');
+        });
+        jQuery('.currency_code').parent().addClass('currency-' + defaultCurrency);
+      }
+      else {
+        Currency.currentCurrency = defaultCurrency;
+      }
+      Currency.cookie.write(defaultCurrency);
+    }
+    // If the cookie value does not correspond to any value in the currency dropdown.
+    else if (jQuery('[name=currencies]').size() && jQuery('[name=currencies] option[value=' + cookieCurrency + ']').size() === 0) {
+      Currency.currentCurrency = shopCurrency;
+      Currency.cookie.write(shopCurrency);
+    }
+      else if (cookieCurrency === shopCurrency) {
+        Currency.currentCurrency = shopCurrency;
+      }
+      else {
+        Currency.convertAll(shopCurrency, cookieCurrency);
+        
+        jQuery('#currencies li').removeClass('active');
+        jQuery('#currencies #currency-'+cookieCurrency).addClass('active');
+        jQuery('.currency_code').html(cookieCurrency + '<i class="fa fa-'+cookieCurrency.replace("CAD", "USD").toLowerCase()+'"></i>');
+        jQuery('.currency_code').parent().removeClass(function (index, css) {
+            return (css.match (/(^|\s)currency-\S+/g) || []).join(' ');
+        });
+        jQuery('.currency_code').parent().addClass('currency-' + cookieCurrency);
+      }
+    
+    jQuery('[name=currencies]').val(Currency.currentCurrency).change(function() {
+      var newCurrency = jQuery(this).val();
+      Currency.convertAll(Currency.currentCurrency, newCurrency);
+      jQuery('.currency_code').html(newCurrency + '<i class="fa fa-'+newCurrency.replace("CAD", "USD").toLowerCase()+'"></i>');
+      jQuery('.currency_code').parent().removeClass(function (index, css) {
+            return (css.match (/(^|\s)currency-\S+/g) || []).join(' ');
+        });
+      jQuery('.currency_code').parent().addClass('currency-' + newCurrency);
+      jQuery(this).parents('#currency').removeClass('open');
+      console.log(newCurrency);
+    });
+    
+    
+    $('.currencies li').removeClass('active');
+    $('.currencies .currency-' + cookieCurrency).addClass('active');
+  }
+                              
+    
+  function currenciesCallbackSpecial(id){
+    /* Saving the current price */
+    jQuery(id).each(function() {
+      //jQuery(this).attr('data-currency-{{ shop.currency }}', jQuery(this).html());
+    });
+    
+    /* Update currency */
+    //jQuery(id).trigger('ajaxCart.afterCartLoad');
+    //Currency.convertAll(shopCurrency, cookieCurrency, id, Currency.format);
+      
+      var oldCurrency = shopCurrency;
+      var newCurrency = cookieCurrency;
+      var format = '{{amount}}';
+      jQuery(id).each(function() {
+        console.log(newCurrency);
+          
+            // Converting to Y for the first time? Let's get to it!
+            var cents = 0.0;
+            var oldFormat = '{{amount}}';
+            var newFormat = '{{amount}}';
+            if (oldFormat.indexOf('amount_no_decimals') !== -1) {
+              cents = Currency.convert(parseInt(jQuery(this).html().replace(/[^0-9]/g, ''), 10)*100, oldCurrency, newCurrency);
+            }
+            else if (oldCurrency === 'JOD' || oldCurrency == 'KWD' || oldCurrency == 'BHD') {
+              cents = Currency.convert(parseInt(jQuery(this).html().replace(/[^0-9]/g, ''), 10)/10, oldCurrency, newCurrency);
+            }
+            else { 
+              cents = Currency.convert(parseInt(jQuery(this).html().replace(/[^0-9]/g, ''), 10), oldCurrency, newCurrency);
+            }
+        	console.log(cents);
+            var newFormattedAmount = function(cents, format) {
+                if (typeof Shopify.formatMoney === 'function') {
+                  return Shopify.formatMoney(cents, format);
+                }
+                if (typeof cents == 'string') { cents = cents.replace('.',''); }
+                var value = '';
+                var placeholderRegex = /\{\{\s*(\w+)\s*\}\}/;
+                var formatString = format || '${{amount}}';
+                function defaultOption(opt, def) {
+                   return (typeof opt == 'undefined' ? def : opt);
+                }
+                function formatWithDelimiters(number, precision, thousands, decimal) {
+                  precision = defaultOption(precision, 2);
+                  thousands = defaultOption(thousands, ',');
+                  decimal   = defaultOption(decimal, '.');
+                  if (isNaN(number) || number == null) { return 0; }
+                  number = (number/100.0).toFixed(precision);
+                  var parts   = number.split('.'),
+                      dollars = parts[0].replace(/(\d)(?=(\d\d\d)+(?!\d))/g, '$1' + thousands),
+                      cents   = parts[1] ? (decimal + parts[1]) : '';
+                  return dollars + cents;
+                }
+                switch(formatString.match(placeholderRegex)[1]) {
+                  case 'amount':
+                    value = formatWithDelimiters(cents, 2);
+                    break;
+                  case 'amount_no_decimals':
+                    value = formatWithDelimiters(cents, 0);
+                    break;
+                  case 'amount_with_comma_separator':
+                    value = formatWithDelimiters(cents, 2, '.', ',');
+                    break;
+                  case 'amount_no_decimals_with_comma_separator':
+                    value = formatWithDelimiters(cents, 0, '.', ',');
+                    break;
+                }
+                return formatString.replace(placeholderRegex, value);
+              };
+            
+            jQuery(this).html(newFormattedAmount);
+            jQuery(this).attr('data-currency-'+newCurrency, newFormattedAmount);
+          
+          // We record the new currency locally.
+          jQuery(this).attr('data-currency', newCurrency);
+      });
+  }
+                       
+  
+    /* Update ajax cart with currency */
+    
+
+</script>
+
+{% endif %}

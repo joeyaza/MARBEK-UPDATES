@@ -1,0 +1,260 @@
+<section class="main-header">
+  {% if settings.header_snow %}<span class="snow"></span>{% endif %}
+  <div class="main-header-wrapper">
+    <div class="container">
+      <div class="row">
+        <div class="main-header-inner">
+          <div class="col-md-3 col-sm-12">
+            <div class="nav-logo">
+              <div class="logo">
+                {% if settings.use_logo %}
+                <h1><a href="/"><img src="{{ 'logo.png' | asset_url }}" alt="{{ shop.name }}" /></a></h1>
+                {% if template == 'index' %}
+                <h1 style="display:none"><a href="/">{{ shop.name }}</a></h1>
+                {% endif %}
+                {% else %}
+                <h1><a href="/">{{ shop.name }}</a></h1>
+                {% endif %}
+              </div>
+            </div>
+            {% if settings.use_stickylogo %}
+            <div class="sticky-logo">
+              <div class="logo">
+                {% if settings.use_logo %}
+                <h1><a href="/"><img src="{{ 'sticky_logo.png' | asset_url }}" alt="{{ shop.name }}" /></a></h1>
+                {% if template == 'index' %}
+                <h1 style="display:none"><a href="/">{{ shop.name }}</a></h1>
+                {% endif %}
+                {% else %}
+                <h1><a href="/">{{ shop.name }}</a></h1>
+                {% endif %}
+              </div>
+            </div>
+            {% endif %}
+          </div>
+          <div class="col-md-7 col-sm-12">
+            <div class="nav-header">
+              <div class="nav-header-wrapper">
+                <div class="nav-header-inner">
+                  <div class="navi-group">
+                    <ul class="navigation-left hidden-xs">
+                     {% for l in linklists[settings.nav_linklist].links %}
+                       {% include 'header_navigation' %}
+                     {% endfor %} 
+                    </ul>            
+                  </div>
+                 </div>
+              </div>
+            </div>
+            </div>
+            <div class="col-md-2 col-sm-4 right-area">
+              <!-- Customer Links -->
+            {% if shop.customer_accounts_enabled %}
+            <ul class="unstyled">
+              {% if customer  %}
+              <li class="toolbar-customer my-account"><a href="/account"> {{ 'layout.customer.your_account' | t }}</a></li>
+              <li class="toolbar-customer my-wishlist logged-wishlist"><a href="/pages/help">Help</a></li>
+              <li class="toolbar-customer log-out"><a href="/account/logout"><i class="fa fa-sign-out"></i> {{ 'layout.customer.logout' | t }}</a></li>
+              {% else %}
+              <li class="toolbar-customer login-account">                    
+                <span id="loginButton" class="dropdown-toggle" data-toggle="dropdown">
+                  <i class="sub-dropdown1 visible-sm visible-md visible-lg"></i>
+                  <i class="sub-dropdown visible-sm visible-md visible-lg"></i>         
+                  {{ 'Account' | customer_login_link }}
+                </span>                    
+                <div id="loginBox" class="dropdown-menu text-left">
+                  {% form 'customer_login' %}
+                  <div id="bodyBox">
+                    <ul class="control-container customer-accounts list-unstyled">
+                      <li class="clearfix">
+                        <label for="customer_email_box" class="control-label">{{'layout.header.login_dropdown.customer_email'|t}} <span class="req">*</span></label>
+                        <input type="email" value="" name="customer[email]" id="customer_email_box" class="form-control" />
+                      </li>
+                      {% if form.password_needed %}
+                      <li class="clearfix">
+                        <label for="customer_password_box" class="control-label">{{'layout.header.login_dropdown.customer_password'|t}} <span class="req">*</span></label>
+                        <input type="password" value="" name="customer[password]" id="customer_password_box" class="form-control password" />
+                      </li>
+                      {% endif %}
+                      <li class="clearfix">
+                        <span class="required field">*{{'layout.header.login_dropdown.required'|t}}</span>
+                      </li>
+                      <li class="clearfix">
+                        <a href="/account/login#recover"><span class="red">?</span> {{'layout.header.login_dropdown.forgot'|t}}</a>
+                      </li>
+                      <li class="clearfix">
+                        <button class="btn btn-1" type="submit">{{'layout.header.login_dropdown.login'|t}}</button>
+                      </li>                  
+                      <li class="clearfix">
+                        <a class="action btn btn-3" href="/account/register">{{'layout.header.login_dropdown.create'|t}}</a>
+                      </li>
+                    </ul>
+                  </div>
+                  {% endform %}
+                </div>
+              </li>
+              <li class="toolbar-customer my-wishlist logged-wishlist"><a href="/pages/help">Help</a></li>
+              {% endif %}
+            </ul>
+            {% endif %}
+              
+               {% include 'mlveda-currencies-switcher' %}
+            <div id="cart-target" class="toolbar-cart">              
+              <a href="/cart" class="cart dropdown-toggle dropdown-link" data-toggle="dropdown" title="Shopping Cart">
+                <i class="sub-dropdown1 visible-sm visible-md visible-lg"></i>
+                <i class="sub-dropdown visible-sm visible-md visible-lg"></i> 
+                <div class="num-items-in-cart">
+                  <div class="block-cart">
+                    <span class="icon">                      
+                      <span class="number">{{ cart.item_count }}</span>
+                    </span>   
+                  </div>
+                </div>
+              </a>
+              <div id="cart-info" class="dropdown-menu">
+                <div id="cart-content">
+                  <div class="loading">
+                    <img src="{{'loader.gif' | asset_url}}" alt="" />
+                  </div>
+                </div>
+              </div>
+            </div>
+              
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="mobile-nav-header">
+  <div class="mobile-nav-header-wrapper">
+    <div class="container">
+      <div class="row">
+        <div class="mobile-nav-header-inner">                                            
+          <div class="mobile-top-navigation visible-xs">      
+            <button id="showLeftPush" class="visible-xs"><i class="fa fa-bars fa-2x"></i></button>
+            {% if template == 'collection' %}
+            <div class="breadcrumb clearfix">
+              <span itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a href="{{ shop.url }}" title="{{ shop.name | escape }}" itemprop="url"><span itemprop="title">{{ 'general.breadcrumbs.home' | t }}</span></a></span>
+              <span class="arrow-space">></span>
+              <span itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a href="/collections/all/" title="{{ collection.title | escape }}" itemprop="url"><span itemprop="title">Shop</span></a></span>
+<!--
+              {% if current_tags %}
+                {% for tag in current_tags %}
+                  <span class="arrow-space">/</span>
+                  <span itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a href="/collections/{% if collection.handle != blank %}{{ collection.handle }}{% else %}all{% endif %}/{{ tag | handleize }}" title="{{ tag | escape }}" itemprop="url"><span itemprop="title">{{ tag }}</span></a></span>
+                {% endfor %}
+              {% endif %}
+              
+              {% if paginate.pages != 0 %}
+                <span class="arrow-space">/</span> <strong>{{ 'general.pagination.summary' | t: current_page: paginate.current_page, pages: paginate.pages }}</strong>
+              {% endif %}
+  -->
+            </div>
+            {% endif %}
+            <ul class="list-inline">        
+              {% if shop.customer_accounts_enabled %}
+              <li class="is-mobile-login hidden-xs">
+                <div class="btn-group">
+                  <div class="dropdown-toggle" data-toggle="dropdown">
+                    <i class="fa fa-user"></i>
+                  </div>
+                  <ul class="customer dropdown-menu">
+                    {% if customer %}
+                    <li class="toolbar-customer log-out">
+                      <a href="/account/logout">{{ 'layout.customer.logout' | t }}</a>
+                    </li>
+                    <li class="toolbar-customer my-account">
+                      <a href="/account">{{ 'layout.customer.your_account' | t }}</a>
+                    </li>
+                    <li class="toolbar-customer my-wishlist">
+                      <a href="/pages/wish-list">{{ 'layout.customer.wishlist' | t }}</a>
+                    </li>
+                    {% else %}
+                    <li class="logout">
+                      <a href="/account/login">{{'layout.header.login_dropdown.login'|t}}</a>
+                    </li>
+                    <li class="account">
+                      <a href="/account/register">{{'layout.header.login_dropdown.create'|t}}</a>
+                    </li>
+                    {% endif %}
+                  </ul>
+                </div>
+              </li>
+              {% endif %}
+
+              {% if settings.show_multiple_currencies %}
+             <!-- <li class="is-mobile-currency currency_group">
+                <div class="currencies-switcher"> 
+                  {% include 'mlveda-swicher-mobile' %}
+                </div>
+              </li>--->
+              {% endif %}
+              <li class="mlveda-sw-mobile">
+               
+                  {% include 'mlveda-swicher-mobile' %}
+                
+              </li>
+              <li class="is-mobile-cart">
+                <a href="/cart" title="Shopping Cart">
+                  <div class="num-items-in-cart">
+                    <i class="fa fa-shopping-cart"></i>
+                      <span class="icon">
+                        <span class="number">{{ cart.item_count }}</span>
+                      </span>
+                    <div class="ajax-subtotal" style="display:none;"></div>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="is-mobile-nav-menu nav-menu visible-xs" id="is-mobile-nav-menu">
+            <ul class="nav navbar-nav hoverMenuWrapper">
+              {% for l in linklists[settings.nav_linklist].links %}
+              {% include 'header_navigation' %}
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="mobile-nav">  
+  <div class="row mobile-nav-wrapper">
+    <nav class="mobile clearfix">
+      {% include 'mobile-menu' %}
+    </nav>
+  </div>  
+</section>
+
+{% if settings.nav_sticky %}
+<script>
+  function addaffix(scr){
+    if($(window).innerWidth() >= 992){
+      if(scr > 53){
+        if(!$('#top').hasClass('baffix')){
+          $('#top').addClass('affix').addClass('animated');
+        }
+      }
+      else{
+        if($('#top').hasClass('affix')){
+          $('#top').prev().remove();
+          $('#top').removeClass('affix').removeClass('animated');
+        }
+      }
+    }
+    else $('#top').removeClass('affix');
+  }
+  $(window).scroll(function() {
+    var scrollTop = $(this).scrollTop();
+    addaffix(scrollTop);
+  });
+  $( window ).resize(function() {
+    var scrollTop = $(this).scrollTop();
+	addaffix(scrollTop);
+  });
+</script>
+{% endif %}

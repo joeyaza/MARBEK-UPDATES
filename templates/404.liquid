@@ -1,0 +1,96 @@
+<section class="page-404-heading">
+  <div class="page-404-heading-wrapper">
+    <div class="container">
+      <div class="row">
+        <div class="page-404-heading-inner">
+          <h1 class="page-title"><span>404</span></h1>
+          <div class="breadcrumb clearfix">
+            <span itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a href="{{ shop.url }}" title="{{ shop.name | escape }}" itemprop="url"><span itemprop="title">{{ 'general.breadcrumbs.home' | t }}</span></a></span>
+            <span class="arrow-space">&#62;</span>
+            <span itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+              <span itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a href="{{ page.url }}" title="404" itemprop="url"><span itemprop="404">404</span></a></span>
+            </span>              
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="page-404-content">
+  <div class="page-404-content-wrapper">
+    <div class="container">
+      <div class="row">
+        <div class="page-404-content-inner">          
+          <div id="page-404" class="">
+            <div class="notfound-image"><img src="{{'img404.png' | asset_url }}" alt="404 - not fount"/></div>
+            <h2>{{ 'general.404.title' | t }}</h2>
+            <span class="subtext">{{ 'general.404.subtext' | t }}</span>
+            <div class="search-field">
+              <form class="search" action="/search">
+                <input type="hidden" name="type" value="product" /> 
+                <input type="image" src="{{ 'icon-search.png' | asset_url }}" alt="Go" id="go">
+                <input type="text" name="q" class="search_box" placeholder="{{ 'general.search.placeholder' | t }}" value=""  />
+              </form>
+            </div>
+          </div>
+
+          {% if shop.products_count == 0 %}
+            <div id="example-product-helper-section" class="clearfix helper-section" style="display:none;">
+                <div class="note helper-note helper-product"><i class="icon-products helper-icon"></i>
+                    <h3>{{ 'products.example_product.overlay_title' | t }}</h3>
+                    <p>{{ 'products.example_product.subtext_html' | t }}</p>
+                    <p>
+                      <a href="/admin/products/new" class="admin-btn-primary">{{ 'products.example_product.add_product' | t }}</a>
+                    </p>
+                </div>
+                <div class="helper-content clearfix">
+                    <div id="product" class="example-product">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="breadcrumb clearfix">
+                                  <a href="/">{{ 'general.breadcrumbs.home' | t }}</a><span class="arrow-space">&gt;</span><a href="/collections/all" title="All Products">{{ 'general.breadcrumbs.products' | t }}</a><span class="arrow-space">&gt;</span><strong>{{ 'products.example_product.title' | t }}</strong>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="featured">
+                                  <img src="{{ "product-1.png" | asset_url }}" alt="{{ 'products.example_product.title' | t }}">
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <h1 class="title">{{ 'products.example_product.title' | t }}</h1>
+                                <div class="purchase">
+                                    <h2 class="price">$79.99</h2>
+                                </div>
+                                <div class="clearfix">
+                                    <div class="product-options no-options ">
+                                      <a class="btn">{{ 'products.product.add_to_cart' | t }}</a>
+                                    </div>
+                                </div>
+                                <div class="description">
+                                  <span>{{ 'products.example_product.description_html' | t }}</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <script type="text/javascript">
+              (function() {
+                if ( window.location.pathname === "/products/example-product" ) {
+                  document.title = "{{ 'products.example_product.title' | t }}";
+                  $("#404").hide();
+                  $(function() {
+                    $("#example-product-helper-section").show();
+                  });
+                }
+              })();
+            </script>
+
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

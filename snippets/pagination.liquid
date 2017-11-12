@@ -1,0 +1,47 @@
+{% if paginate.pages > 1 %}
+  {% unless template == 'customers/account' %}<div class="col-md-12">{% endunless %}
+    {% if template == 'collection' %}
+      	<!-- Number product per page 
+                    {% if settings.collection_perpage %}
+                    <div class="show-per-page">
+                      View
+                      <select name="change-per-page">
+                        <option value="12" {% if settings.pagination_limit == "12"%}selected{%endif%}>12</option>
+                        <option value="24" {% if settings.pagination_limit == "24"%}selected{%endif%}>24</option>
+                        <option value="36" {% if settings.pagination_limit == "36"%}selected{%endif%}>36</option>
+                      </select>
+                    </div>
+                  {% endif%}
+-->
+      {% endif %}
+	<div class="pagination">
+      
+      {% if paginate.previous %}
+        <li class="prev"><a href="{{ paginate.previous.url }}"><i class="fa fa-angle-double-left"></i></a></li>
+      {% else %}
+        <li class="prev"><a class="disabled" href="javascript:;"><i class="fa fa-angle-double-left"></i></a></li>
+      {% endif %}
+
+      
+        {% for part in paginate.parts %}
+          {% if part.is_link %}
+            <li><a href="{{ part.url }}">{{ part.title }}</a></li>
+          {% else %}
+            {% if part.title == '&hellip;' %}
+              <li class="ellipsis"><a class="disabled" href="javascript:;">{{ part.title }}</a></li>
+            {% else %}
+              <li class="active"><a href="javascript:;">{{ part.title }}</a></li>
+            {% endif %}
+          {% endif %}
+        {% endfor %}
+      
+
+      {% if paginate.next %}
+        <li class="next"><a href="{{ paginate.next.url }}"><i class="fa fa-angle-double-right"></i></a></li>
+      {% else %}
+        <li class="next"><a class="disabled" href="javascript:;"><i class="fa fa-angle-double-right"></i></a></li>
+      {% endif %} 
+      
+    </div>
+  {% unless template == 'customers/account' %}</div>{% endunless %}
+  {% endif %}

@@ -1,0 +1,119 @@
+<section class="cart-heading">
+  <div class="cart-heading-wrapper">
+    <div class="container">
+      <div class="row">
+        <div class="cart-heading-inner">
+          <h1 class="page-title"><span>{{ 'cart.general.title' | t }}</span></h1>
+          <div class="breadcrumb clearfix">
+            <span itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a href="{{ shop.url }}" title="{{ shop.name | escape }}" itemprop="url"><span itemprop="title">{{ 'general.breadcrumbs.home' | t }}</span></a></span>
+            <span class="arrow-space">&#62;</span>
+            <span itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+              <a href="/cart" title="{{ 'cart.general.title' | t }}">{{ 'cart.general.title' | t }}</a>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cart-content">
+  <div class="cart-wrapper">
+    <div class="container">
+      <div class="row">
+        <div class="cart-inner">
+          <div id="cart">  
+            {% if cart.item_count == 0 %}
+            <div class="cart-empty">
+              <h2 class="tc">{{ 'cart.general.empty' | t }}</h2>
+            </div>
+            {% else %}
+            <div class="cart-form">
+              <form action="/cart" method="post" id="cartform">
+                <table>
+                  <thead>
+                    <tr>
+                      <th class="image">{{ 'cart.label.product' | t }}</th>
+                      <th class="price">{{ 'cart.label.price' | t }}</th>
+                      <th class="qty">{{ 'cart.label.quantity' | t }}</th>
+                      <th class="total">{{ 'cart.label.total' | t }}</th>
+                      <th class="remove">{{ 'cart.label.remove' | t }}</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {% for item in cart.items %}
+                    <tr>
+                      <td class="image">
+                        <div class="product_image">
+                          <a href="{{ item.url }}">
+                            <img src="{{ item | img_url: 'small' }}"  alt="{{ item.title | escape }}" />
+                          </a>
+                        </div>  
+                        <div class="product_name">
+                          <a href="{{ item.url }}">
+                            <p>{{ item.product.title }}</p>
+                            {% if item.product.variants.size > 1 %}
+                            <span class="variant_title">{{ item.variant.title }}</span>
+                            {% endif %}
+                          </a>
+                        </div>
+                      </td>
+                      <td class="price">{{ item.price | money }}</td>
+                      <td class="qty">
+                        <div class="quantity-wrapper">
+                          <div class="wrapper">
+                            <input type="number" size="4" name="updates[]" id="updates_{{ item.id }}" value="{{ item.quantity }}" class="tc item-quantity" />
+                          </div><!--End wrapper-->                  
+                        </div><!--End quantily wrapper-->                
+                      </td>
+                      <td class="total title-1">{{ item.line_price | money }}</td>
+                      <td class="remove"><a href="/cart/change?line={{ forloop.index }}&quantity=0" class="cart"><i class="fa fa-trash"></i></a></td>              
+                    </tr>
+                    {% endfor %}
+                    <tr class="summary">
+                      <td class="total_text" colspan="1">{{'cart.label.total'|t}}</td>
+                      <td class="price" colspan="4"><span class="total"><strong>{{ cart.total_price | money }}</strong></span></td>
+                    </tr>
+                  </tbody>
+                </table>
+                				
+                <div class="group-bottom"> 
+                  <div class="cart-buttons col-sm-12">
+                    <div class="buttons clearfix">                    
+                      <input type="submit" id="update-cart" class="btn" name="update" value="{{ 'cart.general.update' | t }}" />
+                      <input type="button" id="continue-cart" class="btn btn-3" name="continue" value="{{ 'cart.general.continue' | t }}" onclick="location.href='{{ shop.url }}'" />
+                      <input type="submit" id="checkout" class="btn" name="checkout" value="{{ 'cart.general.checkout' | t }}" />                        
+                    </div>
+                  </div>
+                  <div class="group-checkout-input col-sm-6">
+                    <div class="checkout-buttons clearfix">
+                      <label for="note">{{ 'cart.general.note' | t }}</label>
+                      <textarea id="note" name="note" rows="10" cols="50">{{ cart.note }}</textarea>
+                    </div>
+                  </div>
+                </div>
+                
+                {% if additional_checkout_buttons %}        
+                  <div class="col-sm-6">
+                    <div class="extra-checkout-buttons inner-right">
+                      {{ content_for_additional_checkout_buttons }}
+                    </div>
+                  </div>
+                {% endif %}
+              </form>
+            </div>
+            {% endif %}  
+          </div> 
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<p class="mlvedaCartNote" style="display:none">
+  {{ shop.name }} process all orders in {{ shop.currency }}.
+  While the content of your cart is currently displayed in
+  <span class="selected-currency"></span>,
+  you will checkout using {{ shop.currency }} at the most current exchange rate.
+</p>

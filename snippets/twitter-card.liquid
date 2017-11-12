@@ -1,0 +1,58 @@
+{% comment %}
+
+  This snippet renders meta data needed to create a Twitter card
+  for products and articles.
+
+  Your cards must be approved by Twitter to be activated
+    - https://dev.twitter.com/docs/cards/validation/validator
+
+  More information:
+   - https://dev.twitter.com/docs/cards/types/summary-card
+
+{% endcomment %}
+
+{% comment %}
+  Twitter user name of the site, based on theme settings
+{% endcomment %}
+<meta name="twitter:card" content="summary">
+{% unless settings.twittercard_handle == blank %}
+  <meta name="twitter:site" content="{{ settings.twittercard_handle }}">
+{% endunless %}
+{% if template contains 'product' %}
+  {%- comment %}<locksmith:d98f>{% endcomment -%}
+    {% include 'locksmith-variables', locksmith_hiding_scope: 'resource' %}{% if locksmith_transparent %}<meta name="twitter:title" content="{{ product.title | strip_html | escape }}">{% endif %}
+    {%- comment %}original: <meta name="twitter:title" content="{{ product.title | strip_html | escape }}">{%- endcomment %}
+  {%- comment %}</locksmith:d98f>{% endcomment -%}
+  {%- comment %}<locksmith:0e3f>{% endcomment -%}
+    {% include 'locksmith-variables', locksmith_hiding_scope: 'resource' %}{% if locksmith_transparent %}<meta name="twitter:description" content="{{ product.description | strip_html | truncatewords: 50, '' | escape }}">{% endif %}
+    {%- comment %}original: <meta name="twitter:description" content="{{ product.description | strip_html | truncatewords: 50, '' | escape }}">{%- endcomment %}
+  {%- comment %}</locksmith:0e3f>{% endcomment -%}
+  {%- comment %}<locksmith:1a00>{% endcomment -%}
+    {% include 'locksmith-variables', locksmith_hiding_scope: 'resource' %}{% if locksmith_transparent %}<meta name="twitter:image" content="https:{{ product | img_url: 'medium' }}">{% endif %}
+    {%- comment %}original: <meta name="twitter:image" content="https:{{ product | img_url: 'medium' }}">{%- endcomment %}
+  {%- comment %}</locksmith:1a00>{% endcomment -%}
+  {%- comment %}<locksmith:1cd0>{% endcomment -%}
+    {% include 'locksmith-variables', locksmith_hiding_scope: 'resource' %}{% if locksmith_transparent %}<meta name="twitter:image:width" content="240">{% endif %}
+    {%- comment %}original: <meta name="twitter:image:width" content="240">{%- endcomment %}
+  {%- comment %}</locksmith:1cd0>{% endcomment -%}
+  {%- comment %}<locksmith:d0c2>{% endcomment -%}
+    {% include 'locksmith-variables', locksmith_hiding_scope: 'resource' %}{% if locksmith_transparent %}<meta name="twitter:image:height" content="240">{% endif %}
+    {%- comment %}original: <meta name="twitter:image:height" content="240">{%- endcomment %}
+  {%- comment %}</locksmith:d0c2>{% endcomment -%}
+{% elsif template contains 'article' %}
+  {%- comment %}<locksmith:2852>{% endcomment -%}
+    {% include 'locksmith-variables', locksmith_hiding_scope: 'resource' %}{% if locksmith_transparent %}<meta name="twitter:title" content="{{ article.title | strip_html | escape }}">{% endif %}
+    {%- comment %}original: <meta name="twitter:title" content="{{ article.title | strip_html | escape }}">{%- endcomment %}
+  {%- comment %}</locksmith:2852>{% endcomment -%}
+  {%- comment %}<locksmith:0464>{% endcomment -%}
+    {% include 'locksmith-variables', locksmith_hiding_scope: 'resource' %}{% if locksmith_transparent %}<meta name="twitter:description" content="{{ article.excerpt_or_content | strip_html | truncatewords: 50, '' | escape }}">{% endif %}
+    {%- comment %}original: <meta name="twitter:description" content="{{ article.excerpt_or_content | strip_html | truncatewords: 50, '' | escape }}">{%- endcomment %}
+  {%- comment %}</locksmith:0464>{% endcomment -%}
+  {% if article.content contains "<img" %}
+    {% assign src = article.content | split: 'src="' %}
+    {% assign src = src[1] | split: '"' | first | remove: 'https:' | remove: 'http:' %}
+    {% if src %}
+      <meta property="twitter:image" content="https:{{ src }}">
+    {% endif %}
+  {% endif %}
+{% endif %}

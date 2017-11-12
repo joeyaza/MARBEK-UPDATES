@@ -1,0 +1,106 @@
+<section class="search-heading">
+  <div class="search-heading-wrapper">
+    <div class="container">
+      <div class="row">
+        <div class="search-heading-inner">
+          <h1 class="page-title"><span>{{ 'general.search.title' | t }}</span></h1>
+          <div class="breadcrumb clearfix">
+            <span itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a href="{{ shop.url }}" title="{{ shop.name | escape }}" itemprop="url"><span itemprop="title">{{ 'general.breadcrumbs.home' | t }}</span></a></span>
+            <span class="arrow-space">&#62;</span>
+            {% if search.terms != "" %}
+            <span itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a href="/search" title="{{'general.search.text'|t}} '{{search.terms}}'" itemprop="url"><span itemprop="title">{{'general.search.text'|t}} "{{search.terms}}"</span> within <span class="coll-name-bread"></span></a></span>
+            {% else%}
+            <span itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a href="/search" title="{{'general.search.title'|t}}" itemprop="url"><span itemprop="title">{{'general.search.title'|t}}</span></a></span>
+            {% endif%}              
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="search-content">
+  <div class="search-content-wrapper">
+    <div class="container">
+      <div class="row">
+        <div class="search-content-inner">
+          <div id="search">
+            {% if search.performed %}
+            {% paginate search.results by settings.pagination_limit %}
+
+            {% if search.terms == "" %}
+
+            <div class="expanded-message">
+              <div class="search-field">
+                <form class="search" action="/search">
+                  <input type="image" src="{{ 'icon-search.png' | asset_url }}" alt="Go" id="go">
+                  <input type="text" name="q" class="search_box" placeholder="{{ 'general.search.placeholder' | t }}" value=""  />
+                </form>
+              </div>
+            </div>              
+            {% else %}
+
+            {% if search.results == empty %}            
+            <div class="expanded-message">
+              <h2>{{ 'general.search.no_results_title' | t }}</h2>
+              <span class="subtext">{{ 'general.search.no_results_html' | t: search: search.terms }}</span>
+              <div class="search-field">
+                <form class="search" action="/search">
+                  <input type="image" src="{{ 'icon-search.png' | asset_url }}" alt="Go" id="go">
+                  <input type="text" name="q" class="search_box" placeholder="{{ 'general.search.placeholder' | t }}" value="{{ search.terms | escape }}"  />
+                </form>
+              </div>
+            </div>            
+            {% else %}
+
+            <!-- Begin results -->
+            {% for product in search.results %}
+            <div class="product-item-wrapper coll-all{% for collection in product.collections %} coll-{{ collection.handle }}{% endfor %} col-sm-3 col-xs-6">              
+              {% include 'index_product-items' %}
+            </div>
+            {% endfor %}
+            <div class="js-no-result" style="display:none;">
+              <h2>{{ 'general.search.no_results_title' | t }}</h2>
+              <span class="subtext">{{ 'general.search.no_results_html' | t: search: search.terms }}</span>
+              <div class="search-field">
+                <form class="search" action="/search">
+                  <input type="image" src="{{ 'icon-search.png' | asset_url }}" alt="Go" id="go">
+                  <input type="text" name="q" class="search_box" placeholder="{{ 'general.search.placeholder' | t }}" value="{{ search.terms | escape }}"  />
+                </form>
+              </div>
+            </div>
+            <script>
+              $( window ).ready(function() {
+                var jssearchtext = location.search.substring(12,location.search.indexOf("&")),
+                    collname = ".coll-"+jssearchtext;
+                $('.coll-name-bread').html(jssearchtext + " Collection");
+                console.log(jssearchtext);
+                $(collname).fadeIn();                
+                if($(collname).size() == 0) $('.js-no-result').css("display","block");
+              });
+            </script>
+            <!-- End results -->
+
+            {% include 'pagination' %}
+
+            {% endif %}
+            {% endif %}
+
+            {% endpaginate %}
+
+            {% else %}            
+              <div class="expanded-message">
+                <div class="search-field">
+                  <form class="search" action="/search">
+                    <input type="image" src="{{ 'icon-search.png' | asset_url }}" alt="Go" id="go">
+                    <input type="text" name="q" class="search_box" placeholder="{{ 'general.search.placeholder' | t }}" value="" />
+                  </form>
+                </div>
+              </div>            
+            {% endif %}	   
+          </div> <!-- /#search -->
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

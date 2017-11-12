@@ -1,0 +1,88 @@
+<section class="blcontactog-heading">
+  <div class="contact-heading-wrapper">
+    <div class="container">
+      <div class="row">
+        <div class="contact-heading-inner">
+          <h1 class="page-title"><span>{{ page.title }}</span></h1>
+          <!--
+          <div class="breadcrumb clearfix">
+            <span itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a href="{{ shop.url }}" title="{{ shop.name | escape }}" itemprop="url"><span itemprop="title">{{ 'general.breadcrumbs.home' | t }}</span></a></span>
+            <span class="arrow-space">&#62;</span>
+            <span itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+              <a href="{{ page.title }}" title="{{ page.title }}">{{ page.title }}</a>
+            </span>
+          </div>
+          -->
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact-content">
+  <div class="contact-wrapper">
+    <div class="container">
+      <div class="row">
+        <div class="contact-inner">
+          <div id="page">
+              {% if settings.contact_map and settings.contact_address != '' %}
+              <div class="google-maps-wrapper">
+                <div class="google-maps-inner">
+                  <div id="contact_map" class="map"></div>
+                </div>
+              </div>
+              {% endif %}
+              <div class="page-with-contact-form">
+                <div class="contact-page-content col-sm-12">
+				  <div class="page-form col-sm-6">
+                    <h4 class="contact-title">{{ settings.contact_title }}</h4>
+                    {% form 'contact' %}
+                    {% if form.posted_successfully? %}
+                    <div class="successForm feedback">
+                      <p>{{ 'contact.form.post_success' | t }}</p>
+                    </div>
+                    {% endif %}
+
+                    {% if form.errors %}
+                    <div class="errorForm feedback">
+                      <p>{{ 'contact.form.post_error' | t }}</p>
+                      {% for field in form.errors %}
+                        <p>{{ 'contact.form.post_field_error_html' | t: field: field, error: form.errors.messages[field] }}</p>
+                      {% endfor %}
+                    </div>
+                    {% endif %}
+
+                    <div id="contactFormWrapper">
+                      <p>
+                        <label>{{ 'contact.form.name' | t }}:</label><br/>
+                        <input type="text" id="contactFormName" name="contact[name]" placeholder="{{ 'contact.placeholder.name' | t }}" />
+                      </p>
+                      <p>
+                        <label>{{ 'contact.form.email' | t }}:</label><br/>
+                        <input type="email" id="contactFormEmail" name="contact[email]" placeholder="{{ 'contact.placeholder.email' | t }}" />
+                      </p>
+                      <p>
+                        <label>{{ 'contact.form.phone' | t }}:</label><br/>
+                        <input type="telephone" id="contactFormTelephone" name="contact[phone]" placeholder="{{ 'contact.placeholder.phone' | t }}" />
+                      </p> 
+                      <p>
+                        <label>{{ 'contact.form.message' | t }}:</label><br/>
+                        <textarea rows="15" cols="75" id="contactFormMessage" name="contact[body]" placeholder="{{ 'contact.placeholder.message' | t }}"></textarea>
+                      </p>
+                      <p>
+                        <input type="submit" id="contactFormSubmit" value="{{ 'contact.form.send' | t }}" class="btn" />
+                      </p>
+                    </div>
+                    {% endform %}
+                  </div>
+                  <div class="page-input col-sm-6">
+                    {{ page.content }}
+                  </div>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

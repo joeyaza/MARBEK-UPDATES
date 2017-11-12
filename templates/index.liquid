@@ -1,0 +1,210 @@
+<section id="main-slideshow">
+  		  <!-- Main slideshow -->
+          {% if settings.maincarousel_active %}
+  			<div class="container"><div class="row"><div class="col-sm-12">
+          <div id="home-slideshow" class="home-slideshow-area">
+            {% if settings.slide-active-1 != false or slide-active-2 != false or settings.slide-active-3 != false or settings.slide-active-4 != false or settings.slide-active-5 != false %}    
+              <div class="home-slideshow">
+                <ul class="slides">
+                  {% assign  array = "1|2|3|4|5|6" | split: "|" %}
+                  {% for i in array %}
+                  {% capture show_slide %}slide-active-{{ i }}{% endcapture %}
+                  {% capture image %}slide-image-{{ i }}.jpg{% endcapture %}
+                  {% capture position %}slide-image-position-{{i}}{% endcapture %}
+                  {% capture capimg %}slide-caption-{{i}}.png{% endcapture %}
+                  {% capture cap02 %}slide-cap-{{ i }}2{% endcapture %}    
+                  {% capture btn01text %}slide-button-text-{{ i }}1{% endcapture %}
+                  {% capture btn01link %}slide-button-link-{{ i }}1{% endcapture %}
+                  {% if settings[show_slide] %}
+                  <li class="slide-{{i}}">  
+                    {% if settings.maincarousel_snow %}<span class="snow"></span>{% endif %}
+                    <a href="{{settings[btn01link]}}">
+                    <img src="{{ image | asset_url }}" alt="{{image}}" />
+                    <div class="caption-group caption-{{ settings[position] }}">
+                      <!--<img class="img-caption" src="{{ capimg | asset_url }}" alt=""/>-->
+                      {% if settings[cap02] != '' %}<div class="caption-main">{{ settings[cap02] }}</div>{% endif %}
+                      {% if settings[btn01text] != '' %}
+                      <div class="btn-group">
+                        {% if settings[btn01text] !='' %}<div class="btn-no01 btn btn-3"><span>{{settings[btn01text]}}</span></div>{% endif %}                        
+                      </div>
+                      {% endif %}
+                      </div>
+                    </a>
+                  </li>
+                  {% endif %}
+                  {% endfor %}
+                </ul>
+              </div>
+            {% endif %}
+              </div>
+              
+             <div id="mobile-slideshow" class="home-slideshow-area">
+            {% if settings.slide-active-1 != false or slide-active-2 != false or settings.slide-active-3 != false or settings.slide-active-4 != false or settings.slide-active-5 != false %}    
+              <div class="home-slideshow">
+                <ul class="slides">
+                  {% for i in array %}
+                  {% capture show_slide %}slide-active-{{ i }}{% endcapture %}
+                  {% capture image %}slide-image-{{ i }}s.jpg{% endcapture %}
+                  {% capture position %}slide-image-position-{{i}}{% endcapture %}
+                  {% capture capimg %}slide-caption-{{i}}.png{% endcapture %}
+                  {% capture cap02 %}slide-cap-{{ i }}2{% endcapture %}    
+                  {% capture btn01text %}slide-button-text-{{ i }}1{% endcapture %}
+                  {% capture btn01link %}slide-button-link-{{ i }}1{% endcapture %}
+                  {% if settings[show_slide] %}
+                  <li class="slide-{{i}}">  
+                    {% if settings.maincarousel_snow %}<span class="snow"></span>{% endif %}
+                    <a href="{{settings[btn01link]}}"><img src="{{ image | asset_url }}" alt="{{image}}" /></a>                   
+                  </li>
+                  {% endif %}
+                  {% endfor %}
+                </ul>
+              </div>
+            {% endif %}
+              </div> 
+              </div></div></div>
+          {% endif %}
+</section>
+
+{% if settings.newarrivals_active %}
+<section id="newarrivals_product" class="newarrivals-block">
+  <div class="newarrivals_wrapper">
+    <div class="container">
+      <div class="row">
+        <div class="newarrivals_inner">
+          <div class="newarrivals-content">            
+            {% for product in collections[settings.newarrivals_collection].products limit: settings.newarrivals_number %}
+              <div class="product-item-wrapper col-sm-3 col-xs-12">     
+                {% include 'index_product-items' %}
+              </div>
+            {% endfor %}                                
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endif %}
+
+<section class="home-content-wrapper">
+  <div class="container">
+    <div class="row">
+      <div class="home-content-inner">
+        <div class="home-main-area">                                        
+          <!-- Middle Banner -->
+          {% if settings.middle_banner_active %}
+          <div class="middle_banner-block">
+            <div class="middle_banner_wrapper">
+              <div class="middle_banner_inner">
+                <div class="middle-banner-content">
+                  <div class="row-1st">
+                    <div class="banner-left col-sm-6">
+                      <a class="banner-bkg" href="#">
+                        <img src="{{ 'middle_banner1_bkg.jpg' | asset_url}}" alt="" />
+                      </a>
+                      <div class="banner-caption cap1">{{ settings.middle_banner1_textarea }}</div>
+                    </div>
+                    <div class="banner-right col-sm-6">
+                      <a class="banner-bkg" href="{{ settings.middle_banner2_linkto }}">
+                        <img src="{{ 'middle_banner2_bkg.jpg' | asset_url}}" alt="" />
+                      </a>
+                      <a href="{{ settings.middle_banner2_linkto }}" class="banner-caption cap2">{{ settings.middle_banner2_textarea }}</a>
+                    </div>
+                  </div>
+                  <div class="row-2nd col-sm-12 col-xs-12">
+                    <div class="middle-banner-caption" style="background:{{ settings.middle_banner3_bkg }};width:100%;">
+                      <a class="banner-bkg" href="{{ settings[middle_banner3_linkto] }}">
+                      <!--<img src="{{ 'middle_banner3_caption.png' | asset_url}}" alt="" />-->{{ settings.middle_banner3_textarea }}
+                      </a>    
+                    </div>
+                      
+                    </div>
+                  <div class="row-1st col-sm-12 col-xs-12">
+                    <div class="banner-left col-sm-6">
+                      <a class="banner-bkg" href="{{ settings.middle_banner4_linkto }}">
+                        <img src="{{ 'middle_banner4_bkg.jpg' | asset_url}}" alt="" />
+                      </a>
+                      <a href="{{ settings.middle_banner4_linkto }}" class="banner-caption cap3">{{ settings.middle_banner4_textarea }}</a>
+                    </div>
+                    <div class="banner-right col-sm-6">
+                      <a class="banner-bkg" href="{{ settings.middle_banner5_linkto }}">
+                        <img src="{{ 'middle_banner5_bkg.jpg' | asset_url}}" alt="" />
+                      </a>
+                      <a href="{{ settings.middle_banner5_linkto }}" class="banner-caption cap4">{{ settings.middle_banner5_textarea }}</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          {% endif %}
+          
+          <!-- Bottom block -->
+          <div class="besrseller_wrapper">
+            {% if settings.bestseller_active %}
+            <div class="bestseller-block ">
+              <div class="bestseller_wrapper">
+                <div class="bestseller_inner">
+                  <div class="home-title home-title-bestseller"><h3>{{settings.bestseller_title}}</h3></div>
+                  <div class="bestseller-content">
+                    {% for product in collections[settings.bestseller_collection].products limit:settings.bestseller_number %}
+                    <div class="product-item-wrapper col-md-3 col-sm-3 col-xs-6">                
+                      {% include 'index_product-items' %}
+                    </div>
+                    {% endfor %}
+                  </div>
+                </div>
+              </div>
+            </div>
+            {% endif %}    
+
+            {% if settings.toprated_active %}
+            <div class="bestseller-block ">
+              <div class="bestseller_wrapper">
+                <div class="bestseller_inner">
+                  <div class="home-title home-title-bestseller"><h4>{{settings.toprated_title}}</h4></div>
+                  <div class="bestseller-content">
+                    {% for product in collections[settings.toprated_collection].products limit:settings.toprated_number %}
+                    <div class="product-item-wrapper col-sm-4 col-xs-6">                
+                      {% include 'index_product-items' %}
+                    </div>
+                    {% endfor %}
+                  </div>
+                </div>
+              </div>
+            </div>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% if settings.bottom_active %}
+<section id="bottom_block" class="bottom_infor" style="background-image:url({{'bottom_bkg.jpg'|asset_url}})">
+  <div class="bottom_infor_wrapper">
+    <div class="container">
+      <div class="row">
+        <div class="bottom_infor_inner">
+          <div class="block1st col-sm-4">
+            <div class="img"><img src="{{ 'bottom1_img.png' | asset_url }}" alt="" /></div>
+            <div class="heading">{{ settings.bottom1_text }}</div>
+            <div class="desc">{{ settings.bottom1_desc }}</div>
+          </div>
+          <div class="block2nd col-sm-4">
+            <div class="img"><img src="{{ 'bottom2_img.png' | asset_url }}" alt="" /></div>
+            <div class="heading">{{ settings.bottom2_text }}</div>
+            <div class="desc">{{ settings.bottom2_desc }}</div>
+          </div>
+          <div class="block3rd col-sm-4">
+            <div class="img"><img src="{{ 'bottom3_img.png' | asset_url }}" alt="" /></div>
+            <div class="heading">{{ settings.bottom3_text }}</div>
+            <div class="desc">{{ settings.bottom3_desc }}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endif %}
+

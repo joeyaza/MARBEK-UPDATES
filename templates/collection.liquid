@@ -1,0 +1,392 @@
+{% include 'pagination' %} <!-- 
+<section class="collection-heading">
+  <div class="collection-heading-wrapper">
+    <div class="container">
+      <div class="row">
+        <div class="collection-heading-inner">
+          <h1 class="page-title"><span>{{ collection.title }}</span></h1>
+          
+          {% paginate collection.products by settings.pagination_limit %}
+        
+          <div class="breadcrumb clearfix">
+            <span itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a href="{{ shop.url }}" title="{{ shop.name | escape }}" itemprop="url"><span itemprop="title">{{ 'general.breadcrumbs.home' | t }}</span></a></span>
+            <span class="arrow-space">/</span>
+            <span itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a href="{{ collection.url }}" title="{{ collection.title | escape }}" itemprop="url"><span itemprop="title">{{ collection.title }}</span></a></span>
+
+            {% if current_tags %}
+              {% for tag in current_tags %}
+                <span class="arrow-space">/</span>
+                <span itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a href="/collections/{% if collection.handle != blank %}{{ collection.handle }}{% else %}all{% endif %}/{{ tag | handleize }}" title="{{ tag | escape }}" itemprop="url"><span itemprop="title">{{ tag }}</span></a></span>
+              {% endfor %}
+            {% endif %}
+			
+            {% if paginate.pages != 0 %}
+              <span class="arrow-space">/</span> <strong>{{ 'general.pagination.summary' | t: current_page: paginate.current_page, pages: paginate.pages }}</strong>
+            {% endif %}
+
+          </div>
+         
+          {% endpaginate %}
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+-->
+{% assign tag1 = "0-50" %}
+{% assign tag2 = "50-100" %}
+{% assign tag3 = "100-150" %}
+{% assign tag4 = "0-100" %}
+{% assign tag5 = "0-150" %}
+{% assign tag6 = "50-150" %}
+
+<section class="collection-banner">
+  <div class="collection-banner-wrapper">
+    <div class="container">
+      <div class="row">
+        <div class="collection-banner-inner">
+          {% if settings.collection_banner %}
+          <div class="collection-panner">
+            <img src="{{ 'collection_banner.jpg' | asset_url }}" class="img-responsive" alt="" />
+          </div>
+          {% endif %}
+          {% if settings.collection_image or settings.collection_desc %}
+          <div class="collection-image-wrapper row">
+
+            {% if settings.collection_image %}
+            <div class="collection-image{% if settings.collection_desc %} col-md-8{% else %} col-md-24{% endif %} text-center">
+              {% if collection.image %}
+              <img src="{{ collection.image.src | collection_img_url: 'original' }}" alt="{{ collection.title | escape }}" />
+              {% else %}
+              <img src="{{ collection.products.first.featured_image | product_img_url: 'original' }}" alt="{{ collection.title | escape }}" />
+              {% endif %}
+            </div>
+            {% endif %}
+
+            {% if settings.collection_desc %}
+            {% if collection.description != empty %}
+            <div class="{% if settings.collection_image %}col-md-16{% else %}col-md-24{% endif %}">
+              <div class="collection-description text-left">
+                <div class="description content">{{ collection.description }}</div>
+              </div>
+            </div>
+            {% endif %}
+            {% endif %}
+          </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="collection-content">
+  <div class="collection-content-wrapper">
+    <div class="container">
+      <div class="row">
+        <div class="collection-content-inner">
+          <!-- Tags loading -->
+  		  <div id="tags-load" style="display:none;"><i class="fa fa-spinner fa-pulse fa-2x"></i></div>
+          <div id="collection">
+            
+                {% if collection.products.size == 0 %}
+                  {% include 'helper-default-products' %}
+                {% endif %}
+            	<div class="clear clearfix"></div>   
+            
+                  
+                  
+				<div class="row">
+            	<div class="col-md-3 com-sm-3">   
+                  	<div class="filter-overlay"></div>
+            		<div id="filter-sidebar">
+                  		<a id="trigger" href="#"><i class="fa fa-filter"></i></a>
+                  		<div class="sidebar">
+                          <div class="categoriesSidebar">
+                              <div class="collection-toolbar">
+                                  <div class="cats-filter">
+                                      <button id="showCatsFilter">Categories <i class="fa fa-angle-up"></i></button>
+                                  </div>
+                              </div>
+                              <div id="cats-filter-content">
+                                  {% include 'collection_categories-filter' %}
+                              </div>
+                          </div>
+                          <p class="small"><a href="/collections/{{collection.handle}}">Clear filters <i class="fa fa-close"></i></a></p>
+                          {% include 'collection_tag-filter' %}
+
+                          <div class="collection-toolbar">
+                            <div class="tags-filter">
+                                <button id="showPriceFilter">Filter by Price <i class="fa fa-angle-up"></i></button>
+                            </div>
+                          </div>
+                          <div id="price-filter-content">
+                              <div class="filter-tag-group">
+                                  <div class="tag-group col-md-12">
+                                    <div id="priceLink" style="display:none"></div>
+                                      <div class="price-filter">
+                                          <div id="slider-range"></div>
+                                          <a href="/collections/{{collection.handle}}">Filter</a>
+                                          <p>
+                                              <label for="amount">Price: </label>
+                                            <label id="amount"></label>
+                                          </p>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                          
+                  		</div>
+                  	</div>
+            	</div>
+            	<div class="col-md-9 com-sm-9">
+                  {% paginate collection.products by settings.pagination_limit %}                            
+            	<div class="collection-toolbars ">                  
+                  <div class="list-inline text-right">
+                     <!-- Sort by -->
+                    {% if settings.collection_sort and collection.products_count > 1 %}
+                    <div class="sortBy">
+                      <div id="sortButtonWarper">Sort by: 
+                        <select id="sortby">
+                          <option value="{% if collection.handle == "all" %}/collections/all{% else %}{{ collection.url }}{% endif %}/?sort_by=manual">Recommended</option>
+                          <option value="{% if collection.handle == "all" %}/collections/all{% else %}{{ collection.url }}{% endif %}/?sort_by=created-descending">Latest</option>
+                          <option value="{% if collection.handle == "all" %}/collections/all{% else %}{{ collection.url }}{% endif %}/?sort_by=title-ascending">Name(A to Z)</option>
+                          <option value="{% if collection.handle == "all" %}/collections/all{% else %}{{ collection.url }}{% endif %}/?sort_by=title-descending">Name(Z to A)</option>
+                          <option value="{% if collection.handle == "all" %}/collections/all{% else %}{{ collection.url }}{% endif %}/?sort_by=price-ascending">Price(Low to High)</option>
+                          <option value="{% if collection.handle == "all" %}/collections/all{% else %}{{ collection.url }}{% endif %}/?sort_by=price-descending">Price(High to Low)</option>                          
+                          <!--<option value="{% if collection.handle == "all" %}/collections/all{% else %}{{ collection.url }}{% endif %}/?sort_by=created-ascending">{{'collections.sorting.date_ascending'|t}}</option>                          
+                          <option value="{% if collection.handle == "all" %}/collections/all{% else %}{{ collection.url }}{% endif %}/?sort_by=best-selling">{{'collections.sorting.best_selling'|t}}</option>-->
+                        </select>
+                      </div>                   
+                    </div>        
+                    {% endif %} 
+                    <!-- View as -->
+                    {% if settings.collection_grid_list %}
+                    <div class="grid_list">
+                      <ul class="list-inline option-set" data-option-key="layoutMode">
+                        <li data-option-value="fitRows" id="goGrid" class="goAction {% if settings.collection_grid_list_default == 'grid' %} active{% endif %}" data-toggle="tooltip" data-placement="top" title="Grid">
+                          <i class="fa fa fa-th"></i>
+                        </li>
+                        <li data-option-value="straightDown" id="goList" class="goAction {% if settings.collection_grid_list_default == 'list' %} active{% endif %}" data-toggle="tooltip" data-placement="top" title="List">
+                          <i class="fa fa-th-list"></i>
+                        </li>
+                      </ul>
+                    </div>
+                    {% endif %}
+                                                    
+                  </div>
+                  {% include 'pagination' %}
+                </div>
+                  <div class="row">
+                  <div class="collection-items clearfix">                  
+                    <div class="products" id="coll-products">
+                    {% for product in collection.products %}
+                      <div class="product-item-wrapper {% cycle 'first', '', '', 'last' %} col-sm-4 col-xs-6 ">
+                        {% include 'index_product-items' with collection.handle %}
+                      </div>
+                    {% endfor %}
+                    </div>
+                </div>
+                {% include 'pagination' %}
+            	</div></div>
+            </div>
+            {% endpaginate %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+ <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script type="text/javascript">
+  var minval = 0, maxval = 200;
+	$( function() {
+		priceFilter();
+      	console.log(Currency.currentCurrency);
+      	var doFilter = function(data,min,max) {
+                min = typeof min !== 'undefined' ? min : 0;
+                max = typeof max !== 'undefined' ? max : 250;
+                var output = new Array();
+                for (var i = 0; i < data.products.length; i++) {
+                    if (data.products[i].variants[0].price >= min && data.products[i].variants[0].price <= max) {
+                        output.push(data.products[i]);
+                    }
+                }
+                return output;
+        }
+        
+        function doProducts(collection, limit) {
+                collection = typeof collection !== 'undefined' ? collection : 'books';
+                limit = typeof limit !== 'undefined' ? limit : 250;
+                var url = '/collections/' + collection + '/products.json?limit=' + limit;
+                return url;
+        } 
+      
+      	$(".price-filter123 a").off().on('click', function (e) {
+                e.preventDefault();
+                var min = parseInt($( "#slider-range" ).slider( "values", 0 ));
+                var max = parseInt($( "#slider-range" ).slider( "values", 1 ));
+                var collection = "{{collection.handle}}";
+                var json = doProducts(collection, 1);
+                var imgsrc = 'https://cdn.shopify.com/s/assets/admin/no-image-large-d7c282f81cbf208c9ee0f0f27cb214c7.gif';		
+               
+                $.ajax({
+                    type: 'GET',
+                    url: json,
+                    dataType: 'jsonp',
+                    success: function (data) {                      
+                      	$('#coll-products').html('');
+                        var output = doFilter(data,min,max);
+                      	console.log(output);
+                        for (var i = 0; i < output.length; i++) {
+                            var item = output[i];
+                            var tempSrc, tempSrc1;
+                            if (item.images.length > 0) {
+                               tempSrc  = item.images[0].src;
+                               if (item.images.length > 1) {
+                                    tempSrc1  = item.images[1].src;
+                               }else {
+                                    tempSrc1  = item.images[0].src;
+                               }
+                            } else {
+                                tempSrc = imgsrc;
+                            }
+                            var product = '<div class="product-item-wrapper col-sm-4 col-xs-6 "><div class="row-container list-unstyled clearfix"><div class="row-left">';
+                            product += '<a href="/collections/{{ collections.handle }}/products/'+item.handle+'" class="hoverBorder container_item">'
+                            product += '<div class="hoverBorderWrapper"><div class="reveal">';	
+                            product += '<img src="'+tempSrc+'" class="not-rotation img-responsive front" alt="'+item.title+'" /><div class="hidden"> ';
+                            product += '<img class="hidden" src="'+tempSrc1+'" alt="'+item.title+'" /></div></div><div class="mask"></div></div></a>';
+                            product += '<div class="hover-mask"><div class="group-mask"><div class="inner-mask"></div></div></div></div>';
+                            product += '<div class="row-right animMix"><div class="product-title"><a class="title-5" href="/collections/{{ collections.handle }}/products/'+item.handle+'">'+item.title+'</a></div>';		
+                            if(item.variants[0].compare_at_price && item.variants[0].compare_at_price > 0){
+                                product += '<div class="product-price"><span class="price_sale"><span class=money>'+item.variants[0].price+'</span></span><del class="price_compare"> <span class=money>'+item.variants[0].compare_at_price+'</span></del></div>';
+                            }else {
+                              	var price = Shopify.formatMoney(item.variants[0].price, "{{shop.money_format}}");
+                                                                price = '<span class="selected-currency"></span>' + item.variants[0].price;
+                                product += '<div class="product-price"><span class="price"><span class=money>'+price+'</span></span></div>';
+                            }
+                            product += '<form action="/cart/add" method="post"><div class="hide clearfix">';			
+                            product += '<select name="id"><option selected="selected" value="'+item.variants[0].id+'">'+item.variants[0].title+'</option></select></div>';			
+                            product += '<div class="effect-ajax-cart"><input type="hidden" name="quantity" value="1" />';			
+                            product += '<button class="btn btn-1 select-option" type="button" onclick="window.location=\'/products/'+item.handle+'\';">SHOP NOW</button>';			             
+                            product += '</div></form></div></div></div>';
+                          console.log(product);  
+                          $('#coll-products').append(product);
+                        }
+                    }
+                });
+        });
+        
+          
+          
+		$(".price-filter a").off().on('click', function (event) {
+          event.preventDefault();
+          
+          minval = $( "#slider-range" ).slider( "values", 0 );
+          maxval = $( "#slider-range" ).slider( "values", 1 );
+          
+          var url = "{% if collection.handle == "all" %}/collections/all{% else %}{{ collection.url }}{% endif %}";  
+          if(parseInt(minval) <= 50 && parseInt(maxval) == 50){
+            url = "{% if collection.handle == "all" %}/collections/all{% else %}{{ collection.url }}{% endif %}/{{tag1}}";                     
+          }
+          
+          if(parseInt(minval) <= 50 && (parseInt(maxval) > 50 && parseInt(maxval) <= 100)){
+            url = "{% if collection.handle == "all" %}/collections/all{% else %}{{ collection.url }}{% endif %}/{{tag4}}";                     
+          }
+          if(parseInt(minval) <= 50 && (parseInt(maxval) > 100 && parseInt(maxval) <= 150)){
+            url = "{% if collection.handle == "all" %}/collections/all{% else %}{{ collection.url }}{% endif %}/{{tag5}}";                    
+          }
+          if(parseInt(minval) >= 50 && parseInt(maxval) <= 100){
+            url = "{% if collection.handle == "all" %}/collections/all{% else %}{{ collection.url }}{% endif %}/{{tag2}}";                     
+          }
+          if(parseInt(minval) >= 50 && (parseInt(maxval) > 100 && parseInt(maxval) <= 150)){
+            url = "{% if collection.handle == "all" %}/collections/all{% else %}{{ collection.url }}{% endif %}/{{tag6}}";                     
+          }
+          if(parseInt(minval) >= 100 && parseInt(maxval) >= 150){
+           // $("#priceLink").html('{{ tag3 | link_to_add_tag: tag3 }}');
+            url = "{% if collection.handle == "all" %}/collections/all{% else %}{{ collection.url }}{% endif %}/{{tag1}}";                     
+          }
+                    
+          //var url = $("#priceLink").find("a").attr("href"); 
+                           
+          console.log(url);
+          //window.location.replace(url);
+          
+          $.ajax({
+            type: 'GET',
+            url: url,
+            data: {},
+            beforeSend: function( xhr ) {
+              $("#tags-load").show();
+            },
+            complete: function (data) {          
+              $('#collection').html($("#collection", data.responseText).html());
+              history.pushState({
+                page: url
+              }, url, url);      
+              $("#tags-load").hide();
+              handleGridList();
+              toggleTagsFilter();
+              toggleCatsFilter();
+              togglePriceFilter();
+              toggleSizeFilter();
+              priceFilter();
+            }
+          });
+         
+        });
+    });
+  function priceFilter(){
+    //var curr1 = Currency.currentCurrency;
+    //curr1 = curr1.replace('CAD', 'USD');
+    //curr1 = curr1.toLowerCase();
+   $( "#slider-range" ).slider({
+			range: true,
+			min: 0,
+			max: 150,
+          step: 50,
+			values: [minval, maxval ],
+			slide: function( event, ui ) {
+				$( "#amount" ).html( '<i class="fa fa-gbp"></i> ' + ui.values[ 0 ] + ' - <i class="fa fa-gbp"></i> ' + ui.values[ 1 ] );
+			}
+		});
+		$( "#amount" ).html( '<i class="fa fa-gbp"></i> ' + $( "#slider-range" ).slider( "values", 0 ) +
+			' - <i class="fa fa-gbp"></i> ' + $( "#slider-range" ).slider( "values", 1 ) ); 
+  }
+	</script>
+<script type="text/javascript">
+  $(document).ready(function() {      
+    $('#sortby').change(function(e){
+    	window.location.replace($(this).val());
+    });
+    $("#trigger").click(function(){
+        if($("#filter-sidebar").hasClass('open')){
+            //$("#filter-sidebar").hide("slide", { direction: "right"  }, 2000);
+      		$("#filter-sidebar").removeClass('open');
+      		$("#filter-sidebar").addClass('closed');
+            $(".filter-overlay").removeClass('active');                    
+        }else{
+			//$("#filter-sidebar").show("slide", { direction: "left"  }, 2000);
+      		$("#filter-sidebar").addClass('open');
+      		$("#filter-sidebar").removeClass('closed');
+            $(".filter-overlay").addClass('active');  
+        }
+		return false;
+	});
+	if(location.search.search("sort_by=") == -1){
+      
+    }
+    else{
+    if(location.search != ""){
+      var stpo = location.search.search("sort_by=")+8, sortby_url = '.'+location.search.substr(stpo).split('='), sortby_url_a = sortby_url+" a";
+      $(sortby_url).addClass("active");
+      $('#sortButton .name').html($(sortby_url_a).html());
+    }
+    else{
+       $('.manual').addClass("active");
+    }
+    }    
+  });
+</script>

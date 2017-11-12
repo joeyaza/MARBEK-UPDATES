@@ -1,0 +1,85 @@
+{% if settings.hpl-allcollections_active %}
+<!-- All Collections -->
+<div class="homepage-left all-collections-block">
+  <div class="all-collections-content">
+    <div class="hlp-title all-collections-title">{{ settings.hpl-allcollections_title }}</div>
+    <div class="hlp-content all-collections-content">
+      <ul class="all-collections-links">
+        {% for l in linklists[settings.hpl-allcollections_links].links %}
+          <li class="link-item{% if l.active %} active{% endif %}">
+            <a href="{{ l.url }}">
+              <span>{{ l.title }}</span>
+            </a>
+          </li>
+        {% endfor %} 
+      </ul>            
+    </div>
+  </div>
+</div>
+{% endif %}
+
+{% if settings.hpl-topbanner_active %}
+<!-- Top Banner -->
+<div class="homepage-left left-top-banner">
+  <div class="left-top-banner-content">
+    <img src="{{ 'hpl-topbanner_image.png' | asset_url }}" alt="left top banner" />
+  </div>
+</div>
+{% endif %}
+
+{% if settings.hpl-testimonial_active %}
+<!-- Testimonial -->
+<div class="homepage-left left-testimonial">
+  <div class="left-testimonial-content">
+    <div class="testimonial-slider">
+      {% for i in (1..settings.hpl-testimonial_num) %}
+      {% capture img %}hpl-testimonial_avatar{{i}}.png{% endcapture %}
+      {% capture previ %}hpl-testimonial_text{{i}}{% endcapture %}
+      <div class="testimonial-item">
+        <div class="testimonial-image"><img src="{{ img | asset_url }}" alt="" /></div>
+        <div class="testimonial-preview">{{ settings[previ] }}</div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+{% endif %}
+
+{% if settings.hpl-blog_active %}
+<!-- Blog post -->
+<div class="homepage-left left-blog">
+  <div class="left-blog-content">
+    <div class="hlp-title left-blog-title home-title"><h4>{{settings.hpl-blog_title}}</h4></div>
+    <div class="left-blog-item"> 
+      {% assign articles = blogs[settings.hpl-blog_select].articles %}
+      {% for article in articles limit:2 %}
+        <div class="homeblog-item-inner">
+          <div class="homeblog-top">
+            <a class="homeblog-img" href="{{ article.url }}">
+              <img src="{{article.image | img_url: 'medium'}}" alt="" style="width:100%" />
+            </a>
+            <span class="homeblog-date">
+              {{article.published_at | date: '%d'}}
+              <small>{{article.published_at | date: '%b'}}</small>
+            </span>
+          </div>
+          <div class="homeblog-bottom">
+            <a href="{{ article.url }}" class="homeblog-title clearfix">{{ article.title }}</a>
+            <div class="homeblog-desc">{{ article.content | strip_html | truncatewords: 10 }}</div>
+            <div class="homeblog-action"><a href="{{ article.url }}"><i class="fa fa-angle-double-right"></i> {{ settings.hpl-blog_action }}</a></div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+{% endif %} 
+
+{% if settings.hpl-supbanner_active %}
+<!-- Bottom Banner -->
+<div class="homepage-left left-bottom-banner">
+  <div class="left-top-banner-content">
+    <img src="{{ 'hpl-btmbanner_image.png' | asset_url }}" alt="left top banner" />
+  </div>
+</div>
+{% endif %}

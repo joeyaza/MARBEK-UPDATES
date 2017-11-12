@@ -1,0 +1,52 @@
+<section class="shipping-wrapper">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="shipping-caption">
+        	<a class="banner-bkg" href="{{ settings[middle_banner3_linkto] }}">
+              <img src="{{ 'icon-boat-dark.png' | asset_url}}" alt="" />{{ settings.middle_banner3_textarea }}
+            </a>    
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="page-heading">
+  <div class="page-heading-wrapper">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+        <div class="page-heading-inner">
+          <div class="breadcrumb clearfix">
+            <span itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a href="{{ shop.url }}" title="{{ shop.name | escape }}" itemprop="url"><span itemprop="title">{{ 'general.breadcrumbs.home' | t }}</span></a></span>
+            <span class="arrow-space">/</span>
+            <span itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+              <a href="{{ page.url }}" title="{{ page.title }}">{{ page.title }}</a>
+            </span>              
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="page-content">
+  <div class="page-wrapper">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+        <div class="page-inner">
+          <div id="page">
+            <div class="details">              
+              {{ page.content }}
+              <div class="backtotop"><a href="javascript;">Back to Top</a></div>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+

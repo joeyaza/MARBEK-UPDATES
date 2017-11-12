@@ -1,0 +1,125 @@
+<!-- filter tags group -->
+{% assign array_tag1 = settings.group_tag_1 | split: ',' %}
+      {% assign array_tag2 = settings.group_tag_2 | split: ',' %}
+      {% assign array_tag3 = settings.group_tag_3 | split: ',' %}
+      {% assign array_tag4 = settings.group_tag_4 | split: ',' %}
+
+<div class="collection-toolbar">
+	<div class="tags-filter">
+		<button id="showTagsFilter">{{ settings.group_tag_1_label }}<i class="fa fa-angle-up"></i></button>
+	</div>
+</div>
+<div id="tags-filter-content">
+	<div class="filter-tag-group">
+
+      <!-- tags groupd 1 -->
+      {% if array_tag1.size > 0 %}
+      <div class="tag-group col-xs-12" id="coll-filter-1">
+          {% assign swatch = false %}
+          {% if settings.color_swatch %}
+          {% if settings.group_tag_1_label contains 'Color' or settings.group_tag_1_label contains 'color' %}
+              {% assign swatch = true %}
+          {% endif %}
+          {% endif %}
+          <ul>
+          {% for t in array_tag1 %}
+              {% assign tag = t | strip %}
+              {% if collection.tags contains tag %}
+                  {% if swatch %}
+                      {% assign color_img = tag | downcase | append: '.png' | asset_url %}
+                      {% assign style = 'background-color: ' | append: tag | downcase | append: '; background-image: url(' | append: color_img | append: ');' %}
+                      {% if current_tags contains tag %}
+                          <li class="active swatch-tag {% if tag == 'White' or tag == 'white' %} white-color{% endif %}"><span style="{{ style }}" class="btooltip" data-toggle="tooltip" data-placement="top" title="{{tag}}">{{ ' ' | link_to_remove_tag: tag }}</span></li>
+                      {% else %}
+                          <li class="swatch-tag {% if tag == 'White' or tag == 'white' %} white-color{% endif %}"><span style="{{ style }}" class="btooltip" data-toggle="tooltip" data-placement="top" title="{{tag}}">{{ ' ' | link_to_add_tag: tag }}</span></li>
+                      {% endif %}
+
+                  {% else %}
+                      {% if current_tags contains tag %}
+                          <li class="active">{{ '<span class="fe-checkbox"></span> ' | append: tag | link_to_remove_tag: tag }}</li>
+                      {% else %}
+                          <li>{{ '<span class="fe-checkbox"></span> ' | append: tag | link_to_add_tag: tag }}</li>
+                      {% endif %}
+                  {% endif %}
+              {% endif %}
+          {% endfor %}
+          </ul>
+      </div>
+      {% endif %}
+  	</div>
+</div>
+<div class="collection-toolbar">
+	<div class="tags-filter">
+		<button id="showSizeFilter">{{ settings.group_tag_4_label }}<i class="fa fa-angle-up"></i></button>
+	</div>
+</div>
+<div id="size-filter-content">
+	<div class="filter-tag-group">
+      {% if array_tag4.size > 0 %}
+      <div class="tag-group col-md-12" id="coll-filter-4">
+          {% assign swatch = false %}
+          {% if settings.color_swatch %}
+          {% if settings.group_tag_4_label contains 'Color' or settings.group_tag_4_label contains 'color' %}
+              {% assign swatch = 'swatch-tag' %}
+          {% endif %}
+          {% endif %}
+          <ul>
+          {% for t in array_tag4 %}
+              {% assign tag = t | strip %}
+              {% if collection.tags contains tag %}
+                  {% if swatch %}
+                      {% assign color_img = tag | downcase | append: '.png' | asset_url %}
+                      {% assign style = 'background-color: ' | append: tag | downcase | append: '; background-image: url(' | append: color_img | append: ');' %}
+                      {% if current_tags contains tag %}
+                          <li class="active swatch-tag {% if tag == 'White' or tag == 'white' %} white-color{% endif %}"><span style="{{ style }}" class="btooltip" data-toggle="tooltip" data-placement="top" title="{{tag}}">{{ ' ' | link_to_remove_tag: tag }}</span></li>
+                      {% else %}
+                          <li class="swatch-tag {% if tag == 'White' or tag == 'white' %} white-color{% endif %}"><span style="{{ style }}" class="btooltip" data-toggle="tooltip" data-placement="top" title="{{tag}}">{{ ' ' | link_to_add_tag: tag }}</span></li>
+                      {% endif %}
+
+                  {% else %}
+                      {% if current_tags contains tag %}
+                          <li class="active">{{ '<span class="fe-checkbox"></span> ' | append: tag | link_to_remove_tag: tag }}</li>
+                      {% else %}
+                          <li>{{ '<span class="fe-checkbox"></span> ' | append: tag | link_to_add_tag: tag }}</li>
+                      {% endif %}
+                  {% endif %}
+              {% endif %}
+          {% endfor %}
+          </ul>
+      </div>
+      {% endif %}
+  </div>
+</div>
+
+
+
+
+<script>
+  $(function () {
+    $("#coll-filter-1 ul li a, #coll-filter-2 ul li a, #coll-filter-4 ul li a").off().on('click', function (event) {
+      event.preventDefault();
+      var url = $(this).attr('href');
+      $.ajax({
+        type: 'GET',
+        url: url,
+        data: {},
+        beforeSend: function( xhr ) {
+          $("#tags-load").show();
+        },
+        complete: function (data) {          
+          $('#collection').html($("#collection", data.responseText).html());
+          history.pushState({
+            page: url
+          }, url, url);      
+          $("#tags-load").hide();
+          handleGridList();
+          toggleTagsFilter();
+          toggleCatsFilter();
+          toggleSizeFilter();
+          togglePriceFilter();
+          priceFilter();
+        }
+      });
+    });
+  });
+</script>
