@@ -722,6 +722,9 @@ $zoom: 1.7;
 }
 /*End Ajax cart*/
 /*Header*/
+header {
+  background: white;
+}
 header#top {
   .top-header {
     background-color: $bkg_top_header;
@@ -917,15 +920,15 @@ header#top {
     }
   }
   .main-header {
-    background-color: $bkg_main_header;
-    height: 80px;
+    /*background-color: $bkg_main_header;*/
+    /*height: 80px;*/
     display: table;
     width: 100%;
     @include transition(ease, all, 0.5s);
-    @include box-shadow(0px,2px,2px,0px,rgba(0,0,0,0.15));
-    position: relative;
+    /*@include box-shadow(0px,2px,2px,0px,rgba(0,0,0,0.15));*/
+    /*position: absolute;*/
     .main-header-wrapper {
-      height: 80px;
+      /*height: 80px;*/
       .main-header-inner {
         display: table;
         width: 100%;
@@ -934,8 +937,8 @@ header#top {
         .left-area {
           @include display_inline();
           float: left;
-          height: 80px;
-          line-height: 80px;
+          /*height: 80px;*/
+          /*line-height: 80px;*/
           .support-text {
             font-size: 16px;
             color: $color_text_header;
@@ -968,12 +971,14 @@ header#top {
           }
         }
         .right-area {
-          @include display_inline();
+/*          @include display_inline();
           float: right;
           height: auto;
           line-height: 20px;
           text-align: right;
-          padding-left:10px;padding-right:10px;
+          padding-left:10px;padding-right:10px;*/
+          position: absolute;
+          right: 40px;
           #cart-target {
             display: inline-block !important;
             position: relative;
@@ -1162,18 +1167,19 @@ header#top {
   }
   .nav-header {
     background-color: $bkg_nav_header;
-    height: 80px;
-    padding-right: 70px;
+    /*height: 80px;*/
+/*    padding-right: 70px;*/
     float: none;
-    @include display-inline();
+    /*@include display-inline();*/
+    padding-bottom: 20px;
     @include transition(ease, all, 0.7s);
     .nav-header-wrapper {
-      height: 80px;
+      /*height: 80px;*/
       .nav-header-inner {
-        height: 80px;
+        /*height: 80px;*/
         ul.navigation-left {
-          height: 80px;
-          line-height: 80px;
+          /*height: 80px;*/
+          /*line-height: 80px;*/
           margin: 0;
           text-align: center;
           > li,
@@ -1181,8 +1187,8 @@ header#top {
             list-style: none;
             margin: 0;
             @include display_inline();
-            height: 80px;
-            line-height: 80px;
+            /*height: 80px;*/
+            /*line-height: 80px;*/
             text-align: left;
             padding: 0 10px;
             background-color: transparent;
@@ -1190,7 +1196,7 @@ header#top {
               span {
                 font-size: $font_size_general;
                 text-transform: uppercase;
-                color: $color_text_menu;
+                color: black;
               }
               i.fa {
                 color: $color_text_menu;
@@ -1461,22 +1467,22 @@ header#top {
   &.affix {
     width: 100%;
     z-index: 99;
-    border-color: $color_hover_general;
-    background-color: $color_hover_general;
-    @include box-shadow(0,0,0,1px, $border_header); 
+/*    border-color: $color_hover_general;
+    background-color: $color_hover_general;*/
+    /*@include box-shadow(0,0,0,1px, $border_header); */
     .top-header {
       height: 0;
       line-height: 0;
       display: none;
     }
     .main-header {
-      height: 80px;
+      /*height: 80px;*/
       .main-header-wrapper {
-        height: 80px;
+        /*height: 80px;*/
         .main-header-inner {
           .left-area {
-            height: 80px;
-            line-height: 80px;
+            /*height: 80px;*/
+            /*line-height: 80px;*/
             .nav-logo {
               display: none;
               height: 0;
@@ -1562,7 +1568,7 @@ header#top {
       }
     }
     &+ .fix-sticky {
-      height: 153px;
+      /*height: 153px;*/
     }
     .support-area-wrapper {
       display: none;
@@ -1656,11 +1662,17 @@ header#top {
 .home-slideshow {
   position: relative;
   margin-bottom: 0px;
-  margin-top:10px;
+/*  margin-top:10px;*/
   z-index:45;
   ul.slides {
     > li {
       position: relative;margin-bottom:0;
+      a {
+        img {
+          width: 100%;
+          height: 100vh;
+        }
+      }
       .caption-group {
         position: absolute;
         top: 50%;
@@ -3649,6 +3661,22 @@ blockquote::after{
       #collection {
         display: block;
         float: none;
+        position: relative;
+        .categoriesSidebar {
+          /*position: absolute;*/
+          z-index: 10;
+          background: white;
+          .cats-wrapper {
+            max-height: 0;
+            display: none;
+            @include transition(ease, all, 0.5s);
+            &.open-active {
+              height: 100%;
+              display: block;
+              @include transition(ease, all, 0.5s);
+            }
+          }
+        }
         .collection-toolbar {
           display: block;
           float: left;
@@ -4150,6 +4178,7 @@ blockquote::after{
             margin-bottom: 25px;
             line-height: 30px;
             font-weight:400;
+            text-align: center;
           }
           .rating-star {
             margin-bottom: 26px;
@@ -4164,6 +4193,9 @@ blockquote::after{
           }
           .description {
             color: $color_text_title;
+            border-top: 2px solid #e1e1e1;
+            border-bottom: 2px solid #e1e1e1;
+            padding: 15px 0;
             .quick_overview {
               text-transform: uppercase;
               color: $color_text_title;
@@ -4249,12 +4281,15 @@ blockquote::after{
               }
             }
             .product-options  {
-              margin-top: 20px;
+              /*margin-top: 20px;*/
               width: 100%;
               float: left;
               .description{margin-bottom:20px;}
               .swatch {
                 margin-bottom: 18px;
+                width: 320px;
+                margin-left: auto;
+                margin-right: auto;
                 .header {
                   font-weight: $font_weight_normal;
                   font-family: $font_heading;
@@ -4326,6 +4361,21 @@ blockquote::after{
                     cursor: text;
                   }
                 }
+              }
+              .fancybox {
+                border: none;
+                color: #434343;
+                text-decoration: underline;
+                  &:hover {
+                    background: none;
+                    color: #434343;
+                    text-transform: bold;
+                  }
+              }
+              .pop-up-wrap {
+                text-align: center;
+                padding-bottom: 20px;
+                width: 100%;
               }
             }
           }
@@ -10142,3 +10192,32 @@ header#top .nav-header .nav-header-wrapper .nav-header-inner ul.navigation-left,
   #size-chart {padding:15px !important;}
   #customer_orders table th, #customer_orders table td {padding: 10px 0px;font-size: 11px;}
 }
+
+.index-template {
+  header {
+      .main-header {
+        position: absolute !important;
+
+        .nav-item {
+          a {
+            span {
+              color: white !important;
+            }
+          }
+        }
+        &:hover {
+          background: white;
+          .nav-item {
+            a {
+              span {
+                color: black !important;
+              }
+            }
+          }
+        }
+      }
+  }
+
+}
+
+

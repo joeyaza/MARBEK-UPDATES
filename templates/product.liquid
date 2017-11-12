@@ -74,6 +74,10 @@
               </div>
               <div class="col-md-6" id="product-information">
                 <h1 class="title">{{ product.title }}</h1>
+                  {% assign variant = product.selected_or_first_available_variant %}
+                  <div class="purchase">
+                      <h2 class="price title" id="price-preview">{% if variant.price < variant.compare_at_price %}<span class="price_sale">{{ variant.price | money }}</span> <del class="price_compare">{{ variant.compare_at_price | money }}</del>{% else %}{{ variant.price | money }}{% endif %}</h2>
+                  </div>
                 
                 {% if settings.enable_rating_star %}
                 <div class="rating-star">
@@ -99,6 +103,15 @@
                       {{ product.description }}
                     </div>
                     
+
+
+                    <div class="pop-up-wrap">
+                      {% if product.options contains 'Size' %}
+                      <a class="btn fancy-popup fancybox" href="#dets-care">Details & Care</a>
+                      {% endif %}
+                      <a class="btn fancy-popup fancybox" href="#size-chart">Size Guide</a>
+                      <a class="btn fancy-popup fancybox" href="#del-retrns">Delivery & Returns</a>
+                    </div>
                     {% if settings.color_swatch %}
                       {% if product.available %}
                         {% for option in product.options %}
@@ -115,13 +128,6 @@
                         {% endfor %}
                       </select>
                     </div>
-                    {% if product.options contains 'Size' %}
-                    <a class="btn fancy-popup fancybox" href="#size-chart">Size Guide</a>
-                    {% endif %}
-                    {% assign variant = product.selected_or_first_available_variant %}
-                	<div class="purchase">
-                      <h2 class="price" id="price-preview">{% if variant.price < variant.compare_at_price %}<span class="price_sale">{{ variant.price | money }}</span> <del class="price_compare">{{ variant.compare_at_price | money }}</del>{% else %}{{ variant.price | money }}{% endif %}</h2>
-                	</div>
                     
                     {% if settings.display_quantity_dropdown %}
                     <div class="quantity-wrapper clearfix">
