@@ -32,38 +32,6 @@
           </li>
           {% endfor %}
         </ul>
-        <div class="col-md-12 com-sm-12">   
-                    <div class="filter-overlay"></div>
-                <div id="filter-sidebar">
-                      <a id="trigger" href="#"><i class="fa fa-filter"></i></a>
-                      <div class="sidebar">
-                          <p class="small"><a href="/collections/{{collection.handle}}">Clear filters <i class="fa fa-close"></i></a></p>
-                          {% include 'collection_tag-filter' %}
-
-                          <div class="collection-toolbar">
-                            <div class="tags-filter">
-                                <button id="showPriceFilter">Filter by Price <i class="fa fa-angle-up"></i></button>
-                            </div>
-                          </div>
-                          <div id="price-filter-content">
-                              <div class="filter-tag-group">
-                                  <div class="tag-group col-md-12">
-                                    <div id="priceLink" style="display:none"></div>
-                                      <div class="price-filter">
-                                          <div id="slider-range"></div>
-                                          <a href="/collections/{{collection.handle}}">Filter</a>
-                                          <p>
-                                              <label for="amount">Price: </label>
-                                            <label id="amount"></label>
-                                          </p>
-                                      </div>
-                                  </div>
-                              </div>
-                          </div>
-                          
-                      </div>
-                    </div>
-              </div>
 </div>
 <script>
   $(function () {

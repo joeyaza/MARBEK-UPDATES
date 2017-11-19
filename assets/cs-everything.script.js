@@ -520,31 +520,18 @@ function toggleTagsFilter(){
       });
     }  
 }
-
-// $("#showCatsFilter").click(function() {
-
-//   // $("#cats-filter-content").slideToggle("fast");
-
-// });
-
       
 function toggleCatsFilter(){ 
-  // return;
   if($( '#showCatsFilter' )){ 
       $( '#showCatsFilter' ).unbind().click(function(e){
-        console.log("clicked");
         e.preventDefault();
         if($(this).hasClass('closed')){
           $(this).removeClass('closed');
-          $(".cats-wrapper").fadeIn();
-          // $(".cats-wrapper").addClass("open-active");
-          // $('#cats-filter-content').removeClass('tags-closed');
+          $('#cats-filter-content').removeClass('tags-closed');
           $(this).html("Categories <i class='fa fa-angle-down'></i>");
         }else{
           $(this).addClass('closed');
-          $(".cats-wrapper").fadeOut();
-          // $(".cats-wrapper").removeClass("open-active");
-      	  // $('#cats-filter-content').addClass('tags-closed');
+      	  $('#cats-filter-content').addClass('tags-closed');
           $(this).html("Categories <i class='fa fa-angle-up'></i>");
         }
       });

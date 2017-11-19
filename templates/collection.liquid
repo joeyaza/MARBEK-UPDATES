@@ -98,19 +98,49 @@
                   
                   
 				<div class="row">
-              <div class="categoriesSidebar col-sm-12">
-                <div class="collection-toolbar">
-                  <div class="cats-filter">
-                      <button id="showCatsFilter" class="closed">Categories <i class="fa fa-angle-up"></i></button>
-                    </div>
-                  </div>
-                  <div class="cats-wrapper">
-                    <div id="cats-filter-content">
-                     {% include 'collection_categories-filter' %}
-                    </div>
-                  </div>
-                </div>
-            	<div class="col-md-12 com-sm-12">
+            	<div class="col-md-3 com-sm-3">   
+                  	<div class="filter-overlay"></div>
+            		<div id="filter-sidebar">
+                  		<a id="trigger" href="#"><i class="fa fa-filter"></i></a>
+                  		<div class="sidebar">
+                          <div class="categoriesSidebar">
+                              <div class="collection-toolbar">
+                                  <div class="cats-filter">
+                                      <button id="showCatsFilter">Categories <i class="fa fa-angle-up"></i></button>
+                                  </div>
+                              </div>
+                              <div id="cats-filter-content">
+                                  {% include 'collection_categories-filter' %}
+                              </div>
+                          </div>
+                          <p class="small"><a href="/collections/{{collection.handle}}">Clear filters <i class="fa fa-close"></i></a></p>
+                          {% include 'collection_tag-filter' %}
+
+                          <div class="collection-toolbar">
+                            <div class="tags-filter">
+                                <button id="showPriceFilter">Filter by Price <i class="fa fa-angle-up"></i></button>
+                            </div>
+                          </div>
+                          <div id="price-filter-content">
+                              <div class="filter-tag-group">
+                                  <div class="tag-group col-md-12">
+                                    <div id="priceLink" style="display:none"></div>
+                                      <div class="price-filter">
+                                          <div id="slider-range"></div>
+                                          <a href="/collections/{{collection.handle}}">Filter</a>
+                                          <p>
+                                              <label for="amount">Price: </label>
+                                            <label id="amount"></label>
+                                          </p>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                          
+                  		</div>
+                  	</div>
+            	</div>
+            	<div class="col-md-9 com-sm-9">
                   {% paginate collection.products by settings.pagination_limit %}                            
             	<div class="collection-toolbars ">                  
                   <div class="list-inline text-right">
