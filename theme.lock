@@ -64,7 +64,7 @@ assets/cs-everything.optionSelect.js.liquid:
 assets/cs-everything.script.js.liquid:
   development: 2017-11-19T09:18:29-05:00   6a6249bfdc4f75827a2abaf0db011735
 assets/cs-everything.styles.scss:
-  development: 2017-11-19T10:19:16-05:00   e817bab645e394024427105cee21956a
+  development: 2017-11-19T11:08:28-05:00   61646a94bed4279447491b2d9e8acfd2
 assets/cs-everything.styles.scss.liquid:
   development: 2017-11-19T09:20:16-05:00   8189f81044ce0821e20ae5d296f7ffb0
 assets/doubly.js:
@@ -514,7 +514,7 @@ templates/customers/reset_password.liquid:
 templates/gift_card.liquid:
   development: 2017-11-11T17:57:57-05:00   e121aac5c3d1c357b9bdd397043078c5
 templates/index.liquid:
-  development: 2017-11-19T10:18:26-05:00   e55fb23199b5ef00cec8c37455e22c8d
+  development: 2017-11-19T10:40:43-05:00   e55fb23199b5ef00cec8c37455e22c8d
 templates/list-collections.liquid:
   development: 2017-11-11T17:57:57-05:00   b764bfde118b0ee77ec78aba8256626c
 templates/page.contact.liquid:
