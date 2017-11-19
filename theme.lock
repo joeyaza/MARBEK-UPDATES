@@ -61,10 +61,12 @@ assets/cs-everything.global.scss.liquid:
   development: 2017-11-11T17:57:47-05:00   198ba9aa255384fc876739ba38a28d16
 assets/cs-everything.optionSelect.js.liquid:
   development: 2017-11-11T17:57:47-05:00   4b2eba052014f8884927c8f85bee3764
+assets/cs-everything.script.js:
+  development: 2017-11-19T13:00:24-05:00   d07cc40aac7231a71053cb5deb62f560
 assets/cs-everything.script.js.liquid:
   development: 2017-11-19T09:18:29-05:00   6a6249bfdc4f75827a2abaf0db011735
 assets/cs-everything.styles.scss:
-  development: 2017-11-19T11:08:28-05:00   61646a94bed4279447491b2d9e8acfd2
+  development: 2017-11-19T13:04:47-05:00   e5710d9fa38b3373d13e2179be853041
 assets/cs-everything.styles.scss.liquid:
   development: 2017-11-19T09:20:16-05:00   8189f81044ce0821e20ae5d296f7ffb0
 assets/doubly.js:
@@ -496,7 +498,7 @@ templates/blog.liquid:
 templates/cart.liquid:
   development: 2017-11-11T17:57:57-05:00   50542bb0de76527585ec25b01f9718d2
 templates/collection.liquid:
-  development: 2017-11-19T09:19:23-05:00   455ca39854ea2f4e14ce1c53e3ab6ddd
+  development: 2017-11-19T12:58:54-05:00   d94402ebb208b13553e3d7694fc5a309
 templates/customers/account.liquid:
   development: 2017-11-11T17:57:57-05:00   3c21a118c45c0250e76fab5e493f6d09
 templates/customers/activate_account.liquid:

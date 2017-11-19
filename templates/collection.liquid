@@ -81,7 +81,7 @@
   </div>
 </section>
 
-<section class="collection-content">
+<section class="collection-content" style="padding-top:100px;">
   <div class="collection-content-wrapper">
     <div class="container">
       <div class="row">
@@ -98,11 +98,21 @@
                   
                   
 				<div class="row">
-            	<div class="col-md-3 com-sm-3">   
-                  	<div class="filter-overlay"></div>
-            		<div id="filter-sidebar">
-                  		<a id="trigger" href="#"><i class="fa fa-filter"></i></a>
-                  		<div class="sidebar">
+
+
+            <div class="col-md-12 com-sm-12 collection-toolbar test" style="background:white; border: none; display: none;">
+              <div class="cats-filter">
+                  <button id="showOverallFilter" style="background:white;">Filters<i class="fa fa-angle-up" style="float: none; margin-left: 5px;"></i></button>
+              </div>
+            </div>
+
+
+          <div class="col-md-12 com-sm-12 testing none">   
+            <div class="inside-wrapper" style="position: absolute; width: 100%; background: white; z-index: 49;">
+             <div class="filter-overlay"></div>
+                <div id="filter-sidebar">
+                      <a id="trigger" href="#"><i class="fa fa-filter"></i></a>
+                      <div class="sidebar">
                           <div class="categoriesSidebar">
                               <div class="collection-toolbar">
                                   <div class="cats-filter">
@@ -137,10 +147,12 @@
                               </div>
                           </div>
                           
-                  		</div>
-                  	</div>
-            	</div>
-            	<div class="col-md-9 com-sm-9">
+                      </div>
+                    </div>
+                  </div>
+              </div>
+
+            	<div class="col-md-12 com-sm-12">
                   {% paginate collection.products by settings.pagination_limit %}                            
             	<div class="collection-toolbars ">                  
                   <div class="list-inline text-right">
@@ -182,7 +194,7 @@
                   <div class="collection-items clearfix">                  
                     <div class="products" id="coll-products">
                     {% for product in collection.products %}
-                      <div class="product-item-wrapper {% cycle 'first', '', '', 'last' %} col-sm-4 col-xs-6 ">
+                      <div class="product-item-wrapper {% cycle 'first', '', '', 'last' %} col-sm-3 col-xs-6 ">
                         {% include 'index_product-items' with collection.handle %}
                       </div>
                     {% endfor %}
