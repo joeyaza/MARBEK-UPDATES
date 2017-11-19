@@ -40,3 +40,32 @@
                   		</div>
                   	</div>
             	</div>
+
+              {% if settings.nav_sticky %}
+<script>
+  function addaffix(scr){
+    if($(window).innerWidth() >= 992){
+      if(scr > 53){
+        if(!$('#top').hasClass('baffix')){
+          $('#top').addClass('affix').addClass('animated');
+        }
+      }
+      else{
+        if($('#top').hasClass('affix')){
+          $('#top').prev().remove();
+          $('#top').removeClass('affix').removeClass('animated');
+        }
+      }
+    }
+    else $('#top').removeClass('affix');
+  }
+  $(window).scroll(function() {
+    var scrollTop = $(this).scrollTop();
+    addaffix(scrollTop);
+  });
+  $( window ).resize(function() {
+    var scrollTop = $(this).scrollTop();
+  addaffix(scrollTop);
+  });
+</script>
+{% endif %}

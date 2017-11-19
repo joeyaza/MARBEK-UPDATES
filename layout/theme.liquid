@@ -142,13 +142,13 @@ window.supported_currencies = "{{ settings.supported_currencies }}";
   {% endif %}
   
   <!-- Header -->
-  <header id="top" class="ev24 clearfix" style="position: fixed; z-index: 50; width: 100%;">
+  <header id="top" class="ev24 clearfix" style="position: fixed; z-index: 50; width: 100%; top:0px">
     {% include 'theme_header' %}    
   </header> 
   <!-- <div class="fix-sticky"></div> -->
   
   <!-- Main Content -->
-  <div id="main-content" class="wrapper clearfix">           
+  <div id="main-content" class="wrapper clearfix" style="margin-top: 130px;">           
     
 {{ content_for_layout }}          
   </div>  

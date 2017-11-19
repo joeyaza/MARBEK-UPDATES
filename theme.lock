@@ -66,7 +66,7 @@ assets/cs-everything.script.js:
 assets/cs-everything.script.js.liquid:
   development: 2017-11-19T09:18:29-05:00   6a6249bfdc4f75827a2abaf0db011735
 assets/cs-everything.styles.scss:
-  development: 2017-11-19T13:04:47-05:00   e5710d9fa38b3373d13e2179be853041
+  development: 2017-11-19T13:21:30-05:00   7b51a3cbd334a73a1981c3625bf214e4
 assets/cs-everything.styles.scss.liquid:
   development: 2017-11-19T09:20:16-05:00   8189f81044ce0821e20ae5d296f7ffb0
 assets/doubly.js:
@@ -390,7 +390,7 @@ config/settings_data.json:
 config/settings_schema.json:
   development: 2017-11-19T09:18:59-05:00   23d34af4a6b24b289cca9479b79693fb
 layout/theme.liquid:
-  development: 2017-11-19T09:44:24-05:00   6a17f281867ee0a42d25d1c6b6f4bc67
+  development: 2017-11-19T13:22:10-05:00   bf38b9b19d4d295f17492a9034564cb6
 locales/de.json:
   development: 2017-11-19T09:18:21-05:00   3d7ab708d9cb99aba46687c9245d4139
 locales/en.default.json:
@@ -436,7 +436,7 @@ snippets/home-left-area.liquid:
 snippets/index_bestseller.liquid:
   development: 2017-11-11T17:57:56-05:00   17f3e1517d14af6baf01e59cb8101818
 snippets/index_product-items.liquid:
-  development: 2017-11-19T09:19:26-05:00   232761f39d86387ffb55be15fc7bd172
+  development: 2017-11-19T13:23:26-05:00   71eae67f00e0cc78c87cbd979d97ecc6
 snippets/locksmith-content-variables.liquid:
   development: 2017-11-19T09:19:39-05:00   29cac98511e9adb6e581b1ad560bc044
 snippets/locksmith-variables.liquid:
@@ -484,7 +484,7 @@ snippets/swatch.liquid:
 snippets/theme_footer.liquid:
   development: 2017-11-11T17:57:57-05:00   99ffcc3dcdef5da255911c80219f8a43
 snippets/theme_header.liquid:
-  development: 2017-11-19T09:31:58-05:00   5910ae5018f0f051d22abea79571917b
+  development: 2017-11-19T13:13:08-05:00   2d60e35e339719e0625bca8f87bdb14c
 snippets/twitter-card.liquid:
   development: 2017-11-11T17:57:57-05:00   f70dc00022e670ddd9b7a7d476d9e8e9
 snippets/wish-list.liquid:
@@ -498,7 +498,7 @@ templates/blog.liquid:
 templates/cart.liquid:
   development: 2017-11-11T17:57:57-05:00   50542bb0de76527585ec25b01f9718d2
 templates/collection.liquid:
-  development: 2017-11-19T12:58:54-05:00   d94402ebb208b13553e3d7694fc5a309
+  development: 2017-11-19T13:24:53-05:00   d94e9657c42a743e55d288bd68c4d121
 templates/customers/account.liquid:
   development: 2017-11-11T17:57:57-05:00   3c21a118c45c0250e76fab5e493f6d09
 templates/customers/activate_account.liquid:
