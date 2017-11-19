@@ -73,7 +73,10 @@
                 {% endif %}
               </div>
               <div class="col-md-6" id="product-information">
-                <h1 class="title">{{ product.title }}</h1>
+                <h1 class="title" style="text-align: center;">{{ product.title }}</h1>
+                <div class="purchase" style="text-align: center;">
+                    <h2 class="price" id="price-preview">{% if variant.price < variant.compare_at_price %}<span class="price_sale">{{ variant.price | money }}</span> <del class="price_compare">{{ variant.compare_at_price | money }}</del>{% else %}{{ variant.price | money }}{% endif %}</h2>
+                </div>
                 
                 {% if settings.enable_rating_star %}
                 <div class="rating-star">
@@ -95,17 +98,30 @@
                 <form id="add-item-form" action="/cart/add" method="post" class="variants clearfix">
                   <div class="product-options {% if hide_default_title %}no-options {% endif %}">
 					
-                    <div class="description">
+                    <div class="description" style="border-top: #e1e1e1 1px solid;
+    border-bottom: #e1e1e1 1px solid;
+    padding-top: 20px;">
                       {{ product.description }}
                     </div>
-                    
-                    {% if settings.color_swatch %}
-                      {% if product.available %}
-                        {% for option in product.options %}
-                          {% include 'swatch' with option %}
-                        {% endfor %}
+
+                    <!-- {% if product.options contains 'Size' %} -->
+                    <div class="row" style="padding-top: 10px; padding-bottom: 10px;">
+
+                     <a class="fancy-popup fancybox col-sm-4" href="#details" style="text-align: center; text-decoration: underline;">Details & Care</a>
+                    <a class="fancy-popup fancybox col-sm-4" href="#size-chart" style="text-align: center; text-decoration: underline;">Size Guide</a>
+                     <a class="fancy-popup fancybox col-sm-4" href="#delivery" style="text-align: center; text-decoration: underline;">Delivery & Returns</a>
+
+                   </div>
+<!--                     {% endif %} -->
+                    <div class="size-wrapper" style="width: 300px; margin: 20px auto;">
+                      {% if settings.color_swatch %}
+                        {% if product.available %}
+                          {% for option in product.options %}
+                            {% include 'swatch' with option %}
+                          {% endfor %}
+                        {% endif %}
                       {% endif %}
-                    {% endif %}
+                    </div>
                     <div class="select clearfix"{% if hide_default_title or settings.color_swatch %} style="display:none"{% endif %}>
                       <select id="product-select" name="id">
                         {% for variant in product.variants %}
@@ -115,13 +131,9 @@
                         {% endfor %}
                       </select>
                     </div>
-                    {% if product.options contains 'Size' %}
-                    <a class="btn fancy-popup fancybox" href="#size-chart">Size Guide</a>
-                    {% endif %}
+
+
                     {% assign variant = product.selected_or_first_available_variant %}
-                	<div class="purchase">
-                      <h2 class="price" id="price-preview">{% if variant.price < variant.compare_at_price %}<span class="price_sale">{{ variant.price | money }}</span> <del class="price_compare">{{ variant.compare_at_price | money }}</del>{% else %}{{ variant.price | money }}{% endif %}</h2>
-                	</div>
                     
                     {% if settings.display_quantity_dropdown %}
                     <div class="quantity-wrapper clearfix">
@@ -213,7 +225,7 @@
                 {% endif %}
               </div>              
             </div>
-			{% if settings.display_tab %}
+<!-- 			{% if settings.display_tab %}
             <div id="tabs-information" class="col-md-12" >
                 <div class="col-md-3 tabs-title">
                   <ul class="nav nav-tabs tabs-left sideways">
@@ -236,9 +248,9 @@
                   </div>
                 </div>
             </div>
-            {% endif %}
+            {% endif %} -->
             
-            <section class="page-content-wrapper col-md-12">
+            <section class="page-content-wrapper col-md-12" style="padding-top: 20px;">
                   <div class="home-content-inner">
                     <div class="home-main-area">                                        
                       <!-- Middle Banner -->

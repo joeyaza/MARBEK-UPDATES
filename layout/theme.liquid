@@ -191,6 +191,8 @@ window.supported_currencies = "{{ settings.supported_currencies }}";
   {% comment %} Linked Product Options {% endcomment %}
   {{ 'linkOptionSelectors.js' | asset_url | script_tag }}  
 {% include 'size-chart' %}
+{% include 'delivery' %}
+{% include 'details' %}
 
 </body>
 </html>

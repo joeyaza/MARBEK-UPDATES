@@ -62,7 +62,7 @@ assets/cs-everything.global.scss.liquid:
 assets/cs-everything.optionSelect.js.liquid:
   development: 2017-11-11T17:57:47-05:00   4b2eba052014f8884927c8f85bee3764
 assets/cs-everything.script.js:
-  development: 2017-11-19T13:00:24-05:00   d07cc40aac7231a71053cb5deb62f560
+  development: 2017-11-19T14:45:20-05:00   a1812ef0f8694d0f9272f41def934c45
 assets/cs-everything.script.js.liquid:
   development: 2017-11-19T09:18:29-05:00   6a6249bfdc4f75827a2abaf0db011735
 assets/cs-everything.styles.scss:
@@ -390,7 +390,7 @@ config/settings_data.json:
 config/settings_schema.json:
   development: 2017-11-19T09:18:59-05:00   23d34af4a6b24b289cca9479b79693fb
 layout/theme.liquid:
-  development: 2017-11-19T13:22:10-05:00   bf38b9b19d4d295f17492a9034564cb6
+  development: 2017-11-19T14:06:57-05:00   326d49df1621162bbb30ae4dba14674d
 locales/de.json:
   development: 2017-11-19T09:18:21-05:00   3d7ab708d9cb99aba46687c9245d4139
 locales/en.default.json:
@@ -421,6 +421,10 @@ snippets/currencies.liquid:
   development: 2017-11-11T17:57:56-05:00   04a1022eeaccf3efb3358b6ef0cc12e7
 snippets/customer_links.liquid:
   development: 2017-11-11T17:57:56-05:00   e31650e63a8d9c86dc6a7fc31af6ffad
+snippets/delivery.liquid:
+  development: 2017-11-19T13:43:27-05:00   658a103be3f66bdbca347c5985da9f7c
+snippets/details.liquid:
+  development: 2017-11-19T14:06:47-05:00   3ea7a2b8e49cc2281dd48264efdead0e
 snippets/dropdown.liquid:
   development: 2017-11-11T17:57:56-05:00   5f9929c74e7b019a8a3504010ead764d
 snippets/fb-open-graph-tags.liquid:
@@ -498,7 +502,7 @@ templates/blog.liquid:
 templates/cart.liquid:
   development: 2017-11-11T17:57:57-05:00   50542bb0de76527585ec25b01f9718d2
 templates/collection.liquid:
-  development: 2017-11-19T13:24:53-05:00   d94e9657c42a743e55d288bd68c4d121
+  development: 2017-11-19T14:47:38-05:00   e26c66615b74d1a862a163626696d70c
 templates/customers/account.liquid:
   development: 2017-11-11T17:57:57-05:00   3c21a118c45c0250e76fab5e493f6d09
 templates/customers/activate_account.liquid:
@@ -534,6 +538,6 @@ templates/page.wish-list.liquid:
 templates/password.liquid:
   development: 2017-11-11T17:57:57-05:00   44c028e589cbe2833ad7a9098c42afd6
 templates/product.liquid:
-  development: 2017-11-19T09:19:18-05:00   07b372d26a055b9ee4fa842212b220b0
+  development: 2017-11-19T14:43:13-05:00   f6f0cd5c2461ce5938625e378b17fb7f
 templates/search.liquid:
   development: 2017-11-11T17:57:57-05:00   5c1beeadd845b6bf13f861d5bff9a299

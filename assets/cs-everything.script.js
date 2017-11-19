@@ -3,30 +3,28 @@ var touch = false, clickEv = 'click';
 
   (function() {
 
-    console.log("myWidth>>>", getWidthBrowser());
-
-    if (getWidthBrowser() > 990) {
-      $(".inside-wrapper").css("display", "none");
-      $(".testing").css("display", "none");
-      $(".test").css("display", "block");
+    if (getWidthBrowser() < 990) {
+      $(".inside-wrapper").css("display", "block");
+      $(".overall-filters").css("display", "block");
+      $(".overall-filters-btn").css("display", "none");
     }
 
     $( window ).resize(function() {
       if (getWidthBrowser() > 990) {
         $(".inside-wrapper").css("display", "none");
-        $(".testing").css("display", "none");
-        $(".test").css("display", "block");
+        $(".overall-filters").css("display", "none");
+        $(".overall-filters-btn").css("display", "block");
       } else {
         $(".inside-wrapper").css("display", "block");
-        $(".testing").css("display", "block");
-        $(".test").css("display", "none");
+        $(".overall-filters").css("display", "block");
+        $(".overall-filters-btn").css("display", "none");
       }
   
     });
 
-  $('.test').on('click', function() {
+  $('.overall-filters-btn').on('click', function() {
       $(".inside-wrapper").slideToggle();
-      $(".testing").slideToggle();
+      $(".overall-filters").slideToggle();
   });
 
   })();
