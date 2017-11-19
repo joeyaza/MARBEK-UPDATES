@@ -917,12 +917,12 @@ header#top {
     }
   }
   .main-header {
-    background-color: $bkg_main_header;
+    /*background-color: $bkg_main_header;*/
     height: 80px;
     display: table;
     width: 100%;
     @include transition(ease, all, 0.5s);
-    @include box-shadow(0px,2px,2px,0px,rgba(0,0,0,0.15));
+    /*@include box-shadow(0px,2px,2px,0px,rgba(0,0,0,0.15));*/
     position: relative;
     .main-header-wrapper {
       height: 80px;
@@ -1162,18 +1162,18 @@ header#top {
   }
   .nav-header {
     background-color: $bkg_nav_header;
-    height: 80px;
-    padding-right: 70px;
+    /*height: 80px;*/
+    /*padding-right: 70px;*/
     float: none;
     @include display-inline();
     @include transition(ease, all, 0.7s);
     .nav-header-wrapper {
-      height: 80px;
+      /*height: 80px;*/
       .nav-header-inner {
-        height: 80px;
+        /*height: 80px;*/
         ul.navigation-left {
-          height: 80px;
-          line-height: 80px;
+          /*height: 80px;*/
+          /*line-height: 80px;*/
           margin: 0;
           text-align: center;
           > li,
@@ -1181,8 +1181,8 @@ header#top {
             list-style: none;
             margin: 0;
             @include display_inline();
-            height: 80px;
-            line-height: 80px;
+            /*height: 80px;*/
+            /*line-height: 80px;*/
             text-align: left;
             padding: 0 10px;
             background-color: transparent;
@@ -1461,9 +1461,9 @@ header#top {
   &.affix {
     width: 100%;
     z-index: 99;
-    border-color: $color_hover_general;
-    background-color: $color_hover_general;
-    @include box-shadow(0,0,0,1px, $border_header); 
+    /*border-color: $color_hover_general;*/
+    /*background-color: $color_hover_general;*/
+    /*@include box-shadow(0,0,0,1px, $border_header); */
     .top-header {
       height: 0;
       line-height: 0;
@@ -1541,17 +1541,17 @@ header#top {
             }
             .nav-header {
               width: 100%;
-              height: 80px;
+              /*height: 80px;*/
               .nav-header-wrapper {
-                height: 80px;
+                /*height: 80px;*/
                 .nav-header-inner {
-                  height: 80px;
+                  /*height: 80px;*/
                   ul.navigation-left {
-                    height: 80px;
-                    line-height: 80px;
+                    /*height: 80px;*/
+                    /*line-height: 80px;*/
                     >li {
-                      height: 80px;
-                      line-height: 80px;
+                      /*height: 80px;*/
+                      /*line-height: 80px;*/
                     }
                   }
                 }
@@ -1656,7 +1656,7 @@ header#top {
 .home-slideshow {
   position: relative;
   margin-bottom: 0px;
-  margin-top:10px;
+  /*margin-top:10px;*/
   z-index:45;
   ul.slides {
     > li {
@@ -1764,6 +1764,9 @@ header#top {
             }
           }
         }
+      }
+      img {
+        width: 100%;
       }
     }
   }
@@ -1930,7 +1933,7 @@ header#top {
 /*Content*/
 .home-content-wrapper {
   background: $bkg_home_wrapper;
-  padding-bottom: 35px;
+  /*padding-bottom: 35px;*/
   .home-left-area {
     padding-left: 0;
     .homepage-left {
@@ -2595,8 +2598,8 @@ header#top {
   }
 }
 .middle_banner-block {
-  margin-bottom: 20px;
-  margin-top: 30px;
+  /*margin-bottom: 20px;*/
+  /*margin-top: 30px;*/
   display: block;
   float: left;
   .middle_banner_inner {
@@ -2606,7 +2609,7 @@ header#top {
         padding-left: 0;
         padding-right: 0;
         @include display_inline();
-        margin-bottom: 30px;
+        /*margin-bottom: 30px;*/
         >div {
           position: relative;
           .banner-bkg {

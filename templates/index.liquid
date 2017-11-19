@@ -1,7 +1,7 @@
 <section id="main-slideshow">
   		  <!-- Main slideshow -->
           {% if settings.maincarousel_active %}
-  			<div class="container"><div class="row"><div class="col-sm-12">
+  			<div class="row"><div class="col-sm-12">
           <div id="home-slideshow" class="home-slideshow-area">
             {% if settings.slide-active-1 != false or slide-active-2 != false or settings.slide-active-3 != false or settings.slide-active-4 != false or settings.slide-active-5 != false %}    
               <div class="home-slideshow">
@@ -61,23 +61,21 @@
               </div>
             {% endif %}
               </div> 
-              </div></div></div>
+              </div></div>
           {% endif %}
 </section>
 
 {% if settings.newarrivals_active %}
 <section id="newarrivals_product" class="newarrivals-block">
   <div class="newarrivals_wrapper">
-    <div class="container">
-      <div class="row">
-        <div class="newarrivals_inner">
-          <div class="newarrivals-content">            
-            {% for product in collections[settings.newarrivals_collection].products limit: settings.newarrivals_number %}
-              <div class="product-item-wrapper col-sm-3 col-xs-12">     
-                {% include 'index_product-items' %}
-              </div>
-            {% endfor %}                                
-          </div>
+    <div class="row">
+      <div class="newarrivals_inner">
+        <div class="newarrivals-content">            
+          {% for product in collections[settings.newarrivals_collection].products limit: settings.newarrivals_number %}
+            <div class="product-item-wrapper col-sm-3 col-xs-12">     
+              {% include 'index_product-items' %}
+            </div>
+          {% endfor %}                                
         </div>
       </div>
     </div>
@@ -86,7 +84,6 @@
 {% endif %}
 
 <section class="home-content-wrapper">
-  <div class="container">
     <div class="row">
       <div class="home-content-inner">
         <div class="home-main-area">                                        
@@ -96,38 +93,39 @@
             <div class="middle_banner_wrapper">
               <div class="middle_banner_inner">
                 <div class="middle-banner-content">
-                  <div class="row-1st">
-                    <div class="banner-left col-sm-6">
+                  <div class="row-1st" style="width: 100%">
+                    <div class="banner-left col-sm-6" style="padding: 0">
                       <a class="banner-bkg" href="#">
-                        <img src="{{ 'middle_banner1_bkg.jpg' | asset_url}}" alt="" />
+                        <img src="{{ 'middle_banner1_bkg.jpg' | asset_url}}" alt="" / style="width: 100%">
                       </a>
                       <div class="banner-caption cap1">{{ settings.middle_banner1_textarea }}</div>
                     </div>
-                    <div class="banner-right col-sm-6">
+                    <div class="banner-right col-sm-6" style="padding: 0">
                       <a class="banner-bkg" href="{{ settings.middle_banner2_linkto }}">
-                        <img src="{{ 'middle_banner2_bkg.jpg' | asset_url}}" alt="" />
+                        <img src="{{ 'middle_banner2_bkg.jpg' | asset_url}}" alt="" / style="width: 100%">
                       </a>
                       <a href="{{ settings.middle_banner2_linkto }}" class="banner-caption cap2">{{ settings.middle_banner2_textarea }}</a>
                     </div>
                   </div>
-                  <div class="row-2nd col-sm-12 col-xs-12">
+<!--                   <div class="row-2nd col-sm-12 col-xs-12">
                     <div class="middle-banner-caption" style="background:{{ settings.middle_banner3_bkg }};width:100%;">
                       <a class="banner-bkg" href="{{ settings[middle_banner3_linkto] }}">
-                      <!--<img src="{{ 'middle_banner3_caption.png' | asset_url}}" alt="" />-->{{ settings.middle_banner3_textarea }}
-                      </a>    
-                    </div>
+                      <!--<img src="{{ 'middle_banner3_caption.png' | asset_url}}" alt="" />-->
+                      <!-- {{ settings.middle_banner3_textarea }} -->
+     <!--                  </a>    
+                    </div> -->
                       
-                    </div>
+                <!--   </div> --> 
                   <div class="row-1st col-sm-12 col-xs-12">
-                    <div class="banner-left col-sm-6">
+                    <div class="banner-left col-sm-6" style="padding:0;">
                       <a class="banner-bkg" href="{{ settings.middle_banner4_linkto }}">
-                        <img src="{{ 'middle_banner4_bkg.jpg' | asset_url}}" alt="" />
+                        <img src="{{ 'middle_banner4_bkg.jpg' | asset_url}}" alt="" / style="width: 100%;">
                       </a>
                       <a href="{{ settings.middle_banner4_linkto }}" class="banner-caption cap3">{{ settings.middle_banner4_textarea }}</a>
                     </div>
-                    <div class="banner-right col-sm-6">
+                    <div class="banner-right col-sm-6" style="padding:0;">
                       <a class="banner-bkg" href="{{ settings.middle_banner5_linkto }}">
-                        <img src="{{ 'middle_banner5_bkg.jpg' | asset_url}}" alt="" />
+                        <img src="{{ 'middle_banner5_bkg.jpg' | asset_url}}" alt="" / style="width: 100%;">
                       </a>
                       <a href="{{ settings.middle_banner5_linkto }}" class="banner-caption cap4">{{ settings.middle_banner5_textarea }}</a>
                     </div>
@@ -138,8 +136,8 @@
           </div>
           {% endif %}
           
-          <!-- Bottom block -->
-          <div class="besrseller_wrapper">
+          <!-- Bottom block ja remove-->
+<!--           <div class="besrseller_wrapper">
             {% if settings.bestseller_active %}
             <div class="bestseller-block ">
               <div class="bestseller_wrapper">
@@ -173,17 +171,15 @@
               </div>
             </div>
             {% endif %}
-          </div>
+          </div> -->
         </div>
       </div>
     </div>
-  </div>
 </section>
 
 {% if settings.bottom_active %}
 <section id="bottom_block" class="bottom_infor" style="background-image:url({{'bottom_bkg.jpg'|asset_url}})">
   <div class="bottom_infor_wrapper">
-    <div class="container">
       <div class="row">
         <div class="bottom_infor_inner">
           <div class="block1st col-sm-4">
@@ -203,7 +199,6 @@
           </div>
         </div>
       </div>
-    </div>
   </div>
 </section>
 {% endif %}

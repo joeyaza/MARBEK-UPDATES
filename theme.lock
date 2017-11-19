@@ -63,6 +63,8 @@ assets/cs-everything.optionSelect.js.liquid:
   development: 2017-11-11T17:57:47-05:00   4b2eba052014f8884927c8f85bee3764
 assets/cs-everything.script.js.liquid:
   development: 2017-11-19T09:18:29-05:00   6a6249bfdc4f75827a2abaf0db011735
+assets/cs-everything.styles.scss:
+  development: 2017-11-19T10:19:16-05:00   e817bab645e394024427105cee21956a
 assets/cs-everything.styles.scss.liquid:
   development: 2017-11-19T09:20:16-05:00   8189f81044ce0821e20ae5d296f7ffb0
 assets/doubly.js:
@@ -386,7 +388,7 @@ config/settings_data.json:
 config/settings_schema.json:
   development: 2017-11-19T09:18:59-05:00   23d34af4a6b24b289cca9479b79693fb
 layout/theme.liquid:
-  development: 2017-11-11T17:57:56-05:00   a6ebcb371f0fd66a1df70b1f794d19ac
+  development: 2017-11-19T09:44:24-05:00   6a17f281867ee0a42d25d1c6b6f4bc67
 locales/de.json:
   development: 2017-11-19T09:18:21-05:00   3d7ab708d9cb99aba46687c9245d4139
 locales/en.default.json:
@@ -480,7 +482,7 @@ snippets/swatch.liquid:
 snippets/theme_footer.liquid:
   development: 2017-11-11T17:57:57-05:00   99ffcc3dcdef5da255911c80219f8a43
 snippets/theme_header.liquid:
-  development: 2017-11-19T09:19:31-05:00   28ebf3a32150be377a9d1f07108e43f8
+  development: 2017-11-19T09:31:58-05:00   5910ae5018f0f051d22abea79571917b
 snippets/twitter-card.liquid:
   development: 2017-11-11T17:57:57-05:00   f70dc00022e670ddd9b7a7d476d9e8e9
 snippets/wish-list.liquid:
@@ -512,7 +514,7 @@ templates/customers/reset_password.liquid:
 templates/gift_card.liquid:
   development: 2017-11-11T17:57:57-05:00   e121aac5c3d1c357b9bdd397043078c5
 templates/index.liquid:
-  development: 2017-11-19T09:18:38-05:00   34d485903f554980bba4aa04eb4aa08a
+  development: 2017-11-19T10:18:26-05:00   e55fb23199b5ef00cec8c37455e22c8d
 templates/list-collections.liquid:
   development: 2017-11-11T17:57:57-05:00   b764bfde118b0ee77ec78aba8256626c
 templates/page.contact.liquid:
