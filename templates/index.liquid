@@ -1,4 +1,5 @@
-<section id="main-slideshow">
+<div id="pagepiling">
+<div id="main-slideshow" style="margin-top: -135px;" class="section">
   		  <!-- Main slideshow -->
           {% if settings.maincarousel_active %}
   			<div class="row"><div class="col-sm-12">
@@ -63,10 +64,10 @@
               </div> 
               </div></div>
           {% endif %}
-</section>
+</div>
 
 {% if settings.newarrivals_active %}
-<section id="newarrivals_product" class="newarrivals-block">
+<div id="newarrivals_product" class="newarrivals-block section">
   <div class="newarrivals_wrapper">
     <div class="row">
       <div class="newarrivals_inner">
@@ -80,10 +81,10 @@
       </div>
     </div>
   </div>
-</section>
+</div>
 {% endif %}
 
-<section class="home-content-wrapper">
+<div class="home-content-wrapper section">
     <div class="row">
       <div class="home-content-inner">
         <div class="home-main-area">                                        
@@ -93,7 +94,7 @@
             <div class="middle_banner_wrapper">
               <div class="middle_banner_inner">
                 <div class="middle-banner-content">
-                  <div class="row-1st" style="width: 100%">
+                  <div class="row-1st row" style="width: 100%">
                     <div class="banner-left col-sm-6" style="padding: 0">
                       <a class="banner-bkg" href="#">
                         <img src="{{ 'middle_banner1_bkg.jpg' | asset_url}}" alt="" / style="width: 100%">
@@ -116,7 +117,7 @@
                     </div> -->
                       
                 <!--   </div> --> 
-                  <div class="row-1st col-sm-12 col-xs-12">
+                  <div class="row-1st col-sm-12 col-xs-12 row">
                     <div class="banner-left col-sm-6" style="padding:0;">
                       <a class="banner-bkg" href="{{ settings.middle_banner4_linkto }}">
                         <img src="{{ 'middle_banner4_bkg.jpg' | asset_url}}" alt="" / style="width: 100%;">
@@ -175,10 +176,10 @@
         </div>
       </div>
     </div>
-</section>
+</div>
 
 {% if settings.bottom_active %}
-<section id="bottom_block" class="bottom_infor" style="background-image:url({{'bottom_bkg.jpg'|asset_url}})">
+<div id="bottom_block" class="bottom_infor section" style="background-image:url({{'bottom_bkg.jpg'|asset_url}})">
   <div class="bottom_infor_wrapper">
       <div class="row">
         <div class="bottom_infor_inner">
@@ -200,6 +201,6 @@
         </div>
       </div>
   </div>
-</section>
+</div>
 {% endif %}
-
+</div>

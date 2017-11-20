@@ -1,6 +1,5 @@
 var touch = false, clickEv = 'click';
 
-
   (function() {
 
     if (getWidthBrowser() < 990) {
