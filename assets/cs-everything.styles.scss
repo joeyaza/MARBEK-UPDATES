@@ -1199,7 +1199,7 @@ header#top {
               span {
                 font-size: $font_size_general;
                 text-transform: uppercase;
-                color: black;
+                color: #DCDCDC;
               }
               i.fa {
                 color: $color_text_menu;
@@ -1208,7 +1208,7 @@ header#top {
               }
             }
             &:hover > a i.fa {
-              color: $color_hover_general;
+              color: #2e3035;
             }
             div#search-info {
               form {
@@ -1262,9 +1262,9 @@ header#top {
           > li.active ,
           > li:hover {            
             > a {
-              border-bottom:3px solid #fff;padding-bottom: 5px;
+              border-bottom:3px solid #2e3035;padding-bottom: 5px;
               span {
-                color: #fff;
+                color: #2e3035;
               }
               i.fa {
                 color: $color_hover_general;
