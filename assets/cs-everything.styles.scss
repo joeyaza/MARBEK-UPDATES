@@ -1776,7 +1776,7 @@ header#top {
       }
       img {
         width: 100%;
-        height: 100vh;
+        height: 102vh;
       }
     }
   }
@@ -2185,7 +2185,7 @@ header#top {
   }
   .home-main-area {
     padding-right: 0;
-    float: right;
+    /*float: right;*/
   }
 }
 /*Block Bottom*/
@@ -2612,6 +2612,7 @@ header#top {
   /*margin-top: 30px;*/
   display: block;
   float: left;
+  height: 100vh;
   .middle_banner_inner {
     .middle-banner-content {
       position: relative;
@@ -6555,6 +6556,7 @@ h3.cite1{clear:both;}
       .middle-banner-content {
         margin-left: 0;
         margin-right: 0;
+        margin-bottom: -5px;
         .banner-caption {
           .left-col {
             font-size: 15px;
@@ -6938,8 +6940,8 @@ h3.cite1{clear:both;}
     padding-left: $row_padding;
     padding-right: $row_padding;
     margin-bottom: 15px;
-    box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.1);
-    background:#2E3035;
+    /*box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.1);*/
+    background:transparent;
     padding-bottom: 7px;
     padding:5px 10px 0;margin-bottom:0;
     .mobile-top-navigation {
@@ -7054,7 +7056,7 @@ h3.cite1{clear:both;}
   }
   /*End Homepage*/
   .middle-banner-caption h3 {line-height:40px;margin-top:15px;}
-  .middle_banner-block .middle_banner_inner .middle-banner-content .row-1st {margin-bottom:15px;}
+  .middle_banner-block .middle_banner_inner .middle-banner-content .row-1st {/*margin-bottom:15px;*/}
   /*Banner home*/
   .group_top_banner-block {
     width: 100%;
@@ -10085,8 +10087,8 @@ header#top .nav-header .nav-header-wrapper .nav-header-inner ul.navigation-left,
   .is-mobile-currency{padding: 1px 7px;}
   .list-inline > li.is-mobile-cart {position: absolute;top: 7px;right: 10px;z-index: 999;padding: 1px 7px;background: #000;}
   .besrseller_wrapper .bestseller-block .bestseller_wrapper .bestseller_inner .bestseller-content .product-item-wrapper {width:50%}
-  .banner-left, .middle-banner-caption{margin-bottom:15px;}
-  .middle_banner-block {margin-bottom: 20px;margin-top: 20px;}
+  .banner-left, .middle-banner-caption{/*margin-bottom:15px;*/}
+  .middle_banner-block {/*margin-bottom: 20px;margin-top: 20px;*/ height: auto;}
   .container, .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-xs-1, .col-xs-10, .col-xs-11, .col-xs-12, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9 {padding-right: 10px;padding-left: 10px;}
   .row {margin-right: -10px;margin-left: -10px;}
   h3.cite {font-size:18px;}

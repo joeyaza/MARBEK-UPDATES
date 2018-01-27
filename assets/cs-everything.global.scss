@@ -51,6 +51,10 @@
 /*    SASS HELPERS     */
 /* =================== */
 
+.home-img {
+  height: 100vh;
+}
+
 /* Mixins */
 
 @mixin prefix($property, $value) {

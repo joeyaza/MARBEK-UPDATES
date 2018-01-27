@@ -1,84 +1,114 @@
 var touch = false, clickEv = 'click';
 
-if ($( "body" ).hasClass( "index-template" )) {
+if($(window).innerWidth() > 768 ) {
 
-  var pages = 3;
-  var currentpage = 1;
-  if (document.location.hash) { currentpage = parseInt(document.location.hash.replace('#', '')); }
+  if ($( "body" ).hasClass( "index-template" )) {
 
-  console.log(currentpage);
+    homepageScroll();
 
-  var nextpage = currentpage + 1; if (nextpage > pages) { nextpage = pages; }
-  var prevpage = currentpage - 1; if (prevpage < 1) { prevpage = 1; }
-    
-  var animatingup = false;
-  var animatingdown = false;
-    
-  $(document).ready(function() {
-    resizeDiv();
-    //scrolltocurrent();
-  });
-
-  window.onresize = function(event) {
-    resizeDiv();
-    scrolltocurrent();
   }
+}
 
-  $(window).scroll(function(event) {
-    
-    if (animatingup==true) { console.log("animating up..."); return; }
-    if (animatingdown==true) { console.log("animating down..."); return; }
-    
-    nextpage = currentpage + 1; if (nextpage > pages) { nextpage = pages; }
-    prevpage = currentpage - 1; if (prevpage < 1) { prevpage = 1; }
+
+
+function homepageScroll() {
+
+    var pages = 4;
+    var currentpage = 1;
+    if (document.location.hash) { currentpage = parseInt(document.location.hash.replace('#', '')); }
+
+    console.log(currentpage);
+
+    var nextpage = currentpage + 1; if (nextpage > pages) { nextpage = pages; }
+    var prevpage = currentpage - 1; if (prevpage < 1) { prevpage = 1; }
+
+    animatingup = false;
+    animatingdown = false;
       
-    console.log("scroll happened, previous page is " + prevpage + ", current page is " + currentpage + ", next page is " + nextpage);
+    $(document).ready(function() {
+      resizeDiv();
+      scrolltocurrent();
+    });
 
-    //console.log($("#page"+(currentpage)).offset().top + " < " + $(window).scrollTop());
-    
-    //console.log($(window).scrollTop()+$(window).height() + " < " + $("#page"+(nextpage)).offset().top);
-    
+    window.onresize = function(event) {
+      resizeDiv();
+      scrolltocurrent();
+    }
 
-    if (animatingup == false) {
-      if ($(window).scrollTop()+$(window).height()>=$("#page"+(nextpage)).offset().top+50) {
-        if (nextpage > currentpage) {
-          var p2 = $( "#page"+(nextpage) );
-          var pageheight = p2.position().top;
-          animatingdown = true;
-          $('html, body').animate({ scrollTop: pageheight }, 400, function() { currentpage = nextpage; animatingdown = false; document.location.hash = currentpage;});
-          return;
+    function noscroll() {
+        window.scrollTo( 0, 0 );
+    }
+
+    $(window).scroll(function(event) {
+      
+      if (this.animatingup==true) { console.log("animating up..."); return; }
+      if (this.animatingdown==true) { console.log("animating down..."); return; }
+      
+      nextpage = currentpage + 1; if (nextpage > pages) { nextpage = pages; }
+      prevpage = currentpage - 1; if (prevpage < 1) { prevpage = 1; }
+        
+      console.log("scroll happened, previous page is " + prevpage + ", current page is " + currentpage + ", next page is " + nextpage);
+
+      //console.log($("#page"+(currentpage)).offset().top + " < " + $(window).scrollTop());
+      
+      //console.log($(window).scrollTop()+$(window).height() + " < " + $("#page"+(nextpage)).offset().top);
+      
+
+      if (this.animatingup == false) {
+
+        if ($(window).scrollTop()+$(window).height()>=$("#page"+(nextpage)).offset().top+10) {
+          if (nextpage > currentpage) {
+            var p2 = $( "#page"+(nextpage) );
+            var pageheight = p2.position().top;
+            animatingdown = true;
+            $('html, body').animate({ scrollTop: pageheight }, 400, function() { 
+
+                currentpage = nextpage; document.location.hash = currentpage;
+                   setTimeout (function() { 
+               animatingdown = false
+            }, 450 );
+
+            });
+            return;
+          }
         }
       }
-    }
-    
-    if (animatingdown == false) {
-      if ($(window).scrollTop()<=$("#page"+(currentpage)).offset().top-50) {
-        if (prevpage < currentpage) {
-          var p2 = $( "#page"+(currentpage) );
-          var pageheight = p2.position().top-$(window).height();
-          animatingup = true;
-          $('html, body').animate({ scrollTop: pageheight }, 400, function() { currentpage = prevpage; animatingup = false; document.location.hash = currentpage;});
-          return;
+      
+      if (this.animatingdown == false) {
+
+        if ($(window).scrollTop()<=$("#page"+(currentpage)).offset().top-10) {
+          if (prevpage < currentpage) {
+            var p2 = $( "#page"+(currentpage) );
+            var pageheight = p2.position().top-$(window).height();
+            animatingup = true;
+            $('html, body').animate({ scrollTop: pageheight }, 400, function() { 
+
+                currentpage = prevpage; document.location.hash = currentpage;
+
+                          setTimeout (function() { 
+            animatingup = false
+        }, 450 );
+
+            });
+            return;
+          }
         }
+        
       }
+    });
+     
+
+    function scrolltocurrent() {
+      var p2 = $( "#page"+(currentpage) );
+      var pageheight = p2.position().top;
+      $('html, body').animate({ scrollTop: pageheight }, 200);
     }
-  });
-   
 
-  function scrolltocurrent() {
-    var p2 = $( "#page"+(currentpage) );
-    var pageheight = p2.position().top;
-    $('html, body').animate({ scrollTop: pageheight }, 200);
-  }
-
-  function resizeDiv() {
-    vpw = $(window).width();
-    vph = $(window).height();
-    $('.page').css({'min-height': vph + 'px'});
-  }
-
-
-
+    function resizeDiv() {
+      vpw = $(window).width();
+      vph = $(window).height();
+      $('.page').css({'min-height': vph + 'px'});
+    }
 
 }
 
@@ -610,9 +640,13 @@ function toggleLeftMenu(){
       classie.toggle( this, 'active' );
       classie.toggle( body, 'pushed' );
       classie.toggle( menuLeft, 'leftnavi-open' );
-      if(classie.has( this, 'active' ))
+      if(classie.has( this, 'active' )) {
         $('#showLeftPush').html("<i class='fa fa-times fa-2x'></i>");
-      else $('#showLeftPush').html("<i class='fa fa-bars fa-2x'></i>");
+        $('.mobile-nav-header').css("background", "#2E3035");
+      } else {
+        $('#showLeftPush').html("<i class='fa fa-bars fa-2x'></i>");
+        $('.mobile-nav-header').css("background", "transparent");
+        } 
     };
   }
 };

@@ -90,20 +90,20 @@
         <div class="home-main-area">                                        
           <!-- Middle Banner -->
           {% if settings.middle_banner_active %}
-          <div class="middle_banner-block">
+          <div class="middle_banner-block" style="width: 100%">
             <div class="middle_banner_wrapper">
               <div class="middle_banner_inner">
                 <div class="middle-banner-content">
                   <div class="row-1st row" style="width: 100%">
                     <div class="banner-left col-sm-6" style="padding: 0">
                       <a class="banner-bkg" href="#">
-                        <img src="{{ 'middle_banner1_bkg.jpg' | asset_url}}" alt="" / style="width: 100%">
+                        <img class="home-img" src="{{ 'middle_banner1_bkg.jpg' | asset_url}}" alt="" / style="width: 100%">
                       </a>
                       <div class="banner-caption cap1">{{ settings.middle_banner1_textarea }}</div>
                     </div>
                     <div class="banner-right col-sm-6" style="padding: 0">
                       <a class="banner-bkg" href="{{ settings.middle_banner2_linkto }}">
-                        <img src="{{ 'middle_banner2_bkg.jpg' | asset_url}}" alt="" / style="width: 100%">
+                        <img class="home-img" src="{{ 'middle_banner2_bkg.jpg' | asset_url}}" alt="" / style="width: 100%">
                       </a>
                       <a href="{{ settings.middle_banner2_linkto }}" class="banner-caption cap2">{{ settings.middle_banner2_textarea }}</a>
                     </div>
@@ -117,20 +117,6 @@
                     </div> -->
                       
                 <!--   </div> --> 
-                  <div class="row-1st col-sm-12 col-xs-12 row" style="margin-top:-10px;">
-                    <div class="banner-left col-sm-6" style="padding:0;">
-                      <a class="banner-bkg" href="{{ settings.middle_banner4_linkto }}">
-                        <img src="{{ 'middle_banner4_bkg.jpg' | asset_url}}" alt="" / style="width: 100%;">
-                      </a>
-                      <a href="{{ settings.middle_banner4_linkto }}" class="banner-caption cap3">{{ settings.middle_banner4_textarea }}</a>
-                    </div>
-                    <div class="banner-right col-sm-6" style="padding:0;">
-                      <a class="banner-bkg" href="{{ settings.middle_banner5_linkto }}">
-                        <img src="{{ 'middle_banner5_bkg.jpg' | asset_url}}" alt="" / style="width: 100%;">
-                      </a>
-                      <a href="{{ settings.middle_banner5_linkto }}" class="banner-caption cap4">{{ settings.middle_banner5_textarea }}</a>
-                    </div>
-                  </div>
                 </div>
               </div>
             </div>
@@ -177,6 +163,106 @@
       </div>
     </div>
 </div>
+
+<div id="page3" class="page page3 home-content-wrapper section">
+    <div class="row">
+      <div class="home-content-inner">
+        <div class="home-main-area">                                        
+          <!-- Middle Banner -->
+          {% if settings.middle_banner_active %}
+          <div class="middle_banner-block" style="width: 100%">
+            <div class="middle_banner_wrapper">
+              <div class="middle_banner_inner">
+                <div class="middle-banner-content">
+                  <div class="row-1st row" style="width: 100%">
+                    <div class="banner-left col-sm-6" style="padding: 0">
+                      <a class="banner-bkg" href="#">
+                        <img class="home-img" src="{{ 'middle_banner4_bkg.jpg' | asset_url}}" alt="" / style="width: 100%;">
+                      </a>
+                      <div class="banner-caption cap1">{{ settings.middle_banner1_textarea }}</div>
+                    </div>
+                    <div class="banner-right col-sm-6" style="padding: 0">
+                      <a class="banner-bkg" href="{{ settings.middle_banner5_linkto }}">
+                        <img class="home-img" src="{{ 'middle_banner5_bkg.jpg' | asset_url}}" alt="" / style="width: 100%;">
+                      </a>
+                      <a href="{{ settings.middle_banner2_linkto }}" class="banner-caption cap2">{{ settings.middle_banner2_textarea }}</a>
+                    </div>
+                  </div>
+<!--                   <div class="row-2nd col-sm-12 col-xs-12">
+                    <div class="middle-banner-caption" style="background:{{ settings.middle_banner3_bkg }};width:100%;">
+                      <a class="banner-bkg" href="{{ settings[middle_banner3_linkto] }}">
+                      <!--<img src="{{ 'middle_banner3_caption.png' | asset_url}}" alt="" />-->
+                      <!-- {{ settings.middle_banner3_textarea }} -->
+     <!--                  </a>    
+                    </div> -->
+                      
+                <!--   </div> --> 
+                </div>
+              </div>
+            </div>
+          </div>
+          {% endif %}
+          
+          <!-- Bottom block ja remove-->
+<!--           <div class="besrseller_wrapper">
+            {% if settings.bestseller_active %}
+            <div class="bestseller-block ">
+              <div class="bestseller_wrapper">
+                <div class="bestseller_inner">
+                  <div class="home-title home-title-bestseller"><h3>{{settings.bestseller_title}}</h3></div>
+                  <div class="bestseller-content">
+                    {% for product in collections[settings.bestseller_collection].products limit:settings.bestseller_number %}
+                    <div class="product-item-wrapper col-md-3 col-sm-3 col-xs-6">                
+                      {% include 'index_product-items' %}
+                    </div>
+                    {% endfor %}
+                  </div>
+                </div>
+              </div>
+            </div>
+            {% endif %}    
+
+            {% if settings.toprated_active %}
+            <div class="bestseller-block ">
+              <div class="bestseller_wrapper">
+                <div class="bestseller_inner">
+                  <div class="home-title home-title-bestseller"><h4>{{settings.toprated_title}}</h4></div>
+                  <div class="bestseller-content">
+                    {% for product in collections[settings.toprated_collection].products limit:settings.toprated_number %}
+                    <div class="product-item-wrapper col-sm-4 col-xs-6">                
+                      {% include 'index_product-items' %}
+                    </div>
+                    {% endfor %}
+                  </div>
+                </div>
+              </div>
+            </div>
+            {% endif %}
+          </div> -->
+        </div>
+      </div>
+    </div>
+</div>
+
+
+
+<!--                   <div id="page3" class="row-1st col-sm-12 col-xs-12 row page page3" style="margin-top:-10px;">
+                    <div class="banner-left col-sm-6" style="padding:0;">
+                      <a class="banner-bkg" href="{{ settings.middle_banner4_linkto }}">
+                        <img class="home-img" src="{{ 'middle_banner4_bkg.jpg' | asset_url}}" alt="" / style="width: 100%;">
+                      </a>
+                      <a href="{{ settings.middle_banner4_linkto }}" class="banner-caption cap3">{{ settings.middle_banner4_textarea }}</a>
+                    </div>
+                    <div class="banner-right col-sm-6" style="padding:0;">
+                      <a class="banner-bkg" href="{{ settings.middle_banner5_linkto }}">
+                        <img class="home-img" src="{{ 'middle_banner5_bkg.jpg' | asset_url}}" alt="" / style="width: 100%;">
+                      </a>
+                      <a href="{{ settings.middle_banner5_linkto }}" class="banner-caption cap4">{{ settings.middle_banner5_textarea }}</a>
+                    </div>
+                  </div>
+ -->
+
+
 
 {% if settings.bottom_active %}
 <div id="bottom_block" class="bottom_infor section" style="background-image:url({{'bottom_bkg.jpg'|asset_url}})">
