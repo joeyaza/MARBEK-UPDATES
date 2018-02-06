@@ -1,1 +1,2726 @@
-[{"name":"theme_info","logo":"https:\/\/cdn.shopify.com\/s\/files\/1\/0985\/4524\/t\/1\/assets\/logo.png","settings":[{"type":"header","content":"Everything Store - Multipurpose Responsive Shopify theme"},{"type":"paragraph","content":"This theme is officially supported by www.designshopify.com , if you have any questions please [open ticket support here](http:\/\/www.codespotsupport.com\/others\/)."}]},{"name":"Colors","settings":[{"type":"header","content":"Colors"},{"type":"color","id":"color_text_general","label":"Color General","default":"#a1a1a1"},{"type":"color","id":"color_hover_general","label":"Color hover General","default":"#1c8a71"},{"type":"color","id":"color_text_header","label":"Color Header","default":"#c2c2c2"},{"type":"color","id":"color_text_menu","label":"Color Menu","default":"#ffffff"},{"type":"color","id":"color_text_heading","label":"Color Text Heading","default":"#000000"},{"type":"color","id":"color_text_title","label":"Color Text Title","default":"#434343"},{"type":"color","id":"color_text_banner","label":"Color Text Banner","default":"#ffffff"},{"type":"header","content":"Line"},{"type":"color","id":"border_general","label":"Line General","default":"#e1e1e1"},{"type":"color","id":"border_header","label":"Line Header","default":"#343434"},{"type":"color","id":"border_title","label":"Line Title","default":"#33c1a9"},{"type":"color","id":"border_submenu","label":"Line Submenu","default":"#e9e9e9"},{"type":"header","content":"Background"},{"type":"checkbox","id":"use_bg_image","label":"Use a background image"},{"type":"image","id":"bg.jpg"},{"type":"color","id":"shop_bg_color","label":"Background Body","default":"#fbfbfb"},{"type":"color","id":"bkg_top_header","label":"Background Header Top","default":"#1b1b1b"},{"type":"color","id":"bkg_main_header","label":"Background Header Main","default":"#272727"},{"type":"color","id":"bkg_nav_header","label":"Background Menu","default":"#272727"},{"type":"color","id":"bkg_breadcrumb","label":"Background Breakcrumb","default":"#f7f7f7"},{"type":"color","id":"bkg_title","label":"Background title","default":"#464646"},{"type":"color","id":"bkg_home_wrapper","label":"Background Home Wrapper","default":"#f9f9f9"},{"type":"color","id":"bkg_footer","label":"Background Footer","default":"#272727"},{"type":"color","id":"bkg_footer_copyright","label":"Background Footer Copyright","default":"#000000"},{"type":"header","content":"Button"},{"type":"color","id":"color_text_button","label":"Color text Button","default":"#ffffff"},{"type":"color","id":"color_border_button","label":"Color border Button","default":"#ffffff"},{"type":"color","id":"bkg_button","label":"Color background Button","default":"#ffffff"},{"type":"color","id":"color_text_button_hover","label":"Color text Button hover","default":"#434343"},{"type":"color","id":"bkg_button_hover","label":"Color background Button hover","default":"#ffffff"},{"type":"color","id":"color_border_button_hover","label":"Color border Button hover","default":"#ffffff"},{"type":"color","id":"color_text_button1","label":"Color Text Button1","default":"#434343"},{"type":"color","id":"color_border_button1","label":"Color Border Button1","default":"#ffffff"},{"type":"color","id":"bkg_button1","label":"Color Background Button1","default":"#ffffff"},{"type":"color","id":"color_text_button1_hover","label":"Color Text Button1 hover","default":"#ffffff"},{"type":"color","id":"bkg_button1_hover","label":"Color Background Button1 hover","default":"#1c8a71"},{"type":"color","id":"color_border_button1_hover","label":"Color Border Button1 hover","default":"#1c8a71"},{"type":"color","id":"color_text_button2","label":"Color Text Button2","default":"#434343"},{"type":"color","id":"color_border_button2","label":"Color Border Button2","default":"#ffffff"},{"type":"color","id":"bkg_button2","label":"Color Background Button2","default":"#ffffff"},{"type":"color","id":"color_text_button2_hover","label":"Color Text Button2 hover","default":"#ffffff"},{"type":"color","id":"bkg_button2_hover","label":"Color Background Button2 hover","default":"#1c8a71"},{"type":"color","id":"color_border_button2_hover","label":"Color Border Button2 hover","default":"#1c8a71"},{"type":"select","id":"bg_alignment","label":"Image style","options":[{"value":"fill contained","label":"Fill, sides of page"},{"value":"fill entire","label":"Fill, entire page"},{"value":"tiled contained","label":"Tiled, sides of page"},{"value":"tiled entire","label":"Tiled, entire page"}],"default":"fill contained"}]},{"name":"Typography","settings":[{"type":"select","id":"base_font","label":"Body font","options":[{"value":"Google+Arvo","label":"Arvo","group":"Google Web Fonts"},{"value":"Google+Asap","label":"Asap","group":"Google Web Fonts"},{"value":"Google+Cabin","label":"Cabin","group":"Google Web Fonts"},{"value":"Google+Copse","label":"Copse","group":"Google Web Fonts"},{"value":"Google+Droid+Sans","label":"Droid Sans","group":"Google Web Fonts"},{"value":"Google+Droid+Serif","label":"Droid Serif","group":"Google Web Fonts"},{"value":"Google+Gentium+Book+Basic","label":"Gentium Book Basic","group":"Google Web Fonts"},{"value":"Google+Josefin+Slab","label":"Josefin Slab","group":"Google Web Fonts"},{"value":"Google+Josefin+Sans","label":"Josefin Sans","group":"Google Web Fonts"},{"value":"Google+Kreon","label":"Kreon","group":"Google Web Fonts"},{"value":"Google+Lato","label":"Lato","group":"Google Web Fonts"},{"value":"Google+Lora","label":"Lora","group":"Google Web Fonts"},{"value":"Google+Merriweather","label":"Merriweather","group":"Google Web Fonts"},{"value":"Google+Old+Standard+TT","label":"Old Standard TT","group":"Google Web Fonts"},{"value":"Google+Open+Sans","label":"Open Sans","group":"Google Web Fonts"},{"value":"Google+Raleway","label":"Raleway","group":"Google Web Fonts"},{"value":"proxima-nova","label":"Proxima Nova","group":"Adobe Typekit Fonts"},{"value":"Helvetica, Arial, sans-serif","label":"Helvetica\/Arial","group":"Sans-serif"},{"value":"Impact, Charcoal, Helvetica, Arial, sans-serif","label":"Impact","group":"Sans-serif"},{"value":"'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Lucida, Helvetica, Arial, sans-serif","label":"Lucida Grande","group":"Sans-serif"},{"value":"Trebuchet MS, sans-serif","label":"Trebuchet MS","group":"Sans-serif"},{"value":"Verdana, Helvetica, Arial, sans-serif","label":"Verdana","group":"Sans-serif"},{"value":"Garamond, Baskerville, Caslon, serif","label":"Garamond","group":"Serif"},{"value":"Georgia, Utopia, 'Times New Roman', Times, serif","label":"Georgia","group":"Serif"},{"value":"Palatino, 'Palatino Linotype', 'Book Antiqua', serif","label":"Palatino","group":"Serif"},{"value":"'Times New Roman', Times, serif","label":"Times New Roman","group":"Serif"},{"value":"'Courier New', Courier, monospace","label":"Courier New","group":"Monospace"},{"value":"Monaco, 'Lucida Console', 'DejaVu Sans Mono', monospace","label":"Monaco\/Lucida Console","group":"Monospace"}]},{"type":"select","id":"header_font","label":"Heading font","options":[{"value":"Google+Arvo","label":"Arvo","group":"Google Web Fonts"},{"value":"Google+Asap","label":"Asap","group":"Google Web Fonts"},{"value":"Google+Cabin","label":"Cabin","group":"Google Web Fonts"},{"value":"Google+Copse","label":"Copse","group":"Google Web Fonts"},{"value":"Google+Droid+Sans","label":"Droid Sans","group":"Google Web Fonts"},{"value":"Google+Droid+Serif","label":"Droid Serif","group":"Google Web Fonts"},{"value":"Google+Gentium+Book+Basic","label":"Gentium Book Basic","group":"Google Web Fonts"},{"value":"Google+Josefin+Slab","label":"Josefin Slab","group":"Google Web Fonts"},{"value":"Google+Josefin+Sans","label":"Josefin Sans","group":"Google Web Fonts"},{"value":"Google+Kreon","label":"Kreon","group":"Google Web Fonts"},{"value":"Google+Lato","label":"Lato","group":"Google Web Fonts"},{"value":"Google+Lora","label":"Lora","group":"Google Web Fonts"},{"value":"Google+Merriweather","label":"Merriweather","group":"Google Web Fonts"},{"value":"Google+Old+Standard+TT","label":"Old Standard TT","group":"Google Web Fonts"},{"value":"Google+Open+Sans","label":"Open Sans","group":"Google Web Fonts"},{"value":"Google+Raleway","label":"Raleway","group":"Google Web Fonts"},{"value":"ProximaNovaLight","label":"Proxima Nova","group":"Web Fonts"},{"value":"Helvetica, Arial, sans-serif","label":"Helvetica\/Arial","group":"Sans-serif"},{"value":"Impact, Charcoal, Helvetica, Arial, sans-serif","label":"Impact","group":"Sans-serif"},{"value":"'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Lucida, Helvetica, Arial, sans-serif","label":"Lucida Grande","group":"Sans-serif"},{"value":"Trebuchet MS, sans-serif","label":"Trebuchet MS","group":"Sans-serif"},{"value":"Verdana, Helvetica, Arial, sans-serif","label":"Verdana","group":"Sans-serif"},{"value":"Garamond, Baskerville, Caslon, serif","label":"Garamond","group":"Serif"},{"value":"Georgia, Utopia, 'Times New Roman', Times, serif","label":"Georgia","group":"Serif"},{"value":"Palatino, 'Palatino Linotype', 'Book Antiqua', serif","label":"Palatino","group":"Serif"},{"value":"'Times New Roman', Times, serif","label":"Times New Roman","group":"Serif"},{"value":"'Courier New', Courier, monospace","label":"Courier New","group":"Monospace"},{"value":"Monaco, 'Lucida Console', 'DejaVu Sans Mono', monospace","label":"Monaco\/Lucida Console","group":"Monospace"}]},{"type":"select","id":"misc_font","label":"MISC font","options":[{"value":"Google+Arvo","label":"Arvo","group":"Google Web Fonts"},{"value":"Google+Asap","label":"Asap","group":"Google Web Fonts"},{"value":"Google+Cabin","label":"Cabin","group":"Google Web Fonts"},{"value":"Google+Copse","label":"Copse","group":"Google Web Fonts"},{"value":"Google+Droid+Sans","label":"Droid Sans","group":"Google Web Fonts"},{"value":"Google+Droid+Serif","label":"Droid Serif","group":"Google Web Fonts"},{"value":"Google+Gentium+Book+Basic","label":"Gentium Book Basic","group":"Google Web Fonts"},{"value":"Google+Josefin+Slab","label":"Josefin Slab","group":"Google Web Fonts"},{"value":"Google+Josefin+Sans","label":"Josefin Sans","group":"Google Web Fonts"},{"value":"Google+Kreon","label":"Kreon","group":"Google Web Fonts"},{"value":"Google+Lato","label":"Lato","group":"Google Web Fonts"},{"value":"Google+Lora","label":"Lora","group":"Google Web Fonts"},{"value":"Google+Merriweather","label":"Merriweather","group":"Google Web Fonts"},{"value":"Google+Old+Standard+TT","label":"Old Standard TT","group":"Google Web Fonts"},{"value":"Google+Open+Sans","label":"Open Sans","group":"Google Web Fonts"},{"value":"Google+Raleway","label":"Raleway","group":"Google Web Fonts"},{"value":"ProximaNovaLight","label":"Proxima Nova","group":"Web Fonts"},{"value":"Helvetica, Arial, sans-serif","label":"Helvetica\/Arial","group":"Sans-serif"},{"value":"Impact, Charcoal, Helvetica, Arial, sans-serif","label":"Impact","group":"Sans-serif"},{"value":"'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Lucida, Helvetica, Arial, sans-serif","label":"Lucida Grande","group":"Sans-serif"},{"value":"Trebuchet MS, sans-serif","label":"Trebuchet MS","group":"Sans-serif"},{"value":"Verdana, Helvetica, Arial, sans-serif","label":"Verdana","group":"Sans-serif"},{"value":"Garamond, Baskerville, Caslon, serif","label":"Garamond","group":"Serif"},{"value":"Georgia, Utopia, 'Times New Roman', Times, serif","label":"Georgia","group":"Serif"},{"value":"Palatino, 'Palatino Linotype', 'Book Antiqua', serif","label":"Palatino","group":"Serif"},{"value":"'Times New Roman', Times, serif","label":"Times New Roman","group":"Serif"},{"value":"'Courier New', Courier, monospace","label":"Courier New","group":"Monospace"},{"value":"Monaco, 'Lucida Console', 'DejaVu Sans Mono', monospace","label":"Monaco\/Lucida Console","group":"Monospace"}]}]},{"name":"General Settings","settings":[{"type":"header","content":"Preloading screen"},{"type":"checkbox","id":"general_loadingscreen","label":"Active Preloading screen","default":true},{"type":"header","content":"Mailing List Widget (Mailchimp) Popup"},{"type":"checkbox","id":"mailing_list_active","label":"Active Popup?"},{"type":"text","id":"news_title","label":"Heading text"},{"type":"textarea","id":"news_sub","label":"Subtext"},{"type":"text","id":"news_input","label":"Input text"},{"type":"textarea","id":"mailchimp_form_action","label":"Mailchimp form action [( ? )](http:\/\/support.shopify.com\/customer\/portal\/articles\/640278)"},{"type":"paragraph","content":"[Where do I get my MailChimp Form Action?](http:\/\/support.shopify.com\/customer\/portal\/articles\/640278)"},{"type":"text","id":"news_ignore","label":"Ignore text"},{"type":"text","id":"news_time","label":"Timeout (seconds)","default":"10"},{"type":"image","id":"mailing_bg.png","label":"Upload a image for Background","info":"PNG format"},{"type":"header","content":"Scroll to Top"},{"type":"checkbox","id":"general_gototop","label":"Active Scroll to Top","default":true}]},{"name":"Header","settings":[{"type":"header","content":"Logo and icon"},{"type":"checkbox","id":"use_logo","label":"Use a custom logo"},{"type":"image","id":"logo.png"},{"type":"checkbox","id":"use_favicon","label":"Use a custom icon"},{"type":"image","id":"favicon.png","max-width":16,"max-height":16,"label":"Favicon","info":"16 x 16px required"},{"type":"checkbox","id":"header_snow","label":"Active Snow effect"}]},{"name":"Mega Menu","settings":[{"type":"header","content":"Navigation Setting"},{"type":"link_list","id":"nav_linklist","label":"Select Link list for main Navigation"},{"type":"checkbox","id":"nav_sticky","label":"Active Sticky (float) Navigation?","default":true},{"type":"header","content":"Mega Menu style 01 (3 link list and image)"},{"type":"text","id":"megamenu_items_1","label":"Mega Menu 01 Title","info":"(blank if you don't want to use)"},{"type":"link_list","id":"mega_linklist_1","label":"Link List 1 (column 1)"},{"type":"link_list","id":"mega_linklist_2","label":"Link List 2 (column 2)"},{"type":"link_list","id":"mega_linklist_3","label":"Link List 3 (column 3)"},{"type":"image","id":"mega-bg-01.png","label":"Upload a image"},{"type":"checkbox","id":"display_menu_image_1","label":"Show Menu image collumn","default":true},{"type":"header","content":"Mega Menu style 02 (text and 3 link list)"},{"type":"text","id":"megamenu_items_2","label":"Mega Menu 02 Title","info":"(blank if you don't want to use)"},{"type":"textarea","id":"megamenu_text_2","label":"Sample Text (HTML)"},{"type":"link_list","id":"mega_linklist_4","label":"Link List 1 (column 1)"},{"type":"link_list","id":"mega_linklist_5","label":"Link List 2 (column 2)"},{"type":"link_list","id":"mega_linklist_6","label":"Link List 3 (column 3)"},{"type":"image","id":"mega-bg-02.png","label":"Upload a image"},{"type":"checkbox","id":"display_menu_image_2","label":"Show Menu image background","default":true}]},{"name":"Main Slideshow","settings":[{"type":"header","content":"Main Slideshow Settings"},{"type":"checkbox","id":"maincarousel_active","label":"Active Main Slideshow"},{"type":"checkbox","id":"maincarousel_auto","label":"Setup to animate automatically","default":true},{"type":"select","id":"maincarousel_slide","label":"Controls the animation type","options":[{"value":"fade","label":"Fade"},{"value":"slide","label":"Slide"}],"default":"slide"},{"type":"text","id":"maincarousel_slideshowSpeed","label":"Speed of the slideshow cycling, in milliseconds","default":"5000"},{"type":"checkbox","id":"maincarousel_directionNav","label":"Create previous\/next arrow navigation"},{"type":"checkbox","id":"maincarousel_controlNav","label":"Active Navigation for paging control"},{"type":"checkbox","id":"maincarousel_pauseOnHover","label":"Pause the slideshow when hovering over slider"},{"type":"checkbox","id":"maincarousel_randomize","label":"Randomize slide order, on load"},{"type":"checkbox","id":"maincarousel_snow","label":"Active Snow effect"},{"type":"header","content":"Setup 1st Slide"},{"type":"checkbox","id":"slide-active-1","label":"Active 1st slide"},{"type":"image","id":"slide-image-1.jpg","label":"1st slide image","info":"JPG format"},{"type":"image","id":"slide-image-1s.jpg","label":"1st mobile slide image","info":"JPG format"},{"type":"select","id":"slide-image-position-1","label":"Set the position for caption","options":[{"value":"left","label":"Left side"},{"value":"right","label":"Right side"},{"value":"center","label":"Center"}],"default":"left"},{"type":"textarea","id":"slide-cap-12","label":"Caption - Main text"},{"type":"text","id":"slide-button-text-11","label":"Button 01 - Text"},{"type":"text","id":"slide-button-link-11","label":"Button 01 - Link"},{"type":"header","content":"Setup 2nd Slide"},{"type":"checkbox","id":"slide-active-2","label":"Active 2nd slide"},{"type":"image","id":"slide-image-2.jpg","label":"2nd slide image","info":"JPG format"},{"type":"image","id":"slide-image-2s.jpg","label":"2nd mobile slide image","info":"JPG format"},{"type":"select","id":"slide-image-position-2","label":"Set the position for caption","options":[{"value":"left","label":"Left side"},{"value":"right","label":"Right side"},{"value":"center","label":"Center"}],"default":"left"},{"type":"textarea","id":"slide-cap-22","label":"Caption - Main text"},{"type":"text","id":"slide-button-text-21","label":"Button 01 - Text"},{"type":"text","id":"slide-button-link-21","label":"Button 01 - Link"},{"type":"header","content":"Setup 3rd Slide"},{"type":"checkbox","id":"slide-active-3","label":"Active 3rd slide"},{"type":"image","id":"slide-image-3.jpg","label":"3rd slide image","info":"JPG format"},{"type":"image","id":"slide-image-3s.jpg","label":"3rd mobile slide image","info":"JPG format"},{"type":"select","id":"slide-image-position-3","label":"Set the position for caption","options":[{"value":"left","label":"Left side"},{"value":"right","label":"Right side"},{"value":"center","label":"Center"}],"default":"left"},{"type":"textarea","id":"slide-cap-32","label":"Caption - Main text"},{"type":"text","id":"slide-button-text-31","label":"Button 01 - Text"},{"type":"text","id":"slide-button-link-31","label":"Button 01 - Link"},{"type":"header","content":"Setup 4th Slide"},{"type":"checkbox","id":"slide-active-4","label":"Active 4th slide"},{"type":"image","id":"slide-image-4.jpg","label":"4th slide image","info":"JPG format"},{"type":"image","id":"slide-image-4s.jpg","label":"4th mobile slide image","info":"JPG format"},{"type":"select","id":"slide-image-position-4","label":"Set the position for caption","options":[{"value":"left","label":"Left side"},{"value":"right","label":"Right side"},{"value":"center","label":"Center"}],"default":"left"},{"type":"textarea","id":"slide-cap-42","label":"Caption - Main text"},{"type":"text","id":"slide-button-text-41","label":"Button 01 - Text"},{"type":"text","id":"slide-button-link-41","label":"Button 01 - Link"},{"type":"header","content":"Setup 5th Slide"},{"type":"checkbox","id":"slide-active-5","label":"Active 5th slide"},{"type":"image","id":"slide-image-5.jpg","label":"5th slide image","info":"JPG format"},{"type":"image","id":"slide-image-5s.jpg","label":"5th mobile slide image","info":"JPG format"},{"type":"select","id":"slide-image-position-5","label":"Set the position for caption","options":[{"value":"left","label":"Left side"},{"value":"right","label":"Right side"},{"value":"center","label":"Center"}],"default":"left"},{"type":"textarea","id":"slide-cap-52","label":"Caption - Main text"},{"type":"text","id":"slide-button-text-51","label":"Button 01 - Text"},{"type":"text","id":"slide-button-link-51","label":"Button 01 - Link"},{"type":"header","content":"Setup 6th Slide"},{"type":"checkbox","id":"slide-active-6","label":"Active 6th slide"},{"type":"image","id":"slide-image-6.jpg","label":"6th slide image","info":"JPG format"},{"type":"image","id":"slide-image-6s.jpg","label":"6th mobile slide image","info":"JPG format"},{"type":"select","id":"slide-image-position-6","label":"Set the position for caption","options":[{"value":"left","label":"Left side"},{"value":"right","label":"Right side"},{"value":"center","label":"Center"}],"default":"left"},{"type":"textarea","id":"slide-cap-62","label":"Caption - Main text"},{"type":"text","id":"slide-button-text-61","label":"Button 01 - Text"},{"type":"text","id":"slide-button-link-61","label":"Button 01 - Link"}]},{"name":"Home page","settings":[{"type":"header","content":"Home page Top product block"},{"type":"checkbox","id":"newarrivals_active","label":"Active","default":true},{"type":"collection","id":"newarrivals_collection","label":"Collection to use:"},{"type":"text","id":"newarrivals_number","label":"Number Products each Tab"},{"type":"header","content":"Middle Banner block"},{"type":"checkbox","id":"middle_banner_active","label":"Active","default":true},{"type":"image","id":"middle_banner1_bkg.jpg","label":"Row 1 Left - Background","info":"JPG format"},{"type":"textarea","id":"middle_banner1_textarea","label":"Row 1 Left - Caption"},{"type":"image","id":"middle_banner2_bkg.jpg","label":"Row 1 Left - Background","info":"JPG format"},{"type":"textarea","id":"middle_banner2_textarea","label":"Row 1 Right - Caption"},{"type":"text","id":"middle_banner2_linkto","label":"Row 1 Right - link to"},{"type":"color","id":"middle_banner3_bkg","label":"Background Color Banner 3","default":"#1c8a71"},{"type":"image","id":"middle_banner3_caption.png","label":"Row 2 - Caption","info":"PNG format"},{"type":"textarea","id":"middle_banner3_textarea","label":"Row 2 - Text"},{"type":"text","id":"middle_banner3_linkto","label":"Row 2 - link to"},{"type":"image","id":"middle_banner4_bkg.jpg","label":"Row 3 Left - Background","info":"JPG format"},{"type":"textarea","id":"middle_banner4_textarea","label":"Row 3 Left - Caption"},{"type":"text","id":"middle_banner4_linkto","label":"Row 3 Left - link to"},{"type":"image","id":"middle_banner5_bkg.jpg","label":"Row 3 Right - Background","info":"JPG format"},{"type":"textarea","id":"middle_banner5_textarea","label":"Row 3 Right - Caption"},{"type":"text","id":"middle_banner5_linkto","label":"Row 3 Right - link to"},{"type":"header","content":"Best seller block"},{"type":"checkbox","id":"bestseller_active","label":"Active","default":true},{"type":"text","id":"bestseller_title","label":"Title block"},{"type":"collection","id":"bestseller_collection","label":"Collection to use:"},{"type":"text","id":"bestseller_number","label":"Number Products each Tab"},{"type":"header","content":"Top Rated"},{"type":"checkbox","id":"toprated_active","label":"Active","default":true},{"type":"text","id":"toprated_title","label":"Title block"},{"type":"collection","id":"toprated_collection","label":"Collection to use:"},{"type":"text","id":"toprated_number","label":"Number Products each Tab"},{"type":"header","content":"Bottom Information"},{"type":"checkbox","id":"bottom_active","label":"Active","default":true},{"type":"image","id":"bottom_bkg.jpg","label":"Background image","info":"JPG format"},{"type":"paragraph","content":"1st Block"},{"type":"image","id":"bottom1_img.png","label":"1st Block - Image","info":"PNG format"},{"type":"text","id":"bottom1_text","label":"1st Block - Heading"},{"type":"textarea","id":"bottom1_desc","label":"1st Block - Description"},{"type":"paragraph","content":"2nd Block"},{"type":"image","id":"bottom2_img.png","label":"2nd Block - Image","info":"PNG format"},{"type":"text","id":"bottom2_text","label":"2nd Block - Heading"},{"type":"textarea","id":"bottom2_desc","label":"2nd Block - Description"},{"type":"paragraph","content":"3rd Block"},{"type":"image","id":"bottom3_img.png","label":"3rd Block - Image","info":"PNG format"},{"type":"text","id":"bottom3_text","label":"3rd Block - Heading"},{"type":"textarea","id":"bottom3_desc","label":"3rd Block - Description"}]},{"name":"Footer","settings":[{"type":"header","content":"Newsletter"},{"type":"checkbox","id":"ft_newsletter_show","label":"Show newsletter","default":true},{"type":"text","id":"mailing_list_form_action","label":"Mailchimp form action URL","info":"[Find your MailChimp form action URL](https:\/\/docs.shopify.com\/manual\/configuration\/store-customization\/communicating-with-customers\/accounts-and-newsletters\/get-a-mailchimp-form-action-url)."},{"type":"header","content":"Follow area"},{"type":"checkbox","id":"fi_follow_show","label":"Show this area?","default":true},{"type":"text","id":"fi_follow_title","label":"Title area","default":"Follow Us"},{"type":"text","id":"twitter_link","label":"Twitter","info":"https:\/\/twitter.com\/shopify"},{"type":"text","id":"facebook_link","label":"Facebook","info":"https:\/\/www.facebook.com\/shopify"},{"type":"text","id":"google_link","label":"Google+","info":"https:\/\/plus.google.com\/+shopify"},{"type":"text","id":"youtube_link","label":"Youtube","info":"https:\/\/www.youtube.com\/user\/shopify"},{"type":"text","id":"vimeo_link","label":"Vimeo","info":"https:\/\/vimeo.com\/shopify"},{"type":"text","id":"pinterest_link","label":"Pinterest","info":"https:\/\/www.pinterest.com\/shopify\/"},{"type":"text","id":"instagram_link","label":"Instagram","info":"https:\/\/instagram.com\/shopify\/"},{"type":"text","id":"tumblr_link","label":"Tumblr","info":"http:\/\/shopify.tumblr.com\/"},{"type":"text","id":"atom_link","label":"Blog feed","info":"\/blogs\/news.atom"},{"type":"header","content":"Payment method Icons"},{"type":"text","id":"fi_payment_title","label":"Title area","default":"Payment Accept"},{"type":"checkbox","id":"accept_shopify","label":"Shopify Payments"},{"type":"checkbox","id":"accept_paypal","label":"PayPal"},{"type":"checkbox","id":"accept_mastercard","label":"Mastercard"},{"type":"checkbox","id":"accept_worldpay","label":"Worldpay"},{"type":"checkbox","id":"accept_visa","label":"Visa"},{"type":"checkbox","id":"accept_maestro","label":"Maestro"},{"type":"header","content":"Footer Links"},{"type":"checkbox","id":"footer_links_active","label":"Active Footer Links"},{"type":"text","id":"footer_links1_title","label":"Footer Link list title - Col-1","info":"Company"},{"type":"link_list","id":"footer_links1","label":"set the link líst - Col 1"},{"type":"text","id":"footer_links2_title","label":"Footer Link list title - Col-2","info":"Customer Service"},{"type":"link_list","id":"footer_links2","label":"set the link líst - Col 2"},{"type":"text","id":"footer_links3_title","label":"Footer Link list title - Col-3","info":"My Account"},{"type":"link_list","id":"footer_links3","label":"set the link líst - Col 3"},{"type":"text","id":"footer_links4_title","label":"Footer Link list title - Col-4","info":"Follow Marbek"},{"type":"link_list","id":"footer_links4","label":"set the link líst - Col 4"}]},{"name":"Product page","settings":[{"type":"header","content":"General Setting"},{"type":"checkbox","id":"enable_breadcrumb","label":"Enable Breadcrumb","default":true},{"type":"checkbox","id":"enable_product_image_zoom","label":"Enable image zoom"},{"type":"checkbox","id":"color_swatch","label":"Enable Color Swatch?","default":true},{"type":"checkbox","id":"enable_rating_star","label":"Enable Rating Star"},{"type":"checkbox","id":"enable_quickoverview","label":"Enable Quick Overview"},{"type":"text","id":"detail_qov_lenght","label":"Quick Overview lenght","default":"30"},{"type":"checkbox","id":"display_quantity_dropdown","label":"Show quantity box"},{"type":"checkbox","id":"display_wishlist","label":"Show Wish list","default":true},{"type":"checkbox","id":"display_tags","label":"Show Tags","default":true},{"type":"header","content":"Ajax Add to cart Modal"},{"type":"checkbox","id":"ajax_active","label":"Active Ajax Add to Cart","default":true},{"type":"text","id":"ajax_timeout","label":"Set time out, auto close","default":"5000","info":"(seconds)"},{"type":"header","content":"Product Tab Setting"},{"type":"checkbox","id":"display_tab","label":"Show Product Tab","default":true},{"type":"paragraph","content":"Select tab to show:"},{"type":"checkbox","id":"product_tab_desc","label":"Description Tab"},{"type":"checkbox","id":"product_tab_customerreview","label":"Customer Review Tab"},{"type":"checkbox","id":"product_tab_delivery","label":"Delivery Tab"},{"type":"textarea","id":"product_tab_delivery_content","label":"Delivery Tab Content"},{"type":"checkbox","id":"product_tab_warranty","label":"Style Notes Tab"},{"type":"textarea","id":"product_tab_warranty_content","label":"Style Notes Tab Content"},{"type":"checkbox","id":"product_tab_payment","label":"Delivery Tab"},{"type":"textarea","id":"product_tab_payment_content","label":"Delivery Tab Content"},{"type":"header","content":"Related Products Setting"},{"type":"checkbox","id":"show_related_products","label":"Show related products","default":true,"info":"Only visible within a collection"},{"type":"header","content":"Social media sharing"},{"type":"checkbox","id":"social_sharing_products","label":"Enable product sharing"},{"type":"checkbox","id":"social_sharing_count","label":"Show shared count","info":"Only available for Facebook, Twitter, and Pinterest"},{"type":"select","id":"social_sharing_style","label":"Button style","options":[{"value":"","label":"Normal"},{"value":"is-large","label":"Large"},{"value":"is-clean","label":"Clean"}]},{"type":"checkbox","id":"share_facebook","label":"Share on Facebook"},{"type":"checkbox","id":"share_twitter","label":"Tweet on Twitter"},{"type":"checkbox","id":"share_pinterest","label":"Pin on Pinterest"},{"type":"checkbox","id":"share_fancy","label":"Add to Fancy"},{"type":"checkbox","id":"share_google","label":"+1 on Google Plus"}]},{"name":"Collection page","settings":[{"type":"header","content":"General Settings"},{"type":"checkbox","id":"collection_banner","label":"Display General Banner","default":true},{"type":"image","id":"collection_banner.jpg"},{"type":"checkbox","id":"collection_image","label":"Display Collection Featured image","default":true},{"type":"checkbox","id":"collection_desc","label":"Display Collection Description","default":true},{"type":"header","content":"Collection Filters Toolbar"},{"type":"checkbox","id":"collection_showing","label":"Display \"Showing\" number","default":true},{"type":"checkbox","id":"collection_tags","label":"Display \"Browse by\" product tag filter","default":true},{"type":"checkbox","id":"collection_perpage","label":"Display \"Show per page\" filter","default":true},{"type":"checkbox","id":"collection_sort","label":"Display Sort by filter","default":true},{"type":"checkbox","id":"collection_grid_list","label":"Display View as List\/Grid","default":true},{"type":"select","id":"collection_grid_list_default","label":"Set Default View as Mode","options":[{"value":"grid","label":"Grid"},{"value":"list","label":"List"}],"default":"grid"},{"type":"header","content":"Tags filter"},{"type":"paragraph","content":"Group tag filter 1"},{"type":"text","id":"group_tag_1_label","label":"Label:","default":"Size"},{"type":"text","id":"group_tag_1","label":"Keys:","default":"S,M,L,XL","info":"Separate tags with comma"},{"type":"paragraph","content":"Group tab filter 2"},{"type":"text","id":"group_tag_2_label","label":"Label:","default":"Color"},{"type":"text","id":"group_tag_2","label":"Keys:","default":"Green, Black, Blue, Red, Yellow, White, Brown, Silver, Gray, Pink, Orange","info":"Separate tags with comma"},{"type":"paragraph","content":"Group tab filter 3"},{"type":"text","id":"group_tag_3_label","label":"Label:","default":"Brand"},{"type":"text","id":"group_tag_3","label":"Keys:","default":"Chanel, Dior, Gap, Lucci, Louis, Hermes","info":"Separate tags with comma"},{"type":"paragraph","content":"Group tab filter 4"},{"type":"text","id":"group_tag_4_label","label":"Label:","default":"Price"},{"type":"text","id":"group_tag_4","label":"Keys:","default":"Under $100, $100 - $200, Above $200","info":"Separate tags with comma"},{"type":"header","content":"Collection Page Layout"},{"type":"select","id":"products_per_row","label":"Number of products per row","options":[{"value":"3","label":"3"},{"value":"4","label":"4"}],"default":"3"},{"type":"text","id":"pagination_limit","label":"Number of products per page","default":"24"}]},{"name":"Blog page","settings":[{"type":"header","content":"Blog setting"},{"type":"text","id":"blog_num","label":"Number Post per page","default":"3"},{"type":"header","content":"Blog Sidebar"},{"type":"checkbox","id":"blog_recent_show","label":"Display this widget?","default":true},{"type":"text","id":"blog_recent_title","label":"Title","default":"Recent articles"},{"type":"blog","id":"blog_recent_blog","label":"Use blog"},{"type":"text","id":"blog_recent_number","label":"Number of","default":"3"},{"type":"paragraph","content":"Sidebar Banner"},{"type":"checkbox","id":"side_banner_show","label":"Sidebar Banner","default":true},{"type":"image","id":"blog_sidebar.jpg","label":"Upload image for sale banner","info":"PNG format"},{"type":"image","id":"blog_sidebar2.jpg","label":"Upload image for support banner","info":"PNG format"},{"type":"header","content":"Social Sharing"},{"type":"checkbox","id":"social_sharing_blog","label":"Enable sharing for blog posts"}]},{"name":"Cart page","settings":[{"type":"checkbox","id":"ajax_cart_enable","label":"Stay on the current page when an item is added"}]},{"name":"Contact Page","settings":[{"type":"header","content":"Contact form"},{"type":"text","id":"contact_title","label":"Form Title","default":"Live a Message"},{"type":"header","content":"Google Map Area"},{"type":"checkbox","id":"contact_map","label":"Show contact map","default":true},{"type":"select","id":"contact_type","label":"Map type","options":[{"value":"ROADMAP","label":"Normal map"},{"value":"SATELLITE","label":"Satellite"},{"value":"HYBRID","label":"Hybrid"},{"value":"TERRAIN","label":"Terrain"}]},{"type":"select","id":"contact_zoom","label":"Zoom level","options":[{"value":"0","label":"0"},{"value":"1","label":"1"},{"value":"2","label":"2"},{"value":"3","label":"3"},{"value":"4","label":"4"},{"value":"5","label":"5"},{"value":"6","label":"6"},{"value":"7","label":"7"},{"value":"8","label":"8"},{"value":"9","label":"9"},{"value":"10","label":"10"},{"value":"11","label":"11"},{"value":"12","label":"12"},{"value":"13","label":"13"},{"value":"14","label":"14"},{"value":"15","label":"15"},{"value":"16","label":"16"},{"value":"17","label":"17"},{"value":"18","label":"18"},{"value":"19","label":"19"},{"value":"20","label":"20"},{"value":"21","label":"21"}]},{"type":"text","id":"contact_address","label":"Map address"},{"type":"checkbox","id":"contact_scroll","label":"Scroll wheel","default":true}]},{"name":"FAQs","settings":[{"type":"text","id":"faq-text1-head","label":"FAQ 1 - Heading","default":"What are the delivery charges for orders from the Online Shop?"},{"type":"textarea","id":"faq-text1-cont","label":"FAQ 1 - Content","default":"Transform indicator overcome injustice pursue these aspirations natural resources. Maintain, social analysis Bloomberg; accelerate planned giving. Revitalize economic independence, foundation sharing economy, rights-based approach medical supplies eradicate celebrate informal economies. International medicine social worker participatory monitoring Bill and Melinda Gates our ambitions justice relief transform the world. Resolve emergency response accelerate progress, maximize collaborative cities lifting people up tackle frontline.  Transform indicator overcome injustice pursue these aspirations natural resources. Maintain, social analysis Bloomberg; accelerate planned giving. Revitalize economic independence, foundation sharing economy, rights-based approach medical supplies eradicate celebrate informal economies. International medicine social worker participatory monitoring Bill and Melinda Gates our ambitions justice relief transform the world. Resolve emergency response accelerate progress, maximize collaborative cities lifting people up tackle frontline."},{"type":"text","id":"faq-text2-head","label":"FAQ 2 - Heading","default":" Which payment methods are accepted in the Online Shop?"},{"type":"textarea","id":"faq-text2-cont","label":"FAQ 2 - Content"},{"type":"text","id":"faq-text3-head","label":"FAQ 3 - Heading","default":" How long will delivery take?"},{"type":"textarea","id":"faq-text3-cont","label":"FAQ 3 - Content"},{"type":"text","id":"faq-text4-head","label":"FAQ 4 - Heading","default":"How secure is shopping in the Online Shop? Is my data protected?"},{"type":"textarea","id":"faq-text4-cont","label":"FAQ 4 - Content"},{"type":"text","id":"faq-text5-head","label":"FAQ 5 - Heading","default":" What exactly happens after ordering?"},{"type":"textarea","id":"faq-text5-cont","label":"FAQ 5 - Content"},{"type":"text","id":"faq-text6-head","label":"FAQ 6 - Heading","default":"Do I receive an invoice for my order?"},{"type":"textarea","id":"faq-text6-cont","label":"FAQ 6 - Content"},{"type":"text","id":"faq-text7-head","label":"FAQ 7 - Heading","default":"How much does it cost to update my site or to maintain it?"},{"type":"textarea","id":"faq-text7-cont","label":"FAQ 7 - Content"},{"type":"text","id":"faq-text8-head","label":"FAQ 8 - Heading","default":"How do you manage my web solution project and how do I communicate with you?"},{"type":"textarea","id":"faq-text8-cont","label":"FAQ 8 - Content"},{"type":"text","id":"faq-text9-head","label":"FAQ 9 - Heading","default":"What after-sales support do you offer?"},{"type":"textarea","id":"faq-text9-cont","label":"FAQ 9 - Content"},{"type":"text","id":"faq-text10-head","label":"FAQ 10 - Heading","default":"How much does a web site cost?"},{"type":"textarea","id":"faq-text10-cont","label":"FAQ 10 - Content"}]},{"name":"Password Front-end Page","settings":[{"type":"text","id":"password_link","label":"Password link text","default":"Enter using password"},{"type":"text","id":"password_opening_soon","label":"Opening Soon text","default":"Opening Soon"},{"type":"text","id":"password_signup_form_success","label":"Signup Form Success text","default":"We will send you an email right before we open!"},{"type":"text","id":"password_signup_form_heading","label":"Signup Form Heading text","default":"Find out when we open:"},{"type":"text","id":"password_spread_the_word","label":"Spread The Word text","default":"Spread the word:"},{"type":"text","id":"password_signup_form_email_label","label":"Signup Form Email Label text","default":"Email"},{"type":"text","id":"password_signup_form_email_placeholder","label":"Signup Form Email Placeholder text","default":"Your email"},{"type":"text","id":"password_signup_form_submit","label":"Signup Form Submit text","default":"Submit"},{"type":"text","id":"password_powered_by_shopify_html","label":"Powered By Shopify text","default":"This shop will be powered by"},{"type":"text","id":"password_login_form_heading","label":"Login Form Heading text","default":"Enter store using password:"},{"type":"text","id":"password_login_form_password_label","label":"Login Form Password text","default":"Password"},{"type":"text","id":"password_login_form_password_placeholder","label":"Login Form Password Placeholder text","default":"Your password"},{"type":"text","id":"password_login_form_submit","label":"Login Form Submit text","default":"Enter"},{"type":"text","id":"password_admin_link_html","label":"Admin Link text","default":"Are you the store owner? <a href='\/admin' class='text-link'>Log in here<\/a>"},{"type":"text","id":"password_close","label":"close text","default":"Close (Esc)"},{"type":"image","id":"password_bkg.jpg","label":"Upload image background"}]},{"name":"Social media","settings":[{"type":"header","content":"Sharing"},{"type":"text","id":"twittercard_handle","label":"Twitter handle","info":"@shopify"}]},{"settings":[{"id":"show_multiple_currencies","default":true,"label":"Enable Auto Currency App?","type":"checkbox"},{"content":"Although you will be able to display prices on your store front in different currencies, Shopify will still process orders in your shop's currency.","type":"paragraph"},{"id":"show_decimal_places","default":true,"label":"Round Decimal Digits to .00 ?","type":"checkbox"},{"id":"hide_decimal_places","label":"Hide Decimal Digits? ( Remove .00 )","type":"checkbox"},{"content":"By selecting the Hide Decimal Digits checkbox, the prices will be diplayed without decimal digits.","type":"paragraph"},{"id":"currency_format","default":"money_with_currency_format","label":"Money format","type":"select","options":[{"value":"money_format","label":"Without Currency, ex: $10.00"},{"value":"money_with_currency_format","label":"With Currency, ex: $10 CAD"}]},{"id":"supported_currencies","default":"INR GBP CAD USD AUD EUR JPY","label":"Currencies you wish to support","type":"text"},{"id":"default_currency","default":"GBP","label":"Default currency","type":"text"},{"content":"Separate your currency codes with a space. Use the ISO 4217 3-letter currency code. Click [here](http:\/\/www.xe.com\/iso4217.php) for a complete list of currency codes. Example: CAD USD.","type":"paragraph"}],"name":"Money options"}]
+[  
+   {  
+      "name":"theme_info",
+      "logo":"https:\/\/cdn.shopify.com\/s\/files\/1\/0985\/4524\/t\/1\/assets\/logo.png",
+      "settings":[  
+         {  
+            "type":"header",
+            "content":"Everything Store - Multipurpose Responsive Shopify theme"
+         },
+         {  
+            "type":"paragraph",
+            "content":"This theme is officially supported by www.designshopify.com , if you have any questions please [open ticket support here](http:\/\/www.codespotsupport.com\/others\/)."
+         }
+      ]
+   },
+   {  
+      "name":"Colors",
+      "settings":[  
+         {  
+            "type":"header",
+            "content":"Colors"
+         },
+         {  
+            "type":"color",
+            "id":"color_text_general",
+            "label":"Color General",
+            "default":"#a1a1a1"
+         },
+         {  
+            "type":"color",
+            "id":"color_hover_general",
+            "label":"Color hover General",
+            "default":"#1c8a71"
+         },
+         {  
+            "type":"color",
+            "id":"color_text_header",
+            "label":"Color Header",
+            "default":"#c2c2c2"
+         },
+         {  
+            "type":"color",
+            "id":"color_text_menu",
+            "label":"Color Menu",
+            "default":"#ffffff"
+         },
+         {  
+            "type":"color",
+            "id":"color_text_heading",
+            "label":"Color Text Heading",
+            "default":"#000000"
+         },
+         {  
+            "type":"color",
+            "id":"color_text_title",
+            "label":"Color Text Title",
+            "default":"#434343"
+         },
+         {  
+            "type":"color",
+            "id":"color_text_banner",
+            "label":"Color Text Banner",
+            "default":"#ffffff"
+         },
+         {  
+            "type":"header",
+            "content":"Line"
+         },
+         {  
+            "type":"color",
+            "id":"border_general",
+            "label":"Line General",
+            "default":"#e1e1e1"
+         },
+         {  
+            "type":"color",
+            "id":"border_header",
+            "label":"Line Header",
+            "default":"#343434"
+         },
+         {  
+            "type":"color",
+            "id":"border_title",
+            "label":"Line Title",
+            "default":"#33c1a9"
+         },
+         {  
+            "type":"color",
+            "id":"border_submenu",
+            "label":"Line Submenu",
+            "default":"#e9e9e9"
+         },
+         {  
+            "type":"header",
+            "content":"Background"
+         },
+         {  
+            "type":"checkbox",
+            "id":"use_bg_image",
+            "label":"Use a background image"
+         },
+         {  
+            "type":"image",
+            "id":"bg.jpg"
+         },
+         {  
+            "type":"color",
+            "id":"shop_bg_color",
+            "label":"Background Body",
+            "default":"#fbfbfb"
+         },
+         {  
+            "type":"color",
+            "id":"bkg_top_header",
+            "label":"Background Header Top",
+            "default":"#1b1b1b"
+         },
+         {  
+            "type":"color",
+            "id":"bkg_main_header",
+            "label":"Background Header Main",
+            "default":"#272727"
+         },
+         {  
+            "type":"color",
+            "id":"bkg_nav_header",
+            "label":"Background Menu",
+            "default":"#272727"
+         },
+         {  
+            "type":"color",
+            "id":"bkg_breadcrumb",
+            "label":"Background Breakcrumb",
+            "default":"#f7f7f7"
+         },
+         {  
+            "type":"color",
+            "id":"bkg_title",
+            "label":"Background title",
+            "default":"#464646"
+         },
+         {  
+            "type":"color",
+            "id":"bkg_home_wrapper",
+            "label":"Background Home Wrapper",
+            "default":"#f9f9f9"
+         },
+         {  
+            "type":"color",
+            "id":"bkg_footer",
+            "label":"Background Footer",
+            "default":"#272727"
+         },
+         {  
+            "type":"color",
+            "id":"bkg_footer_copyright",
+            "label":"Background Footer Copyright",
+            "default":"#000000"
+         },
+         {  
+            "type":"header",
+            "content":"Button"
+         },
+         {  
+            "type":"color",
+            "id":"color_text_button",
+            "label":"Color text Button",
+            "default":"#ffffff"
+         },
+         {  
+            "type":"color",
+            "id":"color_border_button",
+            "label":"Color border Button",
+            "default":"#ffffff"
+         },
+         {  
+            "type":"color",
+            "id":"bkg_button",
+            "label":"Color background Button",
+            "default":"#ffffff"
+         },
+         {  
+            "type":"color",
+            "id":"color_text_button_hover",
+            "label":"Color text Button hover",
+            "default":"#434343"
+         },
+         {  
+            "type":"color",
+            "id":"bkg_button_hover",
+            "label":"Color background Button hover",
+            "default":"#ffffff"
+         },
+         {  
+            "type":"color",
+            "id":"color_border_button_hover",
+            "label":"Color border Button hover",
+            "default":"#ffffff"
+         },
+         {  
+            "type":"color",
+            "id":"color_text_button1",
+            "label":"Color Text Button1",
+            "default":"#434343"
+         },
+         {  
+            "type":"color",
+            "id":"color_border_button1",
+            "label":"Color Border Button1",
+            "default":"#ffffff"
+         },
+         {  
+            "type":"color",
+            "id":"bkg_button1",
+            "label":"Color Background Button1",
+            "default":"#ffffff"
+         },
+         {  
+            "type":"color",
+            "id":"color_text_button1_hover",
+            "label":"Color Text Button1 hover",
+            "default":"#ffffff"
+         },
+         {  
+            "type":"color",
+            "id":"bkg_button1_hover",
+            "label":"Color Background Button1 hover",
+            "default":"#1c8a71"
+         },
+         {  
+            "type":"color",
+            "id":"color_border_button1_hover",
+            "label":"Color Border Button1 hover",
+            "default":"#1c8a71"
+         },
+         {  
+            "type":"color",
+            "id":"color_text_button2",
+            "label":"Color Text Button2",
+            "default":"#434343"
+         },
+         {  
+            "type":"color",
+            "id":"color_border_button2",
+            "label":"Color Border Button2",
+            "default":"#ffffff"
+         },
+         {  
+            "type":"color",
+            "id":"bkg_button2",
+            "label":"Color Background Button2",
+            "default":"#ffffff"
+         },
+         {  
+            "type":"color",
+            "id":"color_text_button2_hover",
+            "label":"Color Text Button2 hover",
+            "default":"#ffffff"
+         },
+         {  
+            "type":"color",
+            "id":"bkg_button2_hover",
+            "label":"Color Background Button2 hover",
+            "default":"#1c8a71"
+         },
+         {  
+            "type":"color",
+            "id":"color_border_button2_hover",
+            "label":"Color Border Button2 hover",
+            "default":"#1c8a71"
+         },
+         {  
+            "type":"select",
+            "id":"bg_alignment",
+            "label":"Image style",
+            "options":[  
+               {  
+                  "value":"fill contained",
+                  "label":"Fill, sides of page"
+               },
+               {  
+                  "value":"fill entire",
+                  "label":"Fill, entire page"
+               },
+               {  
+                  "value":"tiled contained",
+                  "label":"Tiled, sides of page"
+               },
+               {  
+                  "value":"tiled entire",
+                  "label":"Tiled, entire page"
+               }
+            ],
+            "default":"fill contained"
+         }
+      ]
+   },
+   {  
+      "name":"Typography",
+      "settings":[  
+         {  
+            "type":"select",
+            "id":"base_font",
+            "label":"Body font",
+            "options":[  
+               {  
+                  "value":"Google+Arvo",
+                  "label":"Arvo",
+                  "group":"Google Web Fonts"
+               },
+               {  
+                  "value":"Google+Asap",
+                  "label":"Asap",
+                  "group":"Google Web Fonts"
+               },
+               {  
+                  "value":"Google+Cabin",
+                  "label":"Cabin",
+                  "group":"Google Web Fonts"
+               },
+               {  
+                  "value":"Google+Copse",
+                  "label":"Copse",
+                  "group":"Google Web Fonts"
+               },
+               {  
+                  "value":"Google+Droid+Sans",
+                  "label":"Droid Sans",
+                  "group":"Google Web Fonts"
+               },
+               {  
+                  "value":"Google+Droid+Serif",
+                  "label":"Droid Serif",
+                  "group":"Google Web Fonts"
+               },
+               {  
+                  "value":"Google+Gentium+Book+Basic",
+                  "label":"Gentium Book Basic",
+                  "group":"Google Web Fonts"
+               },
+               {  
+                  "value":"Google+Josefin+Slab",
+                  "label":"Josefin Slab",
+                  "group":"Google Web Fonts"
+               },
+               {  
+                  "value":"Google+Josefin+Sans",
+                  "label":"Josefin Sans",
+                  "group":"Google Web Fonts"
+               },
+               {  
+                  "value":"Google+Kreon",
+                  "label":"Kreon",
+                  "group":"Google Web Fonts"
+               },
+               {  
+                  "value":"Google+Lato",
+                  "label":"Lato",
+                  "group":"Google Web Fonts"
+               },
+               {  
+                  "value":"Google+Lora",
+                  "label":"Lora",
+                  "group":"Google Web Fonts"
+               },
+               {  
+                  "value":"Google+Merriweather",
+                  "label":"Merriweather",
+                  "group":"Google Web Fonts"
+               },
+               {  
+                  "value":"Google+Old+Standard+TT",
+                  "label":"Old Standard TT",
+                  "group":"Google Web Fonts"
+               },
+               {  
+                  "value":"Google+Open+Sans",
+                  "label":"Open Sans",
+                  "group":"Google Web Fonts"
+               },
+               {  
+                  "value":"Google+Raleway",
+                  "label":"Raleway",
+                  "group":"Google Web Fonts"
+               },
+               {  
+                  "value":"proxima-nova",
+                  "label":"Proxima Nova",
+                  "group":"Adobe Typekit Fonts"
+               },
+               {  
+                  "value":"Helvetica, Arial, sans-serif",
+                  "label":"Helvetica\/Arial",
+                  "group":"Sans-serif"
+               },
+               {  
+                  "value":"Impact, Charcoal, Helvetica, Arial, sans-serif",
+                  "label":"Impact",
+                  "group":"Sans-serif"
+               },
+               {  
+                  "value":"'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Lucida, Helvetica, Arial, sans-serif",
+                  "label":"Lucida Grande",
+                  "group":"Sans-serif"
+               },
+               {  
+                  "value":"Trebuchet MS, sans-serif",
+                  "label":"Trebuchet MS",
+                  "group":"Sans-serif"
+               },
+               {  
+                  "value":"Verdana, Helvetica, Arial, sans-serif",
+                  "label":"Verdana",
+                  "group":"Sans-serif"
+               },
+               {  
+                  "value":"Garamond, Baskerville, Caslon, serif",
+                  "label":"Garamond",
+                  "group":"Serif"
+               },
+               {  
+                  "value":"Georgia, Utopia, 'Times New Roman', Times, serif",
+                  "label":"Georgia",
+                  "group":"Serif"
+               },
+               {  
+                  "value":"Palatino, 'Palatino Linotype', 'Book Antiqua', serif",
+                  "label":"Palatino",
+                  "group":"Serif"
+               },
+               {  
+                  "value":"'Times New Roman', Times, serif",
+                  "label":"Times New Roman",
+                  "group":"Serif"
+               },
+               {  
+                  "value":"'Courier New', Courier, monospace",
+                  "label":"Courier New",
+                  "group":"Monospace"
+               },
+               {  
+                  "value":"Monaco, 'Lucida Console', 'DejaVu Sans Mono', monospace",
+                  "label":"Monaco\/Lucida Console",
+                  "group":"Monospace"
+               }
+            ]
+         },
+         {  
+            "type":"select",
+            "id":"header_font",
+            "label":"Heading font",
+            "options":[  
+               {  
+                  "value":"Google+Arvo",
+                  "label":"Arvo",
+                  "group":"Google Web Fonts"
+               },
+               {  
+                  "value":"Google+Asap",
+                  "label":"Asap",
+                  "group":"Google Web Fonts"
+               },
+               {  
+                  "value":"Google+Cabin",
+                  "label":"Cabin",
+                  "group":"Google Web Fonts"
+               },
+               {  
+                  "value":"Google+Copse",
+                  "label":"Copse",
+                  "group":"Google Web Fonts"
+               },
+               {  
+                  "value":"Google+Droid+Sans",
+                  "label":"Droid Sans",
+                  "group":"Google Web Fonts"
+               },
+               {  
+                  "value":"Google+Droid+Serif",
+                  "label":"Droid Serif",
+                  "group":"Google Web Fonts"
+               },
+               {  
+                  "value":"Google+Gentium+Book+Basic",
+                  "label":"Gentium Book Basic",
+                  "group":"Google Web Fonts"
+               },
+               {  
+                  "value":"Google+Josefin+Slab",
+                  "label":"Josefin Slab",
+                  "group":"Google Web Fonts"
+               },
+               {  
+                  "value":"Google+Josefin+Sans",
+                  "label":"Josefin Sans",
+                  "group":"Google Web Fonts"
+               },
+               {  
+                  "value":"Google+Kreon",
+                  "label":"Kreon",
+                  "group":"Google Web Fonts"
+               },
+               {  
+                  "value":"Google+Lato",
+                  "label":"Lato",
+                  "group":"Google Web Fonts"
+               },
+               {  
+                  "value":"Google+Lora",
+                  "label":"Lora",
+                  "group":"Google Web Fonts"
+               },
+               {  
+                  "value":"Google+Merriweather",
+                  "label":"Merriweather",
+                  "group":"Google Web Fonts"
+               },
+               {  
+                  "value":"Google+Old+Standard+TT",
+                  "label":"Old Standard TT",
+                  "group":"Google Web Fonts"
+               },
+               {  
+                  "value":"Google+Open+Sans",
+                  "label":"Open Sans",
+                  "group":"Google Web Fonts"
+               },
+               {  
+                  "value":"Google+Raleway",
+                  "label":"Raleway",
+                  "group":"Google Web Fonts"
+               },
+               {  
+                  "value":"ProximaNovaLight",
+                  "label":"Proxima Nova",
+                  "group":"Web Fonts"
+               },
+               {  
+                  "value":"Helvetica, Arial, sans-serif",
+                  "label":"Helvetica\/Arial",
+                  "group":"Sans-serif"
+               },
+               {  
+                  "value":"Impact, Charcoal, Helvetica, Arial, sans-serif",
+                  "label":"Impact",
+                  "group":"Sans-serif"
+               },
+               {  
+                  "value":"'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Lucida, Helvetica, Arial, sans-serif",
+                  "label":"Lucida Grande",
+                  "group":"Sans-serif"
+               },
+               {  
+                  "value":"Trebuchet MS, sans-serif",
+                  "label":"Trebuchet MS",
+                  "group":"Sans-serif"
+               },
+               {  
+                  "value":"Verdana, Helvetica, Arial, sans-serif",
+                  "label":"Verdana",
+                  "group":"Sans-serif"
+               },
+               {  
+                  "value":"Garamond, Baskerville, Caslon, serif",
+                  "label":"Garamond",
+                  "group":"Serif"
+               },
+               {  
+                  "value":"Georgia, Utopia, 'Times New Roman', Times, serif",
+                  "label":"Georgia",
+                  "group":"Serif"
+               },
+               {  
+                  "value":"Palatino, 'Palatino Linotype', 'Book Antiqua', serif",
+                  "label":"Palatino",
+                  "group":"Serif"
+               },
+               {  
+                  "value":"'Times New Roman', Times, serif",
+                  "label":"Times New Roman",
+                  "group":"Serif"
+               },
+               {  
+                  "value":"'Courier New', Courier, monospace",
+                  "label":"Courier New",
+                  "group":"Monospace"
+               },
+               {  
+                  "value":"Monaco, 'Lucida Console', 'DejaVu Sans Mono', monospace",
+                  "label":"Monaco\/Lucida Console",
+                  "group":"Monospace"
+               }
+            ]
+         },
+         {  
+            "type":"select",
+            "id":"misc_font",
+            "label":"MISC font",
+            "options":[  
+               {  
+                  "value":"Google+Arvo",
+                  "label":"Arvo",
+                  "group":"Google Web Fonts"
+               },
+               {  
+                  "value":"Google+Asap",
+                  "label":"Asap",
+                  "group":"Google Web Fonts"
+               },
+               {  
+                  "value":"Google+Cabin",
+                  "label":"Cabin",
+                  "group":"Google Web Fonts"
+               },
+               {  
+                  "value":"Google+Copse",
+                  "label":"Copse",
+                  "group":"Google Web Fonts"
+               },
+               {  
+                  "value":"Google+Droid+Sans",
+                  "label":"Droid Sans",
+                  "group":"Google Web Fonts"
+               },
+               {  
+                  "value":"Google+Droid+Serif",
+                  "label":"Droid Serif",
+                  "group":"Google Web Fonts"
+               },
+               {  
+                  "value":"Google+Gentium+Book+Basic",
+                  "label":"Gentium Book Basic",
+                  "group":"Google Web Fonts"
+               },
+               {  
+                  "value":"Google+Josefin+Slab",
+                  "label":"Josefin Slab",
+                  "group":"Google Web Fonts"
+               },
+               {  
+                  "value":"Google+Josefin+Sans",
+                  "label":"Josefin Sans",
+                  "group":"Google Web Fonts"
+               },
+               {  
+                  "value":"Google+Kreon",
+                  "label":"Kreon",
+                  "group":"Google Web Fonts"
+               },
+               {  
+                  "value":"Google+Lato",
+                  "label":"Lato",
+                  "group":"Google Web Fonts"
+               },
+               {  
+                  "value":"Google+Lora",
+                  "label":"Lora",
+                  "group":"Google Web Fonts"
+               },
+               {  
+                  "value":"Google+Merriweather",
+                  "label":"Merriweather",
+                  "group":"Google Web Fonts"
+               },
+               {  
+                  "value":"Google+Old+Standard+TT",
+                  "label":"Old Standard TT",
+                  "group":"Google Web Fonts"
+               },
+               {  
+                  "value":"Google+Open+Sans",
+                  "label":"Open Sans",
+                  "group":"Google Web Fonts"
+               },
+               {  
+                  "value":"Google+Raleway",
+                  "label":"Raleway",
+                  "group":"Google Web Fonts"
+               },
+               {  
+                  "value":"ProximaNovaLight",
+                  "label":"Proxima Nova",
+                  "group":"Web Fonts"
+               },
+               {  
+                  "value":"Helvetica, Arial, sans-serif",
+                  "label":"Helvetica\/Arial",
+                  "group":"Sans-serif"
+               },
+               {  
+                  "value":"Impact, Charcoal, Helvetica, Arial, sans-serif",
+                  "label":"Impact",
+                  "group":"Sans-serif"
+               },
+               {  
+                  "value":"'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Lucida, Helvetica, Arial, sans-serif",
+                  "label":"Lucida Grande",
+                  "group":"Sans-serif"
+               },
+               {  
+                  "value":"Trebuchet MS, sans-serif",
+                  "label":"Trebuchet MS",
+                  "group":"Sans-serif"
+               },
+               {  
+                  "value":"Verdana, Helvetica, Arial, sans-serif",
+                  "label":"Verdana",
+                  "group":"Sans-serif"
+               },
+               {  
+                  "value":"Garamond, Baskerville, Caslon, serif",
+                  "label":"Garamond",
+                  "group":"Serif"
+               },
+               {  
+                  "value":"Georgia, Utopia, 'Times New Roman', Times, serif",
+                  "label":"Georgia",
+                  "group":"Serif"
+               },
+               {  
+                  "value":"Palatino, 'Palatino Linotype', 'Book Antiqua', serif",
+                  "label":"Palatino",
+                  "group":"Serif"
+               },
+               {  
+                  "value":"'Times New Roman', Times, serif",
+                  "label":"Times New Roman",
+                  "group":"Serif"
+               },
+               {  
+                  "value":"'Courier New', Courier, monospace",
+                  "label":"Courier New",
+                  "group":"Monospace"
+               },
+               {  
+                  "value":"Monaco, 'Lucida Console', 'DejaVu Sans Mono', monospace",
+                  "label":"Monaco\/Lucida Console",
+                  "group":"Monospace"
+               }
+            ]
+         }
+      ]
+   },
+   {  
+      "name":"General Settings",
+      "settings":[  
+         {  
+            "type":"header",
+            "content":"Preloading screen"
+         },
+         {  
+            "type":"checkbox",
+            "id":"general_loadingscreen",
+            "label":"Active Preloading screen",
+            "default":true
+         },
+         {  
+            "type":"header",
+            "content":"Mailing List Widget (Mailchimp) Popup"
+         },
+         {  
+            "type":"checkbox",
+            "id":"mailing_list_active",
+            "label":"Active Popup?"
+         },
+         {  
+            "type":"text",
+            "id":"news_title",
+            "label":"Heading text"
+         },
+         {  
+            "type":"textarea",
+            "id":"news_sub",
+            "label":"Subtext"
+         },
+         {  
+            "type":"text",
+            "id":"news_input",
+            "label":"Input text"
+         },
+         {  
+            "type":"textarea",
+            "id":"mailchimp_form_action",
+            "label":"Mailchimp form action [( ? )](http:\/\/support.shopify.com\/customer\/portal\/articles\/640278)"
+         },
+         {  
+            "type":"paragraph",
+            "content":"[Where do I get my MailChimp Form Action?](http:\/\/support.shopify.com\/customer\/portal\/articles\/640278)"
+         },
+         {  
+            "type":"text",
+            "id":"news_ignore",
+            "label":"Ignore text"
+         },
+         {  
+            "type":"text",
+            "id":"news_time",
+            "label":"Timeout (seconds)",
+            "default":"10"
+         },
+         {  
+            "type":"image",
+            "id":"mailing_bg.png",
+            "label":"Upload a image for Background",
+            "info":"PNG format"
+         },
+         {  
+            "type":"header",
+            "content":"Scroll to Top"
+         },
+         {  
+            "type":"checkbox",
+            "id":"general_gototop",
+            "label":"Active Scroll to Top",
+            "default":true
+         }
+      ]
+   },
+   {  
+      "name":"Header",
+      "settings":[  
+         {  
+            "type":"header",
+            "content":"Logo and icon"
+         },
+         {  
+            "type":"checkbox",
+            "id":"use_logo",
+            "label":"Use a custom logo"
+         },
+         {  
+            "type":"image",
+            "id":"logo.png"
+         },
+         {  
+            "type":"checkbox",
+            "id":"use_favicon",
+            "label":"Use a custom icon"
+         },
+         {  
+            "type":"image",
+            "id":"favicon.png",
+            "max-width":16,
+            "max-height":16,
+            "label":"Favicon",
+            "info":"16 x 16px required"
+         },
+         {  
+            "type":"checkbox",
+            "id":"header_snow",
+            "label":"Active Snow effect"
+         }
+      ]
+   },
+   {  
+      "name":"Mega Menu",
+      "settings":[  
+         {  
+            "type":"header",
+            "content":"Navigation Setting"
+         },
+         {  
+            "type":"link_list",
+            "id":"nav_linklist",
+            "label":"Select Link list for main Navigation"
+         },
+         {  
+            "type":"checkbox",
+            "id":"nav_sticky",
+            "label":"Active Sticky (float) Navigation?",
+            "default":true
+         },
+         {  
+            "type":"header",
+            "content":"Mega Menu style 01 (3 link list and image)"
+         },
+         {  
+            "type":"text",
+            "id":"megamenu_items_1",
+            "label":"Mega Menu 01 Title",
+            "info":"(blank if you don't want to use)"
+         },
+         {  
+            "type":"link_list",
+            "id":"mega_linklist_1",
+            "label":"Link List 1 (column 1)"
+         },
+         {  
+            "type":"link_list",
+            "id":"mega_linklist_2",
+            "label":"Link List 2 (column 2)"
+         },
+         {  
+            "type":"link_list",
+            "id":"mega_linklist_3",
+            "label":"Link List 3 (column 3)"
+         },
+         {  
+            "type":"image",
+            "id":"mega-bg-01.png",
+            "label":"Upload a image"
+         },
+         {  
+            "type":"checkbox",
+            "id":"display_menu_image_1",
+            "label":"Show Menu image collumn",
+            "default":true
+         },
+         {  
+            "type":"header",
+            "content":"Mega Menu style 02 (text and 3 link list)"
+         },
+         {  
+            "type":"text",
+            "id":"megamenu_items_2",
+            "label":"Mega Menu 02 Title",
+            "info":"(blank if you don't want to use)"
+         },
+         {  
+            "type":"textarea",
+            "id":"megamenu_text_2",
+            "label":"Sample Text (HTML)"
+         },
+         {  
+            "type":"link_list",
+            "id":"mega_linklist_4",
+            "label":"Link List 1 (column 1)"
+         },
+         {  
+            "type":"link_list",
+            "id":"mega_linklist_5",
+            "label":"Link List 2 (column 2)"
+         },
+         {  
+            "type":"link_list",
+            "id":"mega_linklist_6",
+            "label":"Link List 3 (column 3)"
+         },
+         {  
+            "type":"image",
+            "id":"mega-bg-02.png",
+            "label":"Upload a image"
+         },
+         {  
+            "type":"checkbox",
+            "id":"display_menu_image_2",
+            "label":"Show Menu image background",
+            "default":true
+         }
+      ]
+   },
+   {  
+      "name":"Main Slideshow",
+      "settings":[  
+         {  
+            "type":"header",
+            "content":"Main Slideshow Settings"
+         },
+         {  
+            "type":"checkbox",
+            "id":"maincarousel_active",
+            "label":"Active Main Slideshow"
+         },
+         {  
+            "type":"checkbox",
+            "id":"maincarousel_auto",
+            "label":"Setup to animate automatically",
+            "default":true
+         },
+         {  
+            "type":"select",
+            "id":"maincarousel_slide",
+            "label":"Controls the animation type",
+            "options":[  
+               {  
+                  "value":"fade",
+                  "label":"Fade"
+               },
+               {  
+                  "value":"slide",
+                  "label":"Slide"
+               }
+            ],
+            "default":"slide"
+         },
+         {  
+            "type":"text",
+            "id":"maincarousel_slideshowSpeed",
+            "label":"Speed of the slideshow cycling, in milliseconds",
+            "default":"5000"
+         },
+         {  
+            "type":"checkbox",
+            "id":"maincarousel_directionNav",
+            "label":"Create previous\/next arrow navigation"
+         },
+         {  
+            "type":"checkbox",
+            "id":"maincarousel_controlNav",
+            "label":"Active Navigation for paging control"
+         },
+         {  
+            "type":"checkbox",
+            "id":"maincarousel_pauseOnHover",
+            "label":"Pause the slideshow when hovering over slider"
+         },
+         {  
+            "type":"checkbox",
+            "id":"maincarousel_randomize",
+            "label":"Randomize slide order, on load"
+         },
+         {  
+            "type":"checkbox",
+            "id":"maincarousel_snow",
+            "label":"Active Snow effect"
+         },
+         {  
+            "type":"header",
+            "content":"Setup 1st Slide"
+         },
+         {  
+            "type":"checkbox",
+            "id":"slide-active-1",
+            "label":"Active 1st slide"
+         },
+         {  
+            "type":"image",
+            "id":"slide-image-1.jpg",
+            "label":"1st slide image",
+            "info":"JPG format"
+         },
+         {  
+            "type":"image",
+            "id":"slide-image-1s.jpg",
+            "label":"1st mobile slide image",
+            "info":"JPG format"
+         },
+         {  
+            "type":"image",
+            "id":"slide-image-1m.jpg",
+            "label":"1st Tablet slide image",
+            "info":"JPG format"
+         },
+         {  
+            "type":"select",
+            "id":"slide-image-position-1",
+            "label":"Set the position for caption",
+            "options":[  
+               {  
+                  "value":"left",
+                  "label":"Left side"
+               },
+               {  
+                  "value":"right",
+                  "label":"Right side"
+               },
+               {  
+                  "value":"center",
+                  "label":"Center"
+               }
+            ],
+            "default":"left"
+         },
+         {  
+            "type":"textarea",
+            "id":"slide-cap-12",
+            "label":"Caption - Main text"
+         },
+         {  
+            "type":"text",
+            "id":"slide-button-text-11",
+            "label":"Button 01 - Text"
+         },
+         {  
+            "type":"text",
+            "id":"slide-button-link-11",
+            "label":"Button 01 - Link"
+         },
+         {  
+            "type":"header",
+            "content":"Setup 2nd Slide"
+         },
+         {  
+            "type":"checkbox",
+            "id":"slide-active-2",
+            "label":"Active 2nd slide"
+         },
+         {  
+            "type":"image",
+            "id":"slide-image-2.jpg",
+            "label":"2nd slide image",
+            "info":"JPG format"
+         },
+         {  
+            "type":"image",
+            "id":"slide-image-2s.jpg",
+            "label":"2nd mobile slide image",
+            "info":"JPG format"
+         },
+         {  
+            "type":"image",
+            "id":"slide-image-2m.jpg",
+            "label":"2nd tablet slide image",
+            "info":"JPG format"
+         },
+         {  
+            "type":"select",
+            "id":"slide-image-position-2",
+            "label":"Set the position for caption",
+            "options":[  
+               {  
+                  "value":"left",
+                  "label":"Left side"
+               },
+               {  
+                  "value":"right",
+                  "label":"Right side"
+               },
+               {  
+                  "value":"center",
+                  "label":"Center"
+               }
+            ],
+            "default":"left"
+         },
+         {  
+            "type":"textarea",
+            "id":"slide-cap-22",
+            "label":"Caption - Main text"
+         },
+         {  
+            "type":"text",
+            "id":"slide-button-text-21",
+            "label":"Button 01 - Text"
+         },
+         {  
+            "type":"text",
+            "id":"slide-button-link-21",
+            "label":"Button 01 - Link"
+         },
+         {  
+            "type":"header",
+            "content":"Setup 3rd Slide"
+         },
+         {  
+            "type":"checkbox",
+            "id":"slide-active-3",
+            "label":"Active 3rd slide"
+         },
+         {  
+            "type":"image",
+            "id":"slide-image-3.jpg",
+            "label":"3rd slide image",
+            "info":"JPG format"
+         },
+         {  
+            "type":"image",
+            "id":"slide-image-3s.jpg",
+            "label":"3rd mobile slide image",
+            "info":"JPG format"
+         },
+         {  
+            "type":"image",
+            "id":"slide-image-3m.jpg",
+            "label":"3rd tablet slide image",
+            "info":"JPG format"
+         },
+         {  
+            "type":"select",
+            "id":"slide-image-position-3",
+            "label":"Set the position for caption",
+            "options":[  
+               {  
+                  "value":"left",
+                  "label":"Left side"
+               },
+               {  
+                  "value":"right",
+                  "label":"Right side"
+               },
+               {  
+                  "value":"center",
+                  "label":"Center"
+               }
+            ],
+            "default":"left"
+         },
+         {  
+            "type":"textarea",
+            "id":"slide-cap-32",
+            "label":"Caption - Main text"
+         },
+         {  
+            "type":"text",
+            "id":"slide-button-text-31",
+            "label":"Button 01 - Text"
+         },
+         {  
+            "type":"text",
+            "id":"slide-button-link-31",
+            "label":"Button 01 - Link"
+         },
+         {  
+            "type":"header",
+            "content":"Setup 4th Slide"
+         },
+         {  
+            "type":"checkbox",
+            "id":"slide-active-4",
+            "label":"Active 4th slide"
+         },
+         {  
+            "type":"image",
+            "id":"slide-image-4.jpg",
+            "label":"4th slide image",
+            "info":"JPG format"
+         },
+         {  
+            "type":"image",
+            "id":"slide-image-4s.jpg",
+            "label":"4th mobile slide image",
+            "info":"JPG format"
+         },
+         {  
+            "type":"image",
+            "id":"slide-image-4m.jpg",
+            "label":"4th tablet slide image",
+            "info":"JPG format"
+         },
+         {  
+            "type":"select",
+            "id":"slide-image-position-4",
+            "label":"Set the position for caption",
+            "options":[  
+               {  
+                  "value":"left",
+                  "label":"Left side"
+               },
+               {  
+                  "value":"right",
+                  "label":"Right side"
+               },
+               {  
+                  "value":"center",
+                  "label":"Center"
+               }
+            ],
+            "default":"left"
+         },
+         {  
+            "type":"textarea",
+            "id":"slide-cap-42",
+            "label":"Caption - Main text"
+         },
+         {  
+            "type":"text",
+            "id":"slide-button-text-41",
+            "label":"Button 01 - Text"
+         },
+         {  
+            "type":"text",
+            "id":"slide-button-link-41",
+            "label":"Button 01 - Link"
+         },
+         {  
+            "type":"header",
+            "content":"Setup 5th Slide"
+         },
+         {  
+            "type":"checkbox",
+            "id":"slide-active-5",
+            "label":"Active 5th slide"
+         },
+         {  
+            "type":"image",
+            "id":"slide-image-5.jpg",
+            "label":"5th slide image",
+            "info":"JPG format"
+         },
+         {  
+            "type":"image",
+            "id":"slide-image-5s.jpg",
+            "label":"5th mobile slide image",
+            "info":"JPG format"
+         },
+         {  
+            "type":"image",
+            "id":"slide-image-5m.jpg",
+            "label":"5th tablet slide image",
+            "info":"JPG format"
+         },
+         {  
+            "type":"select",
+            "id":"slide-image-position-5",
+            "label":"Set the position for caption",
+            "options":[  
+               {  
+                  "value":"left",
+                  "label":"Left side"
+               },
+               {  
+                  "value":"right",
+                  "label":"Right side"
+               },
+               {  
+                  "value":"center",
+                  "label":"Center"
+               }
+            ],
+            "default":"left"
+         },
+         {  
+            "type":"textarea",
+            "id":"slide-cap-52",
+            "label":"Caption - Main text"
+         },
+         {  
+            "type":"text",
+            "id":"slide-button-text-51",
+            "label":"Button 01 - Text"
+         },
+         {  
+            "type":"text",
+            "id":"slide-button-link-51",
+            "label":"Button 01 - Link"
+         },
+         {  
+            "type":"header",
+            "content":"Setup 6th Slide"
+         },
+         {  
+            "type":"checkbox",
+            "id":"slide-active-6",
+            "label":"Active 6th slide"
+         },
+         {  
+            "type":"image",
+            "id":"slide-image-6.jpg",
+            "label":"6th slide image",
+            "info":"JPG format"
+         },
+         {  
+            "type":"image",
+            "id":"slide-image-6s.jpg",
+            "label":"6th mobile slide image",
+            "info":"JPG format"
+         },
+         {  
+            "type":"image",
+            "id":"slide-image-6m.jpg",
+            "label":"6th tablet slide image",
+            "info":"JPG format"
+         },
+         {  
+            "type":"select",
+            "id":"slide-image-position-6",
+            "label":"Set the position for caption",
+            "options":[  
+               {  
+                  "value":"left",
+                  "label":"Left side"
+               },
+               {  
+                  "value":"right",
+                  "label":"Right side"
+               },
+               {  
+                  "value":"center",
+                  "label":"Center"
+               }
+            ],
+            "default":"left"
+         },
+         {  
+            "type":"textarea",
+            "id":"slide-cap-62",
+            "label":"Caption - Main text"
+         },
+         {  
+            "type":"text",
+            "id":"slide-button-text-61",
+            "label":"Button 01 - Text"
+         },
+         {  
+            "type":"text",
+            "id":"slide-button-link-61",
+            "label":"Button 01 - Link"
+         }
+      ]
+   },
+   {  
+      "name":"Home page",
+      "settings":[  
+         {  
+            "type":"header",
+            "content":"Home page Top product block"
+         },
+         {  
+            "type":"checkbox",
+            "id":"newarrivals_active",
+            "label":"Active",
+            "default":true
+         },
+         {  
+            "type":"collection",
+            "id":"newarrivals_collection",
+            "label":"Collection to use:"
+         },
+         {  
+            "type":"text",
+            "id":"newarrivals_number",
+            "label":"Number Products each Tab"
+         },
+         {  
+            "type":"header",
+            "content":"Middle Banner block"
+         },
+         {  
+            "type":"checkbox",
+            "id":"middle_banner_active",
+            "label":"Active",
+            "default":true
+         },
+         {  
+            "type":"image",
+            "id":"middle_banner1_bkg.jpg",
+            "label":"Row 1 Left - Background",
+            "info":"JPG format"
+         },
+         {  
+            "type":"textarea",
+            "id":"middle_banner1_textarea",
+            "label":"Row 1 Left - Caption"
+         },
+         {  
+            "type":"image",
+            "id":"middle_banner2_bkg.jpg",
+            "label":"Row 1 Left - Background",
+            "info":"JPG format"
+         },
+         {  
+            "type":"textarea",
+            "id":"middle_banner2_textarea",
+            "label":"Row 1 Right - Caption"
+         },
+         {  
+            "type":"text",
+            "id":"middle_banner2_linkto",
+            "label":"Row 1 Right - link to"
+         },
+         {  
+            "type":"color",
+            "id":"middle_banner3_bkg",
+            "label":"Background Color Banner 3",
+            "default":"#1c8a71"
+         },
+         {  
+            "type":"image",
+            "id":"middle_banner3_caption.png",
+            "label":"Row 2 - Caption",
+            "info":"PNG format"
+         },
+         {  
+            "type":"textarea",
+            "id":"middle_banner3_textarea",
+            "label":"Row 2 - Text"
+         },
+         {  
+            "type":"text",
+            "id":"middle_banner3_linkto",
+            "label":"Row 2 - link to"
+         },
+         {  
+            "type":"image",
+            "id":"middle_banner4_bkg.jpg",
+            "label":"Row 3 Left - Background",
+            "info":"JPG format"
+         },
+         {  
+            "type":"textarea",
+            "id":"middle_banner4_textarea",
+            "label":"Row 3 Left - Caption"
+         },
+         {  
+            "type":"text",
+            "id":"middle_banner4_linkto",
+            "label":"Row 3 Left - link to"
+         },
+         {  
+            "type":"image",
+            "id":"middle_banner5_bkg.jpg",
+            "label":"Row 3 Right - Background",
+            "info":"JPG format"
+         },
+         {  
+            "type":"textarea",
+            "id":"middle_banner5_textarea",
+            "label":"Row 3 Right - Caption"
+         },
+         {  
+            "type":"text",
+            "id":"middle_banner5_linkto",
+            "label":"Row 3 Right - link to"
+         },
+         {  
+            "type":"header",
+            "content":"Best seller block"
+         },
+         {  
+            "type":"checkbox",
+            "id":"bestseller_active",
+            "label":"Active",
+            "default":true
+         },
+         {  
+            "type":"text",
+            "id":"bestseller_title",
+            "label":"Title block"
+         },
+         {  
+            "type":"collection",
+            "id":"bestseller_collection",
+            "label":"Collection to use:"
+         },
+         {  
+            "type":"text",
+            "id":"bestseller_number",
+            "label":"Number Products each Tab"
+         },
+         {  
+            "type":"header",
+            "content":"Top Rated"
+         },
+         {  
+            "type":"checkbox",
+            "id":"toprated_active",
+            "label":"Active",
+            "default":true
+         },
+         {  
+            "type":"text",
+            "id":"toprated_title",
+            "label":"Title block"
+         },
+         {  
+            "type":"collection",
+            "id":"toprated_collection",
+            "label":"Collection to use:"
+         },
+         {  
+            "type":"text",
+            "id":"toprated_number",
+            "label":"Number Products each Tab"
+         },
+         {  
+            "type":"header",
+            "content":"Bottom Information"
+         },
+         {  
+            "type":"checkbox",
+            "id":"bottom_active",
+            "label":"Active",
+            "default":true
+         },
+         {  
+            "type":"image",
+            "id":"bottom_bkg.jpg",
+            "label":"Background image",
+            "info":"JPG format"
+         },
+         {  
+            "type":"paragraph",
+            "content":"1st Block"
+         },
+         {  
+            "type":"image",
+            "id":"bottom1_img.png",
+            "label":"1st Block - Image",
+            "info":"PNG format"
+         },
+         {  
+            "type":"text",
+            "id":"bottom1_text",
+            "label":"1st Block - Heading"
+         },
+         {  
+            "type":"textarea",
+            "id":"bottom1_desc",
+            "label":"1st Block - Description"
+         },
+         {  
+            "type":"paragraph",
+            "content":"2nd Block"
+         },
+         {  
+            "type":"image",
+            "id":"bottom2_img.png",
+            "label":"2nd Block - Image",
+            "info":"PNG format"
+         },
+         {  
+            "type":"text",
+            "id":"bottom2_text",
+            "label":"2nd Block - Heading"
+         },
+         {  
+            "type":"textarea",
+            "id":"bottom2_desc",
+            "label":"2nd Block - Description"
+         },
+         {  
+            "type":"paragraph",
+            "content":"3rd Block"
+         },
+         {  
+            "type":"image",
+            "id":"bottom3_img.png",
+            "label":"3rd Block - Image",
+            "info":"PNG format"
+         },
+         {  
+            "type":"text",
+            "id":"bottom3_text",
+            "label":"3rd Block - Heading"
+         },
+         {  
+            "type":"textarea",
+            "id":"bottom3_desc",
+            "label":"3rd Block - Description"
+         }
+      ]
+   },
+   {  
+      "name":"Footer",
+      "settings":[  
+         {  
+            "type":"header",
+            "content":"Newsletter"
+         },
+         {  
+            "type":"checkbox",
+            "id":"ft_newsletter_show",
+            "label":"Show newsletter",
+            "default":true
+         },
+         {  
+            "type":"text",
+            "id":"mailing_list_form_action",
+            "label":"Mailchimp form action URL",
+            "info":"[Find your MailChimp form action URL](https:\/\/docs.shopify.com\/manual\/configuration\/store-customization\/communicating-with-customers\/accounts-and-newsletters\/get-a-mailchimp-form-action-url)."
+         },
+         {  
+            "type":"header",
+            "content":"Follow area"
+         },
+         {  
+            "type":"checkbox",
+            "id":"fi_follow_show",
+            "label":"Show this area?",
+            "default":true
+         },
+         {  
+            "type":"text",
+            "id":"fi_follow_title",
+            "label":"Title area",
+            "default":"Follow Us"
+         },
+         {  
+            "type":"text",
+            "id":"twitter_link",
+            "label":"Twitter",
+            "info":"https:\/\/twitter.com\/shopify"
+         },
+         {  
+            "type":"text",
+            "id":"facebook_link",
+            "label":"Facebook",
+            "info":"https:\/\/www.facebook.com\/shopify"
+         },
+         {  
+            "type":"text",
+            "id":"google_link",
+            "label":"Google+",
+            "info":"https:\/\/plus.google.com\/+shopify"
+         },
+         {  
+            "type":"text",
+            "id":"youtube_link",
+            "label":"Youtube",
+            "info":"https:\/\/www.youtube.com\/user\/shopify"
+         },
+         {  
+            "type":"text",
+            "id":"vimeo_link",
+            "label":"Vimeo",
+            "info":"https:\/\/vimeo.com\/shopify"
+         },
+         {  
+            "type":"text",
+            "id":"pinterest_link",
+            "label":"Pinterest",
+            "info":"https:\/\/www.pinterest.com\/shopify\/"
+         },
+         {  
+            "type":"text",
+            "id":"instagram_link",
+            "label":"Instagram",
+            "info":"https:\/\/instagram.com\/shopify\/"
+         },
+         {  
+            "type":"text",
+            "id":"tumblr_link",
+            "label":"Tumblr",
+            "info":"http:\/\/shopify.tumblr.com\/"
+         },
+         {  
+            "type":"text",
+            "id":"atom_link",
+            "label":"Blog feed",
+            "info":"\/blogs\/news.atom"
+         },
+         {  
+            "type":"header",
+            "content":"Payment method Icons"
+         },
+         {  
+            "type":"text",
+            "id":"fi_payment_title",
+            "label":"Title area",
+            "default":"Payment Accept"
+         },
+         {  
+            "type":"checkbox",
+            "id":"accept_shopify",
+            "label":"Shopify Payments"
+         },
+         {  
+            "type":"checkbox",
+            "id":"accept_paypal",
+            "label":"PayPal"
+         },
+         {  
+            "type":"checkbox",
+            "id":"accept_mastercard",
+            "label":"Mastercard"
+         },
+         {  
+            "type":"checkbox",
+            "id":"accept_worldpay",
+            "label":"Worldpay"
+         },
+         {  
+            "type":"checkbox",
+            "id":"accept_visa",
+            "label":"Visa"
+         },
+         {  
+            "type":"checkbox",
+            "id":"accept_maestro",
+            "label":"Maestro"
+         },
+         {  
+            "type":"header",
+            "content":"Footer Links"
+         },
+         {  
+            "type":"checkbox",
+            "id":"footer_links_active",
+            "label":"Active Footer Links"
+         },
+         {  
+            "type":"text",
+            "id":"footer_links1_title",
+            "label":"Footer Link list title - Col-1",
+            "info":"Company"
+         },
+         {  
+            "type":"link_list",
+            "id":"footer_links1",
+            "label":"set the link líst - Col 1"
+         },
+         {  
+            "type":"text",
+            "id":"footer_links2_title",
+            "label":"Footer Link list title - Col-2",
+            "info":"Customer Service"
+         },
+         {  
+            "type":"link_list",
+            "id":"footer_links2",
+            "label":"set the link líst - Col 2"
+         },
+         {  
+            "type":"text",
+            "id":"footer_links3_title",
+            "label":"Footer Link list title - Col-3",
+            "info":"My Account"
+         },
+         {  
+            "type":"link_list",
+            "id":"footer_links3",
+            "label":"set the link líst - Col 3"
+         },
+         {  
+            "type":"text",
+            "id":"footer_links4_title",
+            "label":"Footer Link list title - Col-4",
+            "info":"Follow Marbek"
+         },
+         {  
+            "type":"link_list",
+            "id":"footer_links4",
+            "label":"set the link líst - Col 4"
+         }
+      ]
+   },
+   {  
+      "name":"Product page",
+      "settings":[  
+         {  
+            "type":"header",
+            "content":"General Setting"
+         },
+         {  
+            "type":"checkbox",
+            "id":"enable_breadcrumb",
+            "label":"Enable Breadcrumb",
+            "default":true
+         },
+         {  
+            "type":"checkbox",
+            "id":"enable_product_image_zoom",
+            "label":"Enable image zoom"
+         },
+         {  
+            "type":"checkbox",
+            "id":"color_swatch",
+            "label":"Enable Color Swatch?",
+            "default":true
+         },
+         {  
+            "type":"checkbox",
+            "id":"enable_rating_star",
+            "label":"Enable Rating Star"
+         },
+         {  
+            "type":"checkbox",
+            "id":"enable_quickoverview",
+            "label":"Enable Quick Overview"
+         },
+         {  
+            "type":"text",
+            "id":"detail_qov_lenght",
+            "label":"Quick Overview lenght",
+            "default":"30"
+         },
+         {  
+            "type":"checkbox",
+            "id":"display_quantity_dropdown",
+            "label":"Show quantity box"
+         },
+         {  
+            "type":"checkbox",
+            "id":"display_wishlist",
+            "label":"Show Wish list",
+            "default":true
+         },
+         {  
+            "type":"checkbox",
+            "id":"display_tags",
+            "label":"Show Tags",
+            "default":true
+         },
+         {  
+            "type":"header",
+            "content":"Ajax Add to cart Modal"
+         },
+         {  
+            "type":"checkbox",
+            "id":"ajax_active",
+            "label":"Active Ajax Add to Cart",
+            "default":true
+         },
+         {  
+            "type":"text",
+            "id":"ajax_timeout",
+            "label":"Set time out, auto close",
+            "default":"5000",
+            "info":"(seconds)"
+         },
+         {  
+            "type":"header",
+            "content":"Product Tab Setting"
+         },
+         {  
+            "type":"checkbox",
+            "id":"display_tab",
+            "label":"Show Product Tab",
+            "default":true
+         },
+         {  
+            "type":"paragraph",
+            "content":"Select tab to show:"
+         },
+         {  
+            "type":"checkbox",
+            "id":"product_tab_desc",
+            "label":"Description Tab"
+         },
+         {  
+            "type":"checkbox",
+            "id":"product_tab_customerreview",
+            "label":"Customer Review Tab"
+         },
+         {  
+            "type":"checkbox",
+            "id":"product_tab_delivery",
+            "label":"Delivery Tab"
+         },
+         {  
+            "type":"textarea",
+            "id":"product_tab_delivery_content",
+            "label":"Delivery Tab Content"
+         },
+         {  
+            "type":"checkbox",
+            "id":"product_tab_warranty",
+            "label":"Style Notes Tab"
+         },
+         {  
+            "type":"textarea",
+            "id":"product_tab_warranty_content",
+            "label":"Style Notes Tab Content"
+         },
+         {  
+            "type":"checkbox",
+            "id":"product_tab_payment",
+            "label":"Delivery Tab"
+         },
+         {  
+            "type":"textarea",
+            "id":"product_tab_payment_content",
+            "label":"Delivery Tab Content"
+         },
+         {  
+            "type":"header",
+            "content":"Related Products Setting"
+         },
+         {  
+            "type":"checkbox",
+            "id":"show_related_products",
+            "label":"Show related products",
+            "default":true,
+            "info":"Only visible within a collection"
+         },
+         {  
+            "type":"header",
+            "content":"Social media sharing"
+         },
+         {  
+            "type":"checkbox",
+            "id":"social_sharing_products",
+            "label":"Enable product sharing"
+         },
+         {  
+            "type":"checkbox",
+            "id":"social_sharing_count",
+            "label":"Show shared count",
+            "info":"Only available for Facebook, Twitter, and Pinterest"
+         },
+         {  
+            "type":"select",
+            "id":"social_sharing_style",
+            "label":"Button style",
+            "options":[  
+               {  
+                  "value":"",
+                  "label":"Normal"
+               },
+               {  
+                  "value":"is-large",
+                  "label":"Large"
+               },
+               {  
+                  "value":"is-clean",
+                  "label":"Clean"
+               }
+            ]
+         },
+         {  
+            "type":"checkbox",
+            "id":"share_facebook",
+            "label":"Share on Facebook"
+         },
+         {  
+            "type":"checkbox",
+            "id":"share_twitter",
+            "label":"Tweet on Twitter"
+         },
+         {  
+            "type":"checkbox",
+            "id":"share_pinterest",
+            "label":"Pin on Pinterest"
+         },
+         {  
+            "type":"checkbox",
+            "id":"share_fancy",
+            "label":"Add to Fancy"
+         },
+         {  
+            "type":"checkbox",
+            "id":"share_google",
+            "label":"+1 on Google Plus"
+         }
+      ]
+   },
+   {  
+      "name":"Collection page",
+      "settings":[  
+         {  
+            "type":"header",
+            "content":"General Settings"
+         },
+         {  
+            "type":"checkbox",
+            "id":"collection_banner",
+            "label":"Display General Banner",
+            "default":true
+         },
+         {  
+            "type":"image",
+            "id":"collection_banner.jpg"
+         },
+         {  
+            "type":"checkbox",
+            "id":"collection_image",
+            "label":"Display Collection Featured image",
+            "default":true
+         },
+         {  
+            "type":"checkbox",
+            "id":"collection_desc",
+            "label":"Display Collection Description",
+            "default":true
+         },
+         {  
+            "type":"header",
+            "content":"Collection Filters Toolbar"
+         },
+         {  
+            "type":"checkbox",
+            "id":"collection_showing",
+            "label":"Display \"Showing\" number",
+            "default":true
+         },
+         {  
+            "type":"checkbox",
+            "id":"collection_tags",
+            "label":"Display \"Browse by\" product tag filter",
+            "default":true
+         },
+         {  
+            "type":"checkbox",
+            "id":"collection_perpage",
+            "label":"Display \"Show per page\" filter",
+            "default":true
+         },
+         {  
+            "type":"checkbox",
+            "id":"collection_sort",
+            "label":"Display Sort by filter",
+            "default":true
+         },
+         {  
+            "type":"checkbox",
+            "id":"collection_grid_list",
+            "label":"Display View as List\/Grid",
+            "default":true
+         },
+         {  
+            "type":"select",
+            "id":"collection_grid_list_default",
+            "label":"Set Default View as Mode",
+            "options":[  
+               {  
+                  "value":"grid",
+                  "label":"Grid"
+               },
+               {  
+                  "value":"list",
+                  "label":"List"
+               }
+            ],
+            "default":"grid"
+         },
+         {  
+            "type":"header",
+            "content":"Tags filter"
+         },
+         {  
+            "type":"paragraph",
+            "content":"Group tag filter 1"
+         },
+         {  
+            "type":"text",
+            "id":"group_tag_1_label",
+            "label":"Label:",
+            "default":"Size"
+         },
+         {  
+            "type":"text",
+            "id":"group_tag_1",
+            "label":"Keys:",
+            "default":"S,M,L,XL",
+            "info":"Separate tags with comma"
+         },
+         {  
+            "type":"paragraph",
+            "content":"Group tab filter 2"
+         },
+         {  
+            "type":"text",
+            "id":"group_tag_2_label",
+            "label":"Label:",
+            "default":"Color"
+         },
+         {  
+            "type":"text",
+            "id":"group_tag_2",
+            "label":"Keys:",
+            "default":"Green, Black, Blue, Red, Yellow, White, Brown, Silver, Gray, Pink, Orange",
+            "info":"Separate tags with comma"
+         },
+         {  
+            "type":"paragraph",
+            "content":"Group tab filter 3"
+         },
+         {  
+            "type":"text",
+            "id":"group_tag_3_label",
+            "label":"Label:",
+            "default":"Brand"
+         },
+         {  
+            "type":"text",
+            "id":"group_tag_3",
+            "label":"Keys:",
+            "default":"Chanel, Dior, Gap, Lucci, Louis, Hermes",
+            "info":"Separate tags with comma"
+         },
+         {  
+            "type":"paragraph",
+            "content":"Group tab filter 4"
+         },
+         {  
+            "type":"text",
+            "id":"group_tag_4_label",
+            "label":"Label:",
+            "default":"Price"
+         },
+         {  
+            "type":"text",
+            "id":"group_tag_4",
+            "label":"Keys:",
+            "default":"Under $100, $100 - $200, Above $200",
+            "info":"Separate tags with comma"
+         },
+         {  
+            "type":"header",
+            "content":"Collection Page Layout"
+         },
+         {  
+            "type":"select",
+            "id":"products_per_row",
+            "label":"Number of products per row",
+            "options":[  
+               {  
+                  "value":"3",
+                  "label":"3"
+               },
+               {  
+                  "value":"4",
+                  "label":"4"
+               }
+            ],
+            "default":"3"
+         },
+         {  
+            "type":"text",
+            "id":"pagination_limit",
+            "label":"Number of products per page",
+            "default":"24"
+         }
+      ]
+   },
+   {  
+      "name":"Blog page",
+      "settings":[  
+         {  
+            "type":"header",
+            "content":"Blog setting"
+         },
+         {  
+            "type":"text",
+            "id":"blog_num",
+            "label":"Number Post per page",
+            "default":"3"
+         },
+         {  
+            "type":"header",
+            "content":"Blog Sidebar"
+         },
+         {  
+            "type":"checkbox",
+            "id":"blog_recent_show",
+            "label":"Display this widget?",
+            "default":true
+         },
+         {  
+            "type":"text",
+            "id":"blog_recent_title",
+            "label":"Title",
+            "default":"Recent articles"
+         },
+         {  
+            "type":"blog",
+            "id":"blog_recent_blog",
+            "label":"Use blog"
+         },
+         {  
+            "type":"text",
+            "id":"blog_recent_number",
+            "label":"Number of",
+            "default":"3"
+         },
+         {  
+            "type":"paragraph",
+            "content":"Sidebar Banner"
+         },
+         {  
+            "type":"checkbox",
+            "id":"side_banner_show",
+            "label":"Sidebar Banner",
+            "default":true
+         },
+         {  
+            "type":"image",
+            "id":"blog_sidebar.jpg",
+            "label":"Upload image for sale banner",
+            "info":"PNG format"
+         },
+         {  
+            "type":"image",
+            "id":"blog_sidebar2.jpg",
+            "label":"Upload image for support banner",
+            "info":"PNG format"
+         },
+         {  
+            "type":"header",
+            "content":"Social Sharing"
+         },
+         {  
+            "type":"checkbox",
+            "id":"social_sharing_blog",
+            "label":"Enable sharing for blog posts"
+         }
+      ]
+   },
+   {  
+      "name":"Cart page",
+      "settings":[  
+         {  
+            "type":"checkbox",
+            "id":"ajax_cart_enable",
+            "label":"Stay on the current page when an item is added"
+         }
+      ]
+   },
+   {  
+      "name":"Contact Page",
+      "settings":[  
+         {  
+            "type":"header",
+            "content":"Contact form"
+         },
+         {  
+            "type":"text",
+            "id":"contact_title",
+            "label":"Form Title",
+            "default":"Live a Message"
+         },
+         {  
+            "type":"header",
+            "content":"Google Map Area"
+         },
+         {  
+            "type":"checkbox",
+            "id":"contact_map",
+            "label":"Show contact map",
+            "default":true
+         },
+         {  
+            "type":"select",
+            "id":"contact_type",
+            "label":"Map type",
+            "options":[  
+               {  
+                  "value":"ROADMAP",
+                  "label":"Normal map"
+               },
+               {  
+                  "value":"SATELLITE",
+                  "label":"Satellite"
+               },
+               {  
+                  "value":"HYBRID",
+                  "label":"Hybrid"
+               },
+               {  
+                  "value":"TERRAIN",
+                  "label":"Terrain"
+               }
+            ]
+         },
+         {  
+            "type":"select",
+            "id":"contact_zoom",
+            "label":"Zoom level",
+            "options":[  
+               {  
+                  "value":"0",
+                  "label":"0"
+               },
+               {  
+                  "value":"1",
+                  "label":"1"
+               },
+               {  
+                  "value":"2",
+                  "label":"2"
+               },
+               {  
+                  "value":"3",
+                  "label":"3"
+               },
+               {  
+                  "value":"4",
+                  "label":"4"
+               },
+               {  
+                  "value":"5",
+                  "label":"5"
+               },
+               {  
+                  "value":"6",
+                  "label":"6"
+               },
+               {  
+                  "value":"7",
+                  "label":"7"
+               },
+               {  
+                  "value":"8",
+                  "label":"8"
+               },
+               {  
+                  "value":"9",
+                  "label":"9"
+               },
+               {  
+                  "value":"10",
+                  "label":"10"
+               },
+               {  
+                  "value":"11",
+                  "label":"11"
+               },
+               {  
+                  "value":"12",
+                  "label":"12"
+               },
+               {  
+                  "value":"13",
+                  "label":"13"
+               },
+               {  
+                  "value":"14",
+                  "label":"14"
+               },
+               {  
+                  "value":"15",
+                  "label":"15"
+               },
+               {  
+                  "value":"16",
+                  "label":"16"
+               },
+               {  
+                  "value":"17",
+                  "label":"17"
+               },
+               {  
+                  "value":"18",
+                  "label":"18"
+               },
+               {  
+                  "value":"19",
+                  "label":"19"
+               },
+               {  
+                  "value":"20",
+                  "label":"20"
+               },
+               {  
+                  "value":"21",
+                  "label":"21"
+               }
+            ]
+         },
+         {  
+            "type":"text",
+            "id":"contact_address",
+            "label":"Map address"
+         },
+         {  
+            "type":"checkbox",
+            "id":"contact_scroll",
+            "label":"Scroll wheel",
+            "default":true
+         }
+      ]
+   },
+   {  
+      "name":"FAQs",
+      "settings":[  
+         {  
+            "type":"text",
+            "id":"faq-text1-head",
+            "label":"FAQ 1 - Heading",
+            "default":"What are the delivery charges for orders from the Online Shop?"
+         },
+         {  
+            "type":"textarea",
+            "id":"faq-text1-cont",
+            "label":"FAQ 1 - Content",
+            "default":"Transform indicator overcome injustice pursue these aspirations natural resources. Maintain, social analysis Bloomberg; accelerate planned giving. Revitalize economic independence, foundation sharing economy, rights-based approach medical supplies eradicate celebrate informal economies. International medicine social worker participatory monitoring Bill and Melinda Gates our ambitions justice relief transform the world. Resolve emergency response accelerate progress, maximize collaborative cities lifting people up tackle frontline.  Transform indicator overcome injustice pursue these aspirations natural resources. Maintain, social analysis Bloomberg; accelerate planned giving. Revitalize economic independence, foundation sharing economy, rights-based approach medical supplies eradicate celebrate informal economies. International medicine social worker participatory monitoring Bill and Melinda Gates our ambitions justice relief transform the world. Resolve emergency response accelerate progress, maximize collaborative cities lifting people up tackle frontline."
+         },
+         {  
+            "type":"text",
+            "id":"faq-text2-head",
+            "label":"FAQ 2 - Heading",
+            "default":" Which payment methods are accepted in the Online Shop?"
+         },
+         {  
+            "type":"textarea",
+            "id":"faq-text2-cont",
+            "label":"FAQ 2 - Content"
+         },
+         {  
+            "type":"text",
+            "id":"faq-text3-head",
+            "label":"FAQ 3 - Heading",
+            "default":" How long will delivery take?"
+         },
+         {  
+            "type":"textarea",
+            "id":"faq-text3-cont",
+            "label":"FAQ 3 - Content"
+         },
+         {  
+            "type":"text",
+            "id":"faq-text4-head",
+            "label":"FAQ 4 - Heading",
+            "default":"How secure is shopping in the Online Shop? Is my data protected?"
+         },
+         {  
+            "type":"textarea",
+            "id":"faq-text4-cont",
+            "label":"FAQ 4 - Content"
+         },
+         {  
+            "type":"text",
+            "id":"faq-text5-head",
+            "label":"FAQ 5 - Heading",
+            "default":" What exactly happens after ordering?"
+         },
+         {  
+            "type":"textarea",
+            "id":"faq-text5-cont",
+            "label":"FAQ 5 - Content"
+         },
+         {  
+            "type":"text",
+            "id":"faq-text6-head",
+            "label":"FAQ 6 - Heading",
+            "default":"Do I receive an invoice for my order?"
+         },
+         {  
+            "type":"textarea",
+            "id":"faq-text6-cont",
+            "label":"FAQ 6 - Content"
+         },
+         {  
+            "type":"text",
+            "id":"faq-text7-head",
+            "label":"FAQ 7 - Heading",
+            "default":"How much does it cost to update my site or to maintain it?"
+         },
+         {  
+            "type":"textarea",
+            "id":"faq-text7-cont",
+            "label":"FAQ 7 - Content"
+         },
+         {  
+            "type":"text",
+            "id":"faq-text8-head",
+            "label":"FAQ 8 - Heading",
+            "default":"How do you manage my web solution project and how do I communicate with you?"
+         },
+         {  
+            "type":"textarea",
+            "id":"faq-text8-cont",
+            "label":"FAQ 8 - Content"
+         },
+         {  
+            "type":"text",
+            "id":"faq-text9-head",
+            "label":"FAQ 9 - Heading",
+            "default":"What after-sales support do you offer?"
+         },
+         {  
+            "type":"textarea",
+            "id":"faq-text9-cont",
+            "label":"FAQ 9 - Content"
+         },
+         {  
+            "type":"text",
+            "id":"faq-text10-head",
+            "label":"FAQ 10 - Heading",
+            "default":"How much does a web site cost?"
+         },
+         {  
+            "type":"textarea",
+            "id":"faq-text10-cont",
+            "label":"FAQ 10 - Content"
+         }
+      ]
+   },
+   {  
+      "name":"Password Front-end Page",
+      "settings":[  
+         {  
+            "type":"text",
+            "id":"password_link",
+            "label":"Password link text",
+            "default":"Enter using password"
+         },
+         {  
+            "type":"text",
+            "id":"password_opening_soon",
+            "label":"Opening Soon text",
+            "default":"Opening Soon"
+         },
+         {  
+            "type":"text",
+            "id":"password_signup_form_success",
+            "label":"Signup Form Success text",
+            "default":"We will send you an email right before we open!"
+         },
+         {  
+            "type":"text",
+            "id":"password_signup_form_heading",
+            "label":"Signup Form Heading text",
+            "default":"Find out when we open:"
+         },
+         {  
+            "type":"text",
+            "id":"password_spread_the_word",
+            "label":"Spread The Word text",
+            "default":"Spread the word:"
+         },
+         {  
+            "type":"text",
+            "id":"password_signup_form_email_label",
+            "label":"Signup Form Email Label text",
+            "default":"Email"
+         },
+         {  
+            "type":"text",
+            "id":"password_signup_form_email_placeholder",
+            "label":"Signup Form Email Placeholder text",
+            "default":"Your email"
+         },
+         {  
+            "type":"text",
+            "id":"password_signup_form_submit",
+            "label":"Signup Form Submit text",
+            "default":"Submit"
+         },
+         {  
+            "type":"text",
+            "id":"password_powered_by_shopify_html",
+            "label":"Powered By Shopify text",
+            "default":"This shop will be powered by"
+         },
+         {  
+            "type":"text",
+            "id":"password_login_form_heading",
+            "label":"Login Form Heading text",
+            "default":"Enter store using password:"
+         },
+         {  
+            "type":"text",
+            "id":"password_login_form_password_label",
+            "label":"Login Form Password text",
+            "default":"Password"
+         },
+         {  
+            "type":"text",
+            "id":"password_login_form_password_placeholder",
+            "label":"Login Form Password Placeholder text",
+            "default":"Your password"
+         },
+         {  
+            "type":"text",
+            "id":"password_login_form_submit",
+            "label":"Login Form Submit text",
+            "default":"Enter"
+         },
+         {  
+            "type":"text",
+            "id":"password_admin_link_html",
+            "label":"Admin Link text",
+            "default":"Are you the store owner? <a href='\/admin' class='text-link'>Log in here<\/a>"
+         },
+         {  
+            "type":"text",
+            "id":"password_close",
+            "label":"close text",
+            "default":"Close (Esc)"
+         },
+         {  
+            "type":"image",
+            "id":"password_bkg.jpg",
+            "label":"Upload image background"
+         }
+      ]
+   },
+   {  
+      "name":"Social media",
+      "settings":[  
+         {  
+            "type":"header",
+            "content":"Sharing"
+         },
+         {  
+            "type":"text",
+            "id":"twittercard_handle",
+            "label":"Twitter handle",
+            "info":"@shopify"
+         }
+      ]
+   },
+   {  
+      "settings":[  
+         {  
+            "id":"show_multiple_currencies",
+            "default":true,
+            "label":"Enable Auto Currency App?",
+            "type":"checkbox"
+         },
+         {  
+            "content":"Although you will be able to display prices on your store front in different currencies, Shopify will still process orders in your shop's currency.",
+            "type":"paragraph"
+         },
+         {  
+            "id":"show_decimal_places",
+            "default":true,
+            "label":"Round Decimal Digits to .00 ?",
+            "type":"checkbox"
+         },
+         {  
+            "id":"hide_decimal_places",
+            "label":"Hide Decimal Digits? ( Remove .00 )",
+            "type":"checkbox"
+         },
+         {  
+            "content":"By selecting the Hide Decimal Digits checkbox, the prices will be diplayed without decimal digits.",
+            "type":"paragraph"
+         },
+         {  
+            "id":"currency_format",
+            "default":"money_with_currency_format",
+            "label":"Money format",
+            "type":"select",
+            "options":[  
+               {  
+                  "value":"money_format",
+                  "label":"Without Currency, ex: $10.00"
+               },
+               {  
+                  "value":"money_with_currency_format",
+                  "label":"With Currency, ex: $10 CAD"
+               }
+            ]
+         },
+         {  
+            "id":"supported_currencies",
+            "default":"INR GBP CAD USD AUD EUR JPY",
+            "label":"Currencies you wish to support",
+            "type":"text"
+         },
+         {  
+            "id":"default_currency",
+            "default":"GBP",
+            "label":"Default currency",
+            "type":"text"
+         },
+         {  
+            "content":"Separate your currency codes with a space. Use the ISO 4217 3-letter currency code. Click [here](http:\/\/www.xe.com\/iso4217.php) for a complete list of currency codes. Example: CAD USD.",
+            "type":"paragraph"
+         }
+      ],
+      "name":"Money options"
+   }
+]

@@ -62,6 +62,32 @@
               </div>
             {% endif %}
               </div> 
+
+             <div id="tablet-slideshow" class="home-slideshow-area">
+            {% if settings.slide-active-1 != false or slide-active-2 != false or settings.slide-active-3 != false or settings.slide-active-4 != false or settings.slide-active-5 != false %}    
+              <div class="home-slideshow">
+                <ul class="slides">
+                  {% for i in array %}
+                  {% capture show_slide %}slide-active-{{ i }}{% endcapture %}
+                  {% capture image %}slide-image-{{ i }}m.jpg{% endcapture %}
+                  {% capture position %}slide-image-position-{{i}}{% endcapture %}
+                  {% capture capimg %}slide-caption-{{i}}.png{% endcapture %}
+                  {% capture cap02 %}slide-cap-{{ i }}2{% endcapture %}    
+                  {% capture btn01text %}slide-button-text-{{ i }}1{% endcapture %}
+                  {% capture btn01link %}slide-button-link-{{ i }}1{% endcapture %}
+                  {% if settings[show_slide] %}
+                  <li class="slide-{{i}}">  
+                    {% if settings.maincarousel_snow %}<span class="snow"></span>{% endif %}
+                    <a href="{{settings[btn01link]}}"><img src="{{ image | asset_url }}" alt="{{image}}" /></a>                   
+                  </li>
+                  {% endif %}
+                  {% endfor %}
+                </ul>
+              </div>
+            {% endif %}
+              </div> 
+
+
               </div></div>
           {% endif %}
 </div>

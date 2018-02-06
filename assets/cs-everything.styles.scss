@@ -403,6 +403,7 @@ input:focus:-ms-input-placeholder {
   color: transparent;  
 }
 #mobile-slideshow{display:none}
+#tablet-slideshow{display: none}
 #home-slideshow{display:block}
 /*End General*/
 /*Top Loading*/
@@ -10072,8 +10073,6 @@ header#top .nav-header .nav-header-wrapper .nav-header-inner ul.navigation-left,
   #customer_orders table th, #customer_orders table td{padding:10px 5px;font-size:13px;}
 }
 @media (max-width: 767px) {
-  #mobile-slideshow{display:block}
-	#home-slideshow{display:none}
   header#top .main-header .main-header-wrapper .main-header-inner .right-area {display:none;}
   header#top .nav-header {padding-bottom:0;display:none;}
   .home-slideshow ul.slides > li .caption-group {margin-top: -80px;}
@@ -10157,4 +10156,22 @@ header#top .nav-header .nav-header-wrapper .nav-header-inner ul.navigation-left,
   #size-chart {padding:15px !important;}
   #customer_orders table th, #customer_orders table td {padding: 10px 0px;font-size: 11px;}
 }
+
+/*mobile*/
+@media (max-width: 479px) {
+  #mobile-slideshow{display:block}
+  #home-slideshow{display:none}
+  #tablet-slideshow{display:none;}
+
+}
+
+/*tablet*/
+/*@media (max-width : 768px) {
+  #mobile-slideshow{display:none}
+  #home-slideshow{display:none}
+  #tablet-slideshow{display:block;}
+
+}*/
+
+
 
