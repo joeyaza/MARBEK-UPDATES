@@ -1036,12 +1036,6 @@
             "info":"JPG format"
          },
          {  
-            "type":"image",
-            "id":"slide-image-1m.jpg",
-            "label":"1st Tablet slide image",
-            "info":"JPG format"
-         },
-         {  
             "type":"select",
             "id":"slide-image-position-1",
             "label":"Set the position for caption",
@@ -1095,12 +1089,6 @@
             "type":"image",
             "id":"slide-image-2s.jpg",
             "label":"2nd mobile slide image",
-            "info":"JPG format"
-         },
-         {  
-            "type":"image",
-            "id":"slide-image-2m.jpg",
-            "label":"2nd tablet slide image",
             "info":"JPG format"
          },
          {  
@@ -1160,12 +1148,6 @@
             "info":"JPG format"
          },
          {  
-            "type":"image",
-            "id":"slide-image-3m.jpg",
-            "label":"3rd tablet slide image",
-            "info":"JPG format"
-         },
-         {  
             "type":"select",
             "id":"slide-image-position-3",
             "label":"Set the position for caption",
@@ -1219,12 +1201,6 @@
             "type":"image",
             "id":"slide-image-4s.jpg",
             "label":"4th mobile slide image",
-            "info":"JPG format"
-         },
-         {  
-            "type":"image",
-            "id":"slide-image-4m.jpg",
-            "label":"4th tablet slide image",
             "info":"JPG format"
          },
          {  
@@ -1284,12 +1260,6 @@
             "info":"JPG format"
          },
          {  
-            "type":"image",
-            "id":"slide-image-5m.jpg",
-            "label":"5th tablet slide image",
-            "info":"JPG format"
-         },
-         {  
             "type":"select",
             "id":"slide-image-position-5",
             "label":"Set the position for caption",
@@ -1343,12 +1313,6 @@
             "type":"image",
             "id":"slide-image-6s.jpg",
             "label":"6th mobile slide image",
-            "info":"JPG format"
-         },
-         {  
-            "type":"image",
-            "id":"slide-image-6m.jpg",
-            "label":"6th tablet slide image",
             "info":"JPG format"
          },
          {  
@@ -1433,9 +1397,14 @@
             "label":"Row 1 Left - Caption"
          },
          {  
+            "type":"text",
+            "id":"middle_banner1_linkto",
+            "label":"Row 1 Left - link to"
+         },
+         {  
             "type":"image",
             "id":"middle_banner2_bkg.jpg",
-            "label":"Row 1 Left - Background",
+            "label":"Row 1 Right - Background",
             "info":"JPG format"
          },
          {  

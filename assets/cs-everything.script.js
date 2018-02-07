@@ -13,9 +13,9 @@ if($(window).innerWidth() > 768 ) {
 
 function homepageScroll() {
 
+    return; 
     var pages = 4;
     var currentpage = 1;
-    if (document.location.hash) { currentpage = parseInt(document.location.hash.replace('#', '')); }
 
     console.log(currentpage);
 
@@ -41,8 +41,8 @@ function homepageScroll() {
 
     $(window).scroll(function(event) {
       
-      if (this.animatingup==true) { console.log("animating up..."); return; }
-      if (this.animatingdown==true) { console.log("animating down..."); return; }
+      if (animatingup==true) { console.log("animating up..."); return; }
+      if (animatingdown==true) { console.log("animating down..."); return; }
       
       nextpage = currentpage + 1; if (nextpage > pages) { nextpage = pages; }
       prevpage = currentpage - 1; if (prevpage < 1) { prevpage = 1; }
@@ -54,7 +54,7 @@ function homepageScroll() {
       //console.log($(window).scrollTop()+$(window).height() + " < " + $("#page"+(nextpage)).offset().top);
       
 
-      if (this.animatingup == false) {
+      if (animatingup == false) {
 
         if ($(window).scrollTop()+$(window).height()>=$("#page"+(nextpage)).offset().top+10) {
           if (nextpage > currentpage) {
@@ -63,10 +63,8 @@ function homepageScroll() {
             animatingdown = true;
             $('html, body').animate({ scrollTop: pageheight }, 400, function() { 
 
-                currentpage = nextpage; document.location.hash = currentpage;
-                   setTimeout (function() { 
-               animatingdown = false
-            }, 450 );
+                currentpage = nextpage; 
+                setTimeout(()=>{animatingdown = false}, 800);
 
             });
             return;
@@ -74,7 +72,7 @@ function homepageScroll() {
         }
       }
       
-      if (this.animatingdown == false) {
+      if (animatingdown == false) {
 
         if ($(window).scrollTop()<=$("#page"+(currentpage)).offset().top-10) {
           if (prevpage < currentpage) {
@@ -83,11 +81,12 @@ function homepageScroll() {
             animatingup = true;
             $('html, body').animate({ scrollTop: pageheight }, 400, function() { 
 
-                currentpage = prevpage; document.location.hash = currentpage;
+                currentpage = prevpage; 
+                // document.location.hash = currentpage;
 
-                          setTimeout (function() { 
-            animatingup = false
-        }, 450 );
+
+            setTimeout(()=>{animatingup = false}, 800);
+
 
             });
             return;
@@ -780,7 +779,12 @@ $(window).load(function() {
 
   ModalNewsletter();
   $.cookie('everything-fs-cookie', 'active', { expires: 10});
-  
+  setTimeout (()=> {
+
+    $(this).scrollTop(1);
+    console.log("callback!");
+
+  }, 300);
   
   
 });
